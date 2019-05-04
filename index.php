@@ -38,10 +38,11 @@
 	<div class="index_content content">
 		 <!-- HTML Nav -->
         <nav class="nav-bar">
-
+            <h1>hello</h1>
         </nav>
         <!-- END HTML Nav -->
 	</div>
+    
 	</body>	
 
 </html>
