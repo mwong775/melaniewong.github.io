@@ -18,7 +18,7 @@
         <!-- Main Style -->
         <link href="//cdn.plyr.io/2.0.13/plyr.css" rel="stylesheet">
         <link href="css/player2.css" rel="stylesheet">
-        <link href="css/linda.css" rel="stylesheet">
+        <link href="css/site.css" rel="stylesheet">
         <link href="css/responsive.css" rel="stylesheet">
 
         <!-- Fonts -->
@@ -42,7 +42,7 @@
         </nav>
         <!-- END HTML Nav -->
 	</div>
-    
+
 	</body>	
 
 </html>
