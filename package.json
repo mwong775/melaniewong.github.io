@@ -2,7 +2,7 @@
   "name": "mwong-site",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://mwong775.github.io/mwong775.github.io",
+  "homepage": "https://mwong775.github.io",
   "dependencies": {
     "bootstrap": "^4.3.1",
     "gh-pages": "^2.0.1",
@@ -18,7 +18,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -b master -d build"
   },
   "eslintConfig": {
     "extends": "react-app"
