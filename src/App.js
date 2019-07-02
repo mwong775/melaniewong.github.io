@@ -1,12 +1,12 @@
-import React from 'react';
+//import React from 'react';
 import ReactDOM from 'react-dom';
-//import * as React from "react";
+import * as React from "react";
 //import logo from './logo.svg';
-import './App.css';
+//import './App.css';
 // import particlesJS from 'particles-js';
 import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
 import {Home} from "./Home/Home";
-import Carousel from 'react-bootstrap/Carousel';
+// import Carousel from 'react-bootstrap/Carousel';
 
 export class App extends React.Component {
   render() {

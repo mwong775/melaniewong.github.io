@@ -1,6 +1,7 @@
 import * as React from "react";
-import Particles from 'react-particles-js';
+import Particles from 'react-particles-js'; // LEGIT ONE
 import {Tab, Tabs} from "react-bootstrap";
+import './Home.css';
 
 
 export class Home extends React.Component {
