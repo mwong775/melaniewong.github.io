@@ -4,14 +4,13 @@ import './Home.css';
 import {Nav} from "../Nav/Nav";
 import DatatablePage from "./DataTable";
 
-
 export class Home extends React.Component {
 	render() {
 		return (
 			<div className="main">
 				<h1>Home Page!</h1>
 				<DatatablePage/>
-				<Particles params={particleOpt} />
+				<Particles params={particleOpt} className="particles"/>
 			</div>
 			);
 	}
