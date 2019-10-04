@@ -48,7 +48,7 @@ const particleOpt = {
               "speed": 0.05
           },
           "size": {
-              "value": 2
+              "value": 4
           },
           "opacity": {
               "anim": {
