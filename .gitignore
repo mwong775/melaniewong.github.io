@@ -1,0 +1,9 @@
+# See http://help.github.com/ignore-files/ for more about ignoring files.
+# created 10/03/19
+
+# build?
+/build
+
+# dependencies
+/node_modules
+/particles.js-master
