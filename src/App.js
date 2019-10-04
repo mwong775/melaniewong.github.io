@@ -29,6 +29,7 @@ export class App extends React.Component {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 const particleOpt = {
               "particles": {
           "number": {
@@ -72,6 +73,9 @@ const particleOpt = {
       },
       "retina_detect": true
 }
+=======
+
+>>>>>>> parent of e01213d... added some legit data to table, fixed particles to fill page :D
 =======
 
 >>>>>>> parent of e01213d... added some legit data to table, fixed particles to fill page :D
