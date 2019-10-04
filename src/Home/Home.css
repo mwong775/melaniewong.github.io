@@ -1,0 +1,17 @@
+* {
+	margin: 0;
+}
+
+body {
+	height: 100%;
+	font-family: sans-serif;
+	background: linear-gradient(to right, #4568DC, #B06AB3);
+}
+
+.particles {
+	min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    margin: 0 auto -20px;
+
+}

@@ -1,7 +1,6 @@
 //import React from 'react';
 // import ReactDOM from 'react-dom';
 import * as React from "react";
-import Particles from 'react-particles-js'; // LEGIT ONE
 //import logo from './logo.svg';
 //import './App.css';
 // import particlesJS from 'particles-js';
@@ -17,7 +16,6 @@ export class App extends React.Component {
               <header>
 
               </header>
-                <Particles params={particleOpt} className="particles"/>
               <div className="container mt-5">
                   <Switch>
                       <Route path="/" exact component={Home} />
@@ -30,6 +28,7 @@ export class App extends React.Component {
   }
 }
 
+<<<<<<< HEAD
 const particleOpt = {
               "particles": {
           "number": {
@@ -75,6 +74,8 @@ const particleOpt = {
 }
 
 
+=======
+>>>>>>> parent of e01213d... added some legit data to table, fixed particles to fill page :D
 
 
 export default App;
