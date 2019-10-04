@@ -1,3 +1,0 @@
-# mwong775.github.io
-## Personal website using GitHub Pages 
-### Currently under construction...
