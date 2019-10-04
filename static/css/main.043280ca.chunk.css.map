@@ -1,1 +1,0 @@
-{"version":3,"sources":["Home.css"],"names":[],"mappings":"AAAA,KACC,QAAS,CACT,SAAU,CACV,sBAAuB,CACvB,gFAAuD,CAAvD,iDACD","file":"main.043280ca.chunk.css","sourcesContent":["body {\r\n\tmargin: 0;\r\n\tpadding: 0;\r\n\tfont-family: sans-serif;\r\n\tbackground: linear-gradient(to right, #4568DC, #B06AB3);\r\n}"]}
