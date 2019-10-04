@@ -1,46 +1,97 @@
-import * as React from "react";
+import React from 'react';
+import PropTypes from 'prop-types';
+import AppBar from '@material-ui/core/AppBar';
+import Toolbar from '@material-ui/core/Toolbar';
+import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
-import Paper from '@material-ui/core/Paper';
-import Tabs from '@material-ui/core/Tabs';
-import Tab from '@material-ui/core/Tab';
-import PhoneIcon from '@material-ui/icons/Phone';
-import FavoriteIcon from '@material-ui/icons/Favorite';
-import PersonPinIcon from '@material-ui/icons/PersonPin';
+import CssBaseline from '@material-ui/core/CssBaseline';
+import useScrollTrigger from '@material-ui/core/useScrollTrigger';
+import Box from '@material-ui/core/Box';
+import Container from '@material-ui/core/Container';
+import Fab from '@material-ui/core/Fab';
+import KeyboardArrowUpIcon from '@material-ui/icons/KeyboardArrowUp';
+import Zoom from '@material-ui/core/Zoom';
 
-const useStyles = makeStyles({
+const useStyles = makeStyles(theme => ({
   root: {
-    flexGrow: 1,
-    maxWidth: 500,
+    position: 'fixed',
+    bottom: theme.spacing(2),
+    right: theme.spacing(2),
   },
-});
+}));
 
-export default function Nav() {
+function ScrollTop(props) {
+  const { children, window } = props;
   const classes = useStyles();
-  const [value, setValue] = React.useState(0);
+  // Note that you normally won't need to set the window ref as useScrollTrigger
+  // will default to window.
+  // This is only being set here because the demo is in an iframe.
+  const trigger = useScrollTrigger({
+    target: window ? window() : undefined,
+    disableHysteresis: true,
+    threshold: 100,
+  });
 
-  function handleChange(event, newValue) {
-    setValue(newValue);
-  }
+  const handleClick = event => {
+    const anchor = (event.target.ownerDocument || document).querySelector('#back-to-top-anchor');
+
+    if (anchor) {
+      anchor.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+  };
 
   return (
-   <Paper square className={classes.root}>
-      <Tabs
-        value={value}
-        onChange={handleChange}
-        variant="fullWidth"
-        indicatorColor="secondary"
-        textColor="secondary"
-        aria-label="icon label tabs example"
-      >
-        <Tab icon={<PhoneIcon />} label="RECENTS" />
-        <Tab icon={<FavoriteIcon />} label="FAVORITES" />
-        <Tab icon={<PersonPinIcon />} label="NEARBY" />
-      </Tabs>
-    </Paper>
+    <Zoom in={trigger}>
+      <div onClick={handleClick} role="presentation" className={classes.root}>
+        {children}
+      </div>
+    </Zoom>
   );
 }
 
-// export class Nav extends React.Component {
+ScrollTop.propTypes = {
+  children: PropTypes.element.isRequired,
+  /**
+   * Injected by the documentation to work in an iframe.
+   * You won't need it on your project.
+   */
+  window: PropTypes.func,
+};
+
+export default function BackToTop(props) {
+  return (
+    <React.Fragment>
+      <CssBaseline />
+      <AppBar>
+        <Toolbar>
+          <Typography variant="h6">Scroll to see button</Typography>
+        </Toolbar>
+      </AppBar>
+      <Toolbar id="back-to-top-anchor" />
+      <Container>
+        <Box my={2}>
+          {[...new Array(12)]
+            .map(
+              () => `Cras mattis consectetur purus sit amet fermentum.
+Cras justo odio, dapibus ac facilisis in, egestas eget quam.
+Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
+Praesent commodo cursus magna, vel scelerisque nisl consectetur et.`,
+            )
+            .join('\n')}
+        </Box>
+      </Container>
+      <ScrollTop {...props}>
+        <Fab color="secondary" size="small" aria-label="scroll back to top">
+          <KeyboardArrowUpIcon />
+        </Fab>
+      </ScrollTop>
+    </React.Fragment>
+  );
+}
+
+// export default Nav;
+
+ // export class Nav extends React.Component {
 
 // 	render () {
 // 		return(
@@ -50,3 +101,4 @@ export default function Nav() {
 // 			);
 // 	}
 // }
+

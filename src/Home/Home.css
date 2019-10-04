@@ -5,7 +5,8 @@
 body {
 	height: 100%;
 	font-family: sans-serif;
-	background: linear-gradient(to right, #4568DC, #B06AB3);
+	/*background: linear-gradient(to right, #4568DC, #B06AB3);*/
+	background: linear-gradient(to right, rgb(150, 52, 181), rgb(68, 166, 250));
 }
 
 .particles {
@@ -13,5 +14,13 @@ body {
     height: auto !important;
     height: 100%;
     margin: 0 auto -20px;
+    
 
+}
+
+canvas {
+  display: block;
+  position: absolute;
+  margin-top: 0px;
+  margin-bottom: 0px;
 }
