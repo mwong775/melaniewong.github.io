@@ -8,18 +8,30 @@ export class DataTable extends React.Component {
     super(props);
     this.state = {
       columnDefs: [{
-        headerName: "Make", field: "make"
+        headerName: "Course Number", field: "courseNumber"
       }, {
-        headerName: "Model", field: "model"
+        headerName: "Course Title", field: "courseTitle"
       }, {
-        headerName: "Price", field: "price"
+        headerName: "Term", field: "term"
+      }, {
+        headerName: "Language", field: "language"
+      }, {
+        headerName: "Difficulty", field: "difficulty"
       }],
       rowData: [{
-        make: "Toyota", model: "Celica", price: 35000
+        courseNumber: "CMPE 150", courseTitle: "Introduction to Computer Networks", term: "Spring 2019", language: "Python"
       }, {
-        make: "Ford", model: "Mondeo", price: 32000
+        courseNumber: "CMPS 183", courseTitle: "Web Applications", term: "Spring 2019", language: "Python, JavaScript"
       }, {
-        make: "Porsche", model: "Boxter", price: 72000
+        courseNumber: "CMPS 101", courseTitle: "Algorithms & Abstract Data Types", term: "Fall 2018", language: "Java, C"
+      }, {
+        courseNumber: "CSE 130", courseTitle: "Principles of Computer System Design", term: "Fall 2019", language: "C/C++"
+      }, {
+        courseNumber: "CSE 115", courseTitle: "Introduction to Software Engineering", term: "Fall 2019", language: "Java?"
+      }, {
+        courseNumber: "CMPS 102", courseTitle: "Analysis of Algorithms", term: "Winter 2019", language: "LaTeX lol"
+      }, {
+        courseNumber: "CSE 184", courseTitle: "Data Wrangling & Web Scraping", term: "Fall 2019", language: "Python"
       }]
     }
   }
@@ -30,8 +42,8 @@ export class DataTable extends React.Component {
       <div 
         className="ag-theme-balham-dark"
         style={{ 
-        height: '500px', 
-        width: '600px' }} 
+        height: '600px', 
+        width: '800px' }} 
       >
         <AgGridReact
           columnDefs={this.state.columnDefs}
