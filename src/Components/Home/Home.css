@@ -24,3 +24,16 @@ canvas {
   margin-top: 0px;
   margin-bottom: 0px;
 }
+
+.carousel {
+  width:40%;
+  height:auto;
+  margin: auto;
+}
+
+@media (max-width: 900px) {
+    .carousel {
+      width:auto;
+      height:auto;
+    }
+}

@@ -6,19 +6,35 @@ import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import useScrollTrigger from '@material-ui/core/useScrollTrigger';
-import Box from '@material-ui/core/Box';
-import Container from '@material-ui/core/Container';
+import AccountCircle from '@material-ui/icons/AccountCircle';
+import Button from '@material-ui/core/Button';
+// import Box from '@material-ui/core/Box';
+// import Container from '@material-ui/core/Container';
+import IconButton from '@material-ui/core/IconButton';
+import MenuIcon from '@material-ui/icons/Menu';
 import Fab from '@material-ui/core/Fab';
 import KeyboardArrowUpIcon from '@material-ui/icons/KeyboardArrowUp';
 import Zoom from '@material-ui/core/Zoom';
+import {Link} from 'react-router-dom'; 
+import './Nav.css';
 
 const useStyles = makeStyles(theme => ({
   root: {
     position: 'fixed',
     bottom: theme.spacing(2),
     right: theme.spacing(2),
+
+    flexGrow: 1,
+  },
+  menuButton: {
+    marginRight: theme.spacing(2),
+  },
+  title: {
+    flexGrow: 1,
   },
 }));
+
+ // const classes = useStyles();
 
 function ScrollTop(props) {
   const { children, window } = props;
@@ -63,8 +79,34 @@ export const Nav = () => {
     <React.Fragment>
       <CssBaseline />
       <AppBar>
-        <Toolbar>
-          <Typography variant="h6">Scroll to see button</Typography>
+        <Toolbar class>
+            <IconButton edge="start" color="inherit" aria-label="menu">
+            <MenuIcon />
+          </IconButton>
+          <Link to="/">
+            <Button color="inherit">Home</Button>
+          </Link>
+          <Link to="/about">
+            <Button color="inherit">About Me</Button>
+          </Link>
+          <Link to="/resume">
+            <Button color="inherit" href="/resume">Resume</Button>
+          </Link>
+          <Link to="/photos" className="link">
+            <Button color="inherit">Photos</Button>
+          </Link>
+          <Link to="/contact" className="link">
+            <Button color="inherit">Contact</Button>
+          </Link>
+             <IconButton
+                className="accountCircle"
+                aria-label="account of current user"
+                aria-controls="menu-appbar"
+                aria-haspopup="true"
+                color="inherit"
+              >
+                <AccountCircle />
+              </IconButton>
         </Toolbar>
       </AppBar>
       <Toolbar id="back-to-top-anchor" />
@@ -89,4 +131,8 @@ export const Nav = () => {
 //      );
 //  }
 // }
+
+ /*} <Typography variant="h6">
+            not News
+          </Typography> */
 

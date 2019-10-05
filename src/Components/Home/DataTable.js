@@ -2,12 +2,9 @@ import * as React from 'react';
 import { AgGridReact } from 'ag-grid-react';
 import 'ag-grid-community/dist/styles/ag-grid.css';
 import 'ag-grid-community/dist/styles/ag-theme-balham-dark.css';
+// import '../Photos/images/old_gold_building.jpg';
 
-export class DataTable extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      columnDefs: [{
+const columnDefs = [{
         headerName: "Course Number", field: "courseNumber"
       }, {
         headerName: "Course Title", field: "courseTitle"
@@ -17,7 +14,16 @@ export class DataTable extends React.Component {
         headerName: "Language", field: "language"
       }, {
         headerName: "Difficulty", field: "difficulty"
-      }],
+      }];
+
+const gridOptions = {
+  columnDefs: columnDefs
+}
+
+export class DataTable extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
       rowData: [{
         courseNumber: "CMPE 150", courseTitle: "Introduction to Computer Networks", term: "Spring 2019", language: "Python"
       }, {
@@ -39,17 +45,24 @@ export class DataTable extends React.Component {
   render() {
 
     return (
+      <>
+       <h6 style={{textAlign: 'center', marginTop: '20px'}}>List of Technical Coursework (this needs a better title D:)</h6>
       <div 
         className="ag-theme-balham-dark"
         style={{ 
         height: '600px', 
-        width: '800px' }} 
+        width: '800px',
+        margin: 'auto', 
+        marginTop: '10px' }} 
       >
+
         <AgGridReact
-          columnDefs={this.state.columnDefs}
+          // columnDefs={columnDefs}
+          gridOptions={gridOptions}
           rowData={this.state.rowData}>
         </AgGridReact>
       </div>
+      </>
     );
   } 
 }
