@@ -37,12 +37,12 @@ canvas {
   	margin-bottom: 0px;
 }
 
-div.mt-5 {
+div.block {
 	position: relative;
 	margin: auto;
+	margin-bottom: 2%;
 	padding: 2%;
 	width: 95%;
-	background-color: black;
 	color: pink;
 	background-color:rgba(0, 0, 0, 0.6);
 	border-radius: 15px;

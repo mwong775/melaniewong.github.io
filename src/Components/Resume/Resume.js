@@ -1,5 +1,7 @@
 import React from 'react';
 import { Document, Page } from 'react-pdf';
+import Button from '@material-ui/core/Button';
+import DatatablePage from "./DataTable";
 
 export class Resume extends React.Component {
 	state = {
@@ -13,15 +15,20 @@ export class Resume extends React.Component {
     return (
       <div>
       	<h2>Resume</h2>
+        <Button href="/Resume/Resume.pdf" color='inherit'>Resume?</Button>
       	<h5>Using react-pdf but idk how to properly implement it yet whoops</h5>
+        <DatatablePage />
+      </div>
+    );
+  }
+}
+
+/*
         <Document
-          file="https://www.pdf.investintech.com/preview-frames.php?id=WGMxUkVjRVMxVTZqTTBFZ25yOFhwbEY0SWZDNmlCbERtZE1xVGRSWkdlY2pMQVdkNlBldS9MQlJnbzYwcVNrcWE1N2pLeStJTzgrcUo5UnN3N1VldHRpR0hvRzVjbDVaTUp6WmRTZ0g0VlVlSEY5bVhJK3oxdU9pZEdFb05wOUk="
+          file="Resume.pdf"
           onLoadSuccess={this.onDocumentLoadSuccess}
         >
           <Page pageNumber={pageNumber} />
         </Document>
         <p>Page {pageNumber} of {numPages}</p>
-      </div>
-    );
-  }
-}
+*/

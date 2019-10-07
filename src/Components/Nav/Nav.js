@@ -80,7 +80,7 @@ export const Nav = () => {
       <CssBaseline />
       <AppBar>
         <Toolbar class>
-            <IconButton edge="start" color="inherit" aria-label="menu">
+            <IconButton edge="start" color="inherit" aria-label="menu" style={{marginLeft: "1%"}}>
             <MenuIcon />
           </IconButton>
           <Link to="/">
@@ -98,15 +98,6 @@ export const Nav = () => {
           <Link to="/contact" className="link">
             <Button color="inherit">Contact</Button>
           </Link>
-             <IconButton
-                className="accountCircle"
-                aria-label="account of current user"
-                aria-controls="menu-appbar"
-                aria-haspopup="true"
-                color="inherit"
-              >
-                <AccountCircle />
-              </IconButton>
         </Toolbar>
       </AppBar>
       <Toolbar id="back-to-top-anchor" />
@@ -135,4 +126,14 @@ export const Nav = () => {
  /*} <Typography variant="h6">
             not News
           </Typography> */
+
+          /* <IconButton
+                className="accountCircle"
+                aria-label="account of current user"
+                aria-controls="menu-appbar"
+                aria-haspopup="true"
+                color="inherit"
+              >
+                <AccountCircle />
+              </IconButton> */
 

@@ -1,5 +1,3 @@
-//import React from 'react';
-// import ReactDOM from 'react-dom';
 import * as React from "react";
 import Particles from 'react-particles-js'; // LEGIT ONE
 //import logo from './logo.svg';
@@ -21,7 +19,7 @@ export class App extends React.Component {
                  <Nav/>
               </header>
                 <Particles params={particleOpt} className="particles"/>
-              <div className="mt-5">
+              <div className="block">
                   <Switch>
                     <Route path="/about" exact component={About} />
                   </Switch>
@@ -48,7 +46,7 @@ export class App extends React.Component {
 const particleOpt = {
               "particles": {
           "number": {
-              "value": 60,
+              "value": 80,
               "density": {
                   "enable": true,
                   "value_area": 1500

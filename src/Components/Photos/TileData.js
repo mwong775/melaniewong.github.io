@@ -11,7 +11,7 @@ const tileData = [
     featured: true,
   },
   {
-    img: './images/old_gold_building.jpg',
+    img: '/src/Components/Photos/images/old_gold_building.jpg',
     title: 'gold shrine thing in Japan',
     author: 'mwong',
   },
