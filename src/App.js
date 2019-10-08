@@ -1,5 +1,5 @@
 import * as React from "react";
-import Particles from 'react-particles-js'; // LEGIT ONE
+import Particles from 'react-particles-js'; 
 //import logo from './logo.svg';
 import './App.css';
 import {Nav} from "./Components/Nav/Nav";
@@ -9,12 +9,23 @@ import {Photos} from "./Components/Photos/Photos";
 import {Contact} from "./Components/Contact/Contact";
 import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
 import {Home} from "./Components/Home/Home";
+import CssBaseline from '@material-ui/core/CssBaseline';
+import { MuiThemeProvider, createMuiTheme, responsiveFontSizes} from '@material-ui/core/styles'; // responseiveFontSizes needs testing
+
+let theme = createMuiTheme({
+  palette: {
+    type: "dark",
+  },
+});
+theme = responsiveFontSizes(theme);
 
 export class App extends React.Component {
   render() {
       return (
         <Router basename={process ? process.env.PUBLIC_URL : ""}>
           <div>
+           <MuiThemeProvider theme={theme}>
+              <CssBaseline />
               <header>
                  <Nav/>
               </header>
@@ -37,6 +48,7 @@ export class App extends React.Component {
                   </Switch>
               </div>
               <footer className="mb-5"/>
+              </MuiThemeProvider>
           </div>
       </Router>
       );

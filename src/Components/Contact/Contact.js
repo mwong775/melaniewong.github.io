@@ -1,8 +1,9 @@
 import React from 'react';
 import IconButton from '@material-ui/core/IconButton';
 // get our fontawesome imports
-import {faFacebook, faLinkedin, faGithub, faGoogle} from "@fortawesome/free-brands-svg-icons";
+import {faFacebook, faLinkedin, faGithub} from "@fortawesome/free-brands-svg-icons";
 import EmailIcon from '@material-ui/icons/Email';
+import DirectionsRunIcon from '@material-ui/icons/DirectionsRun';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export class Contact extends React.Component {
@@ -15,8 +16,10 @@ export class Contact extends React.Component {
 				<IconButton color='inherit' onClick={()=> window.open("https://www.facebook.com/mwong775", "_blank")}><FontAwesomeIcon icon={faFacebook}/></IconButton>
 				<IconButton color='inherit' onClick={()=> window.open("https://www.linkedin.com/in/mwong775", "_blank")}><FontAwesomeIcon icon={faLinkedin}/></IconButton>
 				<IconButton color='inherit' onClick={()=> window.open("https://github.com/mwong775", "_blank")}><FontAwesomeIcon icon={faGithub}/></IconButton>
-				<p>Also, enjoy the nice bubbles below (click to add more ~ )</p>
+				<IconButton color='inherit' onClick={()=> window.open("https://www.goslugs.com/sports/track/2018-19/bios/wong_melanie_0nqe?view=bio", "_blank")}><DirectionsRunIcon/></IconButton>
+				<p>Also, enjoy the nice bubbles below (Click to add more!)</p>
 			</>
 			);
 	}
 }
+

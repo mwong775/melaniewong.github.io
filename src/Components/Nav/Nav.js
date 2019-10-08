@@ -2,14 +2,15 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
-import Typography from '@material-ui/core/Typography';
+// import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import useScrollTrigger from '@material-ui/core/useScrollTrigger';
-import AccountCircle from '@material-ui/icons/AccountCircle';
+// import AccountCircle from '@material-ui/icons/AccountCircle';
 import Button from '@material-ui/core/Button';
 // import Box from '@material-ui/core/Box';
 // import Container from '@material-ui/core/Container';
+import Drawer from '@material-ui/core/Drawer';
 import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
 import Fab from '@material-ui/core/Fab';
@@ -80,7 +81,7 @@ export const Nav = () => {
       <CssBaseline />
       <AppBar>
         <Toolbar class>
-            <IconButton edge="start" color="inherit" aria-label="menu" style={{marginLeft: "1%"}}>
+            <IconButton edge="start" color="inherit" aria-label="open drawer" style={{marginLeft: "1%"}} onClick={()=> window.open("https://github.com/mwong775/mwong775.github.io/tree/development", "_blank")}>
             <MenuIcon />
           </IconButton>
           <Link to="/">
@@ -100,6 +101,8 @@ export const Nav = () => {
           </Link>
         </Toolbar>
       </AppBar>
+      <Drawer>
+      </Drawer>
       <Toolbar id="back-to-top-anchor" />
       <ScrollTop>
         <Fab color="secondary" size="small" aria-label="scroll back to top">
@@ -109,19 +112,6 @@ export const Nav = () => {
     </React.Fragment>
   );
 }
-
-// export default Nav;
-
- // export class Nav extends React.Component {
-
-//  render () {
-//    return(
-//      <Nav>
-//      Nav?
-//      </Nav>
-//      );
-//  }
-// }
 
  /*} <Typography variant="h6">
             not News

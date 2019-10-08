@@ -54,7 +54,7 @@ export class DataTable extends React.Component {
       <>
       <div style={{textAlign: 'center', marginTop: '5%'}}>
         <h6>Technical Coursework</h6>
-        <p>Table needs a lot more configurations..</p>
+        <p>This sad boi table needs a lot more configurations..</p>
        </div>
       <div 
         className="ag-theme-balham-dark"
