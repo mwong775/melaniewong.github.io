@@ -17,8 +17,8 @@ function getSteps() {
 function getStepContent(step) {
   switch (step) {
     case 0:
-      return `I am a student at UC Santa Cruz pursuing a B.S. in Computer Science. I'm also a Division III student-athlete in 
-      			track & field, and specialize in sprints and hurdles.`;
+      return `I am a student pursuing a B.S. in Computer Science at UC Santa Cruz. I'm also a Division III student-athlete in 
+      			track & field, and I specialize in sprints and hurdles.`;
     case 1:
       return 'I was a Computing Intern at Lawrence Livermore National Laboratory, specifically the National Ignition Facility. My project involved migrating the tech stack of an in-house web-based application from Apache Struts to React. This involved redesigning the user interface in TypeScript, as well as implementing web services in Java.';
    
@@ -77,7 +77,7 @@ export const VerticalLinearStepper = () => {
       </Stepper>
       {activeStep === steps.length && (
         <Paper square elevation={0}>
-          <Typography>Timeline steps completed - you made it!</Typography>
+          <Typography>Introduction completed - scroll down for more info!</Typography>
           <Button onClick={handleReset}>
             Reset
           </Button>

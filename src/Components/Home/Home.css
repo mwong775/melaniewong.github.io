@@ -5,8 +5,7 @@
 body {
 	height: 100%;
 	font-family: sans-serif;
-	/*background: linear-gradient(to right, #4568DC, #B06AB3);*/
-	background: linear-gradient(to right, rgb(150, 52, 181), rgb(68, 166, 250));
+	background: linear-gradient(to right, rgb(100, 52, 181), rgb(80, 166, 250));
 }
 
 .particles {
@@ -35,7 +34,7 @@ div.caption-box {
   border-width: 2px;
   margin: auto;
   width: 30%;
-  background-color:rgba(0, 0, 0, 0.3);
+  background-color:rgba(0, 0, 0, 0.2);
   border-radius: 15px;
   padding: 2%;
 }

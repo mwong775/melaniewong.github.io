@@ -3,7 +3,6 @@ body {
 	margin: 0;
 	padding: 0;
 	font-family: sans-serif;
-	background: linear-gradient(to right, #4568DC, #B06AB3);
 }
 
 #particles-js {
@@ -43,8 +42,8 @@ div.block {
 	margin-bottom: 2%;
 	padding: 2%;
 	width: 95%;
-	color: pink;
-	background-color:rgba(0, 0, 0, 0.6);
+	color: plum;
+	background-color:rgba(0, 0, 0, 0.5);
 	border-radius: 15px;
 }
 

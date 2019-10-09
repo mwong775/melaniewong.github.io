@@ -17,7 +17,7 @@ export class Contact extends React.Component {
 				<IconButton color='inherit' onClick={()=> window.open("https://www.linkedin.com/in/mwong775", "_blank")}><FontAwesomeIcon icon={faLinkedin}/></IconButton>
 				<IconButton color='inherit' onClick={()=> window.open("https://github.com/mwong775", "_blank")}><FontAwesomeIcon icon={faGithub}/></IconButton>
 				<IconButton color='inherit' onClick={()=> window.open("https://www.goslugs.com/sports/track/2018-19/bios/wong_melanie_0nqe?view=bio", "_blank")}><DirectionsRunIcon/></IconButton>
-				<p>Also, enjoy the nice bubbles below (Click to add more!)</p>
+				<p>Also, enjoy the nice bubbles below (Click or tap to add more!)</p>
 			</>
 			);
 	}

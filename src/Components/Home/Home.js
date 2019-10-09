@@ -25,7 +25,9 @@ export class Home extends React.Component {
         <Grid item xs={6}>
           <h3 className="abt-header">About Me</h3>
           <p>Hi there! I'm Melanie, and I'm an undergraduate student studying Computer Science at the University of California in Santa Cruz.</p>
-          <Button href="/about">Learn More</Button>
+          <Link to="/about">
+            <Button>Learn More</Button>
+          </Link>
         </Grid>
         <Grid item xs={6}>
           <h3 className="abt-header">About this Site</h3>
