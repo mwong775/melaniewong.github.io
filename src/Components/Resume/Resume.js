@@ -1,11 +1,11 @@
 import React from 'react';
-// import { Document, Page } from 'react-pdf';
 import Button from '@material-ui/core/Button';
 import AppBar from '@material-ui/core/AppBar';
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 import DatatablePage from "./DataTable";
 import Grid from '@material-ui/core/Grid'; // for HTML resume
+// import { Document, Page } from 'react-pdf';
 
 export class Resume extends React.Component {
 
