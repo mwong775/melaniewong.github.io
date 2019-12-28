@@ -11,19 +11,22 @@ import Typography from '@material-ui/core/Typography';
 import poster from '../Photos/images/Poster.jpg';
 
 function getSteps() {
-  return ['Introduction', 'This past Summer...', 'This Fall...'];
+  return ['Introduction', 'This past Summer...', 'This past Fall 2019...', 'Starting 2020...'];
 }
 
 function getStepContent(step) {
   switch (step) {
     case 0:
-      return `I am a student pursuing a B.S. in Computer Science at UC Santa Cruz. I'm also a Division III student-athlete in 
-      			track & field, and I specialize in sprints and hurdles.`;
+      return `I am a student pursuing a B.S. in Computer Science at UC Santa Cruz. Some of my interests include 
+            computer and network security, software engineering, and using technology for social good.
+            I'm also a Division III student-athlete in track & field, and I specialize in sprints and hurdles.`;
     case 1:
-      return 'I was a Computing Intern at Lawrence Livermore National Laboratory, specifically the National Ignition Facility. My project involved migrating the tech stack of an in-house web-based application from Apache Struts to React. This involved redesigning the user interface in TypeScript, as well as implementing web services in Java.';
+      return 'I was a Compututation Intern at Lawrence Livermore National Laboratory, specifically the National Ignition Facility. My project involved migrating the tech stack of an in-house web-based application from Apache Struts to React. This involved redesigning the user interface in TypeScript, as well as implementing web services in Java.';
    
     case 2:
-      return `I'm starting my second quarter in the Tech4Good Lab at UCSC, focusing on improving usability and experience on one of our learning platforms. I'm also working part time as an "Ingenious" for the Glass Room, a pop-up exhibition in downtown San Francisco sponsored by Tactical Tech and Mozilla Firefox. In the Glass Room, we faciliate workshops and activities addressing today's issues regarding data privacy and digital security.`;
+      return `I'm finished my second quarter in the Tech4Good Lab at UCSC, focusing on improving usability and experience on one of our learning platforms. I'm also worked part time as an "Ingenious" for the Glass Room, a pop-up exhibition in downtown San Francisco sponsored by Tactical Tech and Mozilla Firefox. In the Glass Room, we faciliate workshops and activities addressing today's issues regarding data privacy and digital security.`;
+    case 3:
+      return '';
     default:
       return 'Unknown step';
   }
@@ -94,14 +97,6 @@ export class About extends React.Component {
 				<h2>About Me</h2>
 				<VerticalLinearStepper/>
 				<br/>
-				<h6>Project poster from my internship at LLNL</h6>
-				<div style={{width: '80%', margin: 'auto', marginTop: '2%'}}>
-					 <img
-				      className="d-block w-100"
-				      src={poster}
-				      alt="LLNL Poster"
-				    />
-			    </div>
 				<p>More information on the Tech4Good Lab can be found <a href="https://tech4good.soe.ucsc.edu/#/" target="_blank">here</a>.</p>
 				<p>The Glass Room website can be found <a href="https://theglassroom.org" target="_blank">here</a>.</p>
 				<p>The Glass Room SF offers Data Detox Kits, which are also available online <a href="https://datadetoxkit.org/en/privacy/essential" target="_blank">here</a>.</p>

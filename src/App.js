@@ -5,6 +5,8 @@ import './App.css';
 import {Nav} from "./Components/Nav/Nav";
 import {About} from "./Components/About/About";
 import {Resume} from "./Components/Resume/Resume";
+import {Projects} from "./Components/Projects/Projects";
+import {GIFinder} from "./Components/Projects/GIFinder/GIFinder";
 import {Photos} from "./Components/Photos/Photos";
 import {Contact} from "./Components/Contact/Contact";
 import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
@@ -36,6 +38,12 @@ export class App extends React.Component {
                   </Switch>
                   <Switch>
                     <Route path="/resume" exact component={Resume} />
+                  </Switch>
+                  <Switch>
+                    <Route path="/projects" exact component={Projects} />
+                  </Switch>
+                  <Switch>
+                    <Route path="/gifinder" exact component={GIFinder} />
                   </Switch>
                   <Switch>
                       <Route path="/photos" exact component={Photos} />
