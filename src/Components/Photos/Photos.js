@@ -26,7 +26,7 @@ export class Photos extends React.Component {
     />
 
     <Carousel.Caption>
-      <h3>Kinkakuji</h3>
+      <h5>Kinkakuji</h5>
       <p>The golden pavilion in Kyoto, Japan</p>
     </Carousel.Caption>
   </Carousel.Item>
@@ -38,7 +38,7 @@ export class Photos extends React.Component {
     />
 
     <Carousel.Caption>
-      <h3>Woolies</h3>
+      <h5>Woolies</h5>
       <p>清境農場 - 台灣</p>
       <p>Fluffy sheep of Qingjing Sheep Farm in Taiwan</p>
     </Carousel.Caption>
@@ -50,7 +50,7 @@ export class Photos extends React.Component {
       alt="Rocks"
     />
     <Carousel.Caption>
-      <h3>Rocks, rocks, and sand</h3>
+      <h5>Rocks, rocks, and sand</h5>
       <p>花蓮 - 台灣 Taiwan</p>
     </Carousel.Caption>
   </Carousel.Item>
@@ -61,7 +61,6 @@ export class Photos extends React.Component {
       alt="Waterfall"
     />
     <Carousel.Caption>
-      <h3></h3>
       <p>台灣 Taiwan</p>
     </Carousel.Caption>
   </Carousel.Item>

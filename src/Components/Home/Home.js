@@ -16,7 +16,7 @@ export class Home extends React.Component {
           />
           <div className="d-block w-100 mtn-caption">
             <div className="caption-box">
-              <h2 style={{fontSize: '3vw'}}>Melanie Wong</h2>
+              <h3 style={{fontSize: '3vw'}}>Melanie Wong</h3>
               <h4 style={{fontSize: '2vw'}}>React App</h4>
               <h6 style={{fontSize: '1vw'}}>Design + Development in progress :P</h6>
             </div>

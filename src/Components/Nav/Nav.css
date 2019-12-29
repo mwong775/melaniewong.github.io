@@ -1,3 +1,7 @@
+.appbar {
+	background-color: rgba(0, 0, 0, 0.5) !important;
+}
+
 a {
 	color: #FFF;
 }
@@ -6,3 +10,5 @@ a:hover {
 	color: #FFF;
 	text-decoration: none;
 }
+
+button:focus {outline:0;}

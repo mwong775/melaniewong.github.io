@@ -80,8 +80,8 @@ export const VerticalLinearStepper = () => {
       </Stepper>
       {activeStep === steps.length && (
         <Paper square elevation={0}>
-          <Typography>Introduction completed - scroll down for more info!</Typography>
-          <Button onClick={handleReset}>
+          <Typography style={{padding: "1%"}}>Introduction completed - scroll down for more info!</Typography>
+          <Button variant="contained" color="primary" onClick={handleReset} style={{margin: "1%"}}>
             Reset
           </Button>
         </Paper>

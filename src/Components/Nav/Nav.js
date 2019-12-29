@@ -117,7 +117,7 @@ export const Nav = () => {
   return (
     <React.Fragment>
       <CssBaseline />
-      <AppBar>
+      <AppBar className="appbar">
       <Tabs
        variant="scrollable"
           scrollButtons="off"
