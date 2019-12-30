@@ -49,6 +49,11 @@ h2 {
     width: 100%;
 }
 
+.gif-item:hover {
+  cursor: pointer;
+  background-color: #1aa3ff;
+}
+
 .gif-item img {
     width: 100%;
 }
@@ -69,7 +74,7 @@ input {
     color: white;
     height: 24px;
     margin: 0 auto;
-    width: 60%;
+    width: 65%;
 }
 
 *:focus {
