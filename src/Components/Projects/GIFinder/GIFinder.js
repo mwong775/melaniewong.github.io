@@ -30,10 +30,10 @@ export class GIFinder extends React.Component {
         axios.get(url)
           .then(response => {
             // handle success
-            console.log("response:", response);
+            // console.log("response:", response);
              this.setState({gifs:  response.data.data});
-             console.log("set gifs", this.state.gifs);
-             console.log("STATE", this.state);
+             // console.log("set gifs", this.state.gifs);
+             // console.log("STATE", this.state);
           })
           .catch(function (error) {
             // handle error
@@ -45,9 +45,9 @@ export class GIFinder extends React.Component {
     }
 
     handleInputChange = (term) => {
-    console.log("in App", term);
+    // console.log("in App", term);
     const url = BASE_URL + 'search?' + 'api_key=' + PUBLIC_KEY + '&q=' + term  + '&limit=' + LIMIT   + '&offset=' + OFFSET + '&rating=' + RATING + '&lang=' + LANG;
-    console.log('url for GET: ', url);
+    // console.log('url for GET: ', url);
     axios.get(url)
           .then(response => {
             // console.log("response:", response);
