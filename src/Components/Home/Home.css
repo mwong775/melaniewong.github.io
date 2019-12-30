@@ -62,4 +62,9 @@
     .intro {
       display: flex;
       flex-direction: row;
+
+    }
+
+    .about {
+      padding: 20px;
     }

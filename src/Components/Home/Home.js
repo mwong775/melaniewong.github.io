@@ -21,14 +21,14 @@ export class Home extends React.Component {
           </div>
         </div>
        <div className="intro">
-        <div>
+        <div className="about">
           <h4 className="abt-header">About Me</h4>
           <p>Hi there! I'm Melanie, and I'm an undergraduate student studying Computer Science at the University of California in Santa Cruz.</p>
           <Link to="/about">
             <Button>Learn More</Button>
           </Link>
         </div>
-        <div>
+        <div className="about">
           <h4 className="abt-header">About this Site</h4>
           <p>Welcome to my website! Please feel free to read more <Link to="/about">about</Link> me, or you can check out my <Link to="/resume">resume</Link>, travel <Link to="/Photos">photos</Link>, view site statistics (hopefully soon), or <Link to="/contact">contact</Link> me.</p>
           <p>Source available on GitHub <a href="https://github.com/mwong775/mwong775.github.io/tree/development" target="_blank">here</a>.</p>
