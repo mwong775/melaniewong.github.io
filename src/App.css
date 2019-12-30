@@ -3,14 +3,7 @@ body {
 	margin: 0;
 	padding: 0;
 	font-family: sans-serif;
-}
-
-#particles-js {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background: $background;
-  z-index:-1;
+	background: linear-gradient(to right, rgb(100, 52, 181), rgb(80, 166, 250));
 }
 
 .particles {
@@ -43,14 +36,7 @@ div.block {
 	padding: 2%;
 	width: 95%;
 	color: plum;
-	background-color:rgba(0, 0, 0, 0.5);
+	background-color:rgba(0, 0, 0, 0.4);
 	border-radius: 15px;
 }
 
-#particle-canvas {
-    position:fixed !important;
-    left:0;
-    top:0;
-    width:100%;
-    height:100%;
-}

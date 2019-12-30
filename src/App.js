@@ -66,7 +66,7 @@ export class App extends React.Component {
 const particleOpt = {
               "particles": {
           "number": {
-              "value": 80,
+              "value": 120,
               "density": {
                   "enable": true,
                   "value_area": 1500
@@ -81,7 +81,7 @@ const particleOpt = {
               "speed": 0.05
           },
           "size": {
-              "value": 2
+              "value": 3
           },
           "opacity": {
               "anim": {

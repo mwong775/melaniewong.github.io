@@ -1,10 +1,9 @@
 import React from 'react';
+import clsx from 'clsx';
 import PropTypes from 'prop-types';
 import AppBar from '@material-ui/core/AppBar';
 import Tabs from '@material-ui/core/Tabs';
-import Tab from '@material-ui/core/Tab';
 import Toolbar from '@material-ui/core/Toolbar';
-// import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import useScrollTrigger from '@material-ui/core/useScrollTrigger';
@@ -13,7 +12,13 @@ import Button from '@material-ui/core/Button';
 // import Box from '@material-ui/core/Box';
 // import Container from '@material-ui/core/Container';
 import Drawer from '@material-ui/core/Drawer';
+import Divider from '@material-ui/core/Divider';
+import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import IconButton from '@material-ui/core/IconButton';
+import List from '@material-ui/core/List';
+import ListItem from '@material-ui/core/ListItem';
+import ListItemIcon from '@material-ui/core/ListItemIcon';
+import ListItemText from '@material-ui/core/ListItemText';
 import MenuIcon from '@material-ui/icons/Menu';
 import Fab from '@material-ui/core/Fab';
 import Typography from '@material-ui/core/Typography';
@@ -22,6 +27,8 @@ import KeyboardArrowUpIcon from '@material-ui/icons/KeyboardArrowUp';
 import Zoom from '@material-ui/core/Zoom';
 import {Link} from 'react-router-dom'; 
 import './Nav.css';
+
+const drawerWidth = 240;
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -55,11 +62,26 @@ function a11yProps(index) {
 
 const useStyles = makeStyles(theme => ({
   root: {
+    display: 'flex',
     position: 'fixed',
     bottom: theme.spacing(2),
     right: theme.spacing(2),
 
     flexGrow: 1,
+  },
+  appBar: {
+    transition: theme.transitions.create(['margin', 'width'], {
+      easing: theme.transitions.easing.sharp,
+      duration: theme.transitions.duration.leavingScreen,
+    }),
+  },
+  appBarShift: {
+    width: `calc(100% - ${drawerWidth}px)`,
+    marginLeft: drawerWidth,
+    transition: theme.transitions.create(['margin', 'width'], {
+      easing: theme.transitions.easing.easeOut,
+      duration: theme.transitions.duration.enteringScreen,
+    }),
   },
   menuButton: {
     marginRight: theme.spacing(2),
@@ -67,9 +89,40 @@ const useStyles = makeStyles(theme => ({
   title: {
     flexGrow: 1,
   },
+  hide: {
+    display: 'none',
+  },
+  drawer: {
+    width: drawerWidth,
+    flexShrink: 0,
+  },
+  drawerPaper: {
+    width: drawerWidth,
+  },
+  drawerHeader: {
+    display: 'flex',
+    alignItems: 'center',
+    padding: theme.spacing(0, 1),
+    ...theme.mixins.toolbar,
+    justifyContent: 'flex-end',
+  },
+  content: {
+    flexGrow: 1,
+    padding: theme.spacing(3),
+    transition: theme.transitions.create('margin', {
+      easing: theme.transitions.easing.sharp,
+      duration: theme.transitions.duration.leavingScreen,
+    }),
+    marginLeft: -drawerWidth,
+  },
+  contentShift: {
+    transition: theme.transitions.create('margin', {
+      easing: theme.transitions.easing.easeOut,
+      duration: theme.transitions.duration.enteringScreen,
+    }),
+    marginLeft: 0,
+  },
 }));
-
- // const classes = useStyles();
 
 function ScrollTop(props) {
   const { children, window } = props;
@@ -110,9 +163,21 @@ ScrollTop.propTypes = {
 };
 
 export const Nav = () => {
+   const classes = useStyles();
    const [value, setValue] = React.useState(0);
    const handleChange = (event, newValue) => {
     setValue(newValue);
+  };
+
+// drawer stuff below
+   const [open, setOpen] = React.useState(false);
+
+  const handleDrawerOpen = () => {
+    setOpen(true);
+  };
+
+  const handleDrawerClose = () => {
+    setOpen(false);
   };
   return (
     <React.Fragment>
@@ -123,7 +188,7 @@ export const Nav = () => {
           scrollButtons="off"
           aria-label="scrollable prevent tabs example">
         <Toolbar class>
-            <IconButton edge="start" color="inherit" aria-label="open drawer" style={{marginLeft: "1%"}} onClick={()=> window.open("https://github.com/mwong775/mwong775.github.io/tree/development", "_blank")}>
+            <IconButton edge="start" color="inherit" aria-label="open drawer" style={{marginLeft: "1%"}} onClick={handleDrawerOpen} className={clsx(classes.menuButton, open && classes.hide)}>
             <MenuIcon />
           </IconButton>
           <Link to="/">
@@ -147,11 +212,32 @@ export const Nav = () => {
         </Toolbar>
         </Tabs>
       </AppBar>
-      <Drawer>
+      <Drawer
+      variant="persistent"
+      anchor="left"
+      open={open}
+      classes={{
+          paper: classes.drawerPaper,
+        }}
+      >
+      <div className={classes.drawerHeader}>
+          <IconButton onClick={handleDrawerClose}>
+            <ChevronLeftIcon />
+          </IconButton>
+        </div>
+        <List>
+        </List>
+        <Divider />
+        <List>
+        <ListItem button>
+        </ListItem>
+          <ListItemIcon></ListItemIcon>
+          <ListItemText>test</ListItemText>
+        </List>
       </Drawer>
       <Toolbar id="back-to-top-anchor" />
-      <ScrollTop>
-        <Fab color="secondary" size="small" aria-label="scroll back to top">
+      <ScrollTop className="back-to-top">
+        <Fab  size="small" aria-label="scroll back to top">
           <KeyboardArrowUpIcon />
         </Fab>
       </ScrollTop>

@@ -24,7 +24,7 @@ function getStepContent(step) {
       return 'I was a Compututation Intern at Lawrence Livermore National Laboratory, specifically the National Ignition Facility. My project involved migrating the tech stack of an in-house web-based application from Apache Struts to React. This involved redesigning the user interface in TypeScript, as well as implementing web services in Java.';
    
     case 2:
-      return `I'm finished my second quarter in the Tech4Good Lab at UCSC, focusing on improving usability and experience on one of our learning platforms. I'm also worked part time as an "Ingenious" for the Glass Room, a pop-up exhibition in downtown San Francisco sponsored by Tactical Tech and Mozilla Firefox. In the Glass Room, we faciliate workshops and activities addressing today's issues regarding data privacy and digital security.`;
+      return `This past quarter I was on the UX team in the Tech4Good Lab at UCSC, focusing on improving usability and experience on one of our learning platforms. I also worked part time this Fall as an "Ingenious" for the Glass Room, a pop-up exhibition in downtown San Francisco sponsored by Tactical Tech and Mozilla Firefox. In the Glass Room, we faciliate workshops and activities addressing today's issues regarding data privacy and digital security.`;
     case 3:
       return '';
     default:
@@ -99,7 +99,7 @@ export class About extends React.Component {
 				<br/>
 				<p>More information on the Tech4Good Lab can be found <a href="https://tech4good.soe.ucsc.edu/#/" target="_blank">here</a>.</p>
 				<p>The Glass Room website can be found <a href="https://theglassroom.org" target="_blank">here</a>.</p>
-				<p>The Glass Room SF offers Data Detox Kits, which are also available online <a href="https://datadetoxkit.org/en/privacy/essential" target="_blank">here</a>.</p>
+				<p>The Glass Room SF offers Data Detox Kits, which are also available online <a href="https://datadetoxkit.org/en/home" target="_blank">here</a>.</p>
 
 			</>
 			);
