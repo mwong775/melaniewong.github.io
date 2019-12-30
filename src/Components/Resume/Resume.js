@@ -12,10 +12,8 @@ export class Resume extends React.Component {
   render() {
     return (
       <div>
-      <h2>Resume</h2>{}
+      <h2>Resume</h2>
       <div style={{textAlign: 'center'}}>
-      <AppBar position="static" color="default">
-      </AppBar>
       <div style={{margin: '2%'}}>
           <iframe src="https://docs.google.com/gview?url=https://github.com/mwong775/mwong775.github.io/raw/development/Resume.pdf&embedded=true" 
           style={{width:"70%", height:"70vw"}} frameborder="0"></iframe>

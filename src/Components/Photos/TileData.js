@@ -1,31 +1,46 @@
 import rocks from './images/rocks.jpg';
 import goldBuilding from './images/old_gold_building.jpg';
-import sheep from '../Photos/images/sheeep.jpg';
+import sheep from './images/sheeep.jpg';
+import jamesLeitch from './images/James_Leitch_12-13-18.jpg';
+import NY from './images/NY_5-15-19_2.jpg';
+import pubu from './images/pubu.jpg';
+import tahoe from './images/Tahoe.jpg';
+
 
 const tileData = [
   {
-    img: {rocks},
-    title: 'HuaLian Rocks',
-    author: 'mwong',
-    cols: 2,
+    img: rocks,
+    title: 'Rocks, rocks, and sand',
+    location: '花蓮 - 台灣 Taiwan',
+    cols: 5,
     featured: true,
   },
   {
-    img: '/src/Components/Photos/images/old_gold_building.jpg',
-    title: 'gold shrine thing in Japan',
-    author: 'mwong',
+    img: goldBuilding,
+    title: '金閣寺 Kinkakuji',
+    location: 'Kyoto, Japan',
   },
   {
-    img: '/images/sheeep.jpg',
-    title: 'Taiwanese woolies',
-    author: 'mwong',
+    img: sheep,
+    title: 'Woolies',
+    location: '清境農場 - 台灣',
   },
   {
-    img: '/static/images/grid-list/morning.jpg',
-    title: 'Morning',
-    author: 'fancycrave1',
+    img: NY,
+    title: 'NY Skyline',
+    location: 'Manhattan, NY',
     featured: true,
   },
+  {
+    img: pubu,
+    title: '瀑布 (Waterfall)',
+    location: '台灣 Taiwan'
+  },
+  {
+  img: tahoe,
+  title: 'Blue Lake',
+  location: 'Lake Tahoe, NV'
+  }
 ];
 
 export default tileData;
