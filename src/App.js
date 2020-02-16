@@ -1,6 +1,5 @@
 import * as React from "react";
 import Particles from 'react-particles-js'; 
-//import logo from './logo.svg';
 import './App.css';
 import {Nav} from "./Components/Nav/Nav";
 import {About} from "./Components/About/About";
@@ -106,8 +105,5 @@ const particleOpt = {
       },
       "retina_detect": true
 }
-
-
-
 
 export default App;
