@@ -1,7 +1,7 @@
 import rocks from './images/rocks.jpg';
 import goldBuilding from './images/old_gold_building.jpg';
 import sheep from './images/sheeep.jpg';
-import jamesLeitch from './images/James_Leitch_12-13-18.jpg';
+// import jamesLeitch from './images/James_Leitch_12-13-18.jpg';
 import NY from './images/NY_5-15-19_2.jpg';
 import pubu from './images/pubu.jpg';
 import tahoe from './images/Tahoe.jpg';
