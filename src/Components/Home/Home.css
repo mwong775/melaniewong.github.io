@@ -5,12 +5,6 @@
     z-index: -100;
 }
 
-.home {
-/*      display: flex;
-      flex-direction: row;
-*/}
-
-
 .mtn {
       margin-bottom: 2%;
       position: relative;
@@ -67,4 +61,10 @@
 
     .about {
       padding: 20px;
+    }
+
+    @media screen and (max-width: 420px) {
+      .intro {
+        flex-direction: column;
+      }
     }
