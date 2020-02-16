@@ -3,9 +3,9 @@ import { makeStyles } from '@material-ui/core/styles';
 import ButtonBase from '@material-ui/core/ButtonBase';
 import Typography from '@material-ui/core/Typography';
 import poster from '../Photos/images/Poster.jpg';
-import iws from '../Photos/images/IWS.jpg'; // final webpage design...
+// import iws from '../Photos/images/IWS.jpg'; // final webpage design...
 import giphy from '../Photos/images/giphy.jpg';
-import Button from '@material-ui/core/Button';
+// import Button from '@material-ui/core/Button';
 import {Link} from 'react-router-dom'; 
 import './Projects.css';
 
@@ -136,7 +136,6 @@ export const Projects = () => {
 	<h6>Project poster from my 2019 summer internship at LLNL</h6>
 	<div className="poster">
 		 <img
-	      className="d-block w-100"
 	      src={poster}
 	      alt="LLNL Poster"
 	    />
