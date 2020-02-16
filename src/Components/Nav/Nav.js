@@ -192,22 +192,22 @@ export const Nav = () => {
             <MenuIcon />
           </IconButton>
           <Link to="/">
-            <Button color="inherit" {...a11yProps(0)}>Home</Button>
+            <Button {...a11yProps(0)}>Home</Button>
           </Link>
           <Link to="/about">
-            <Button color="inherit" {...a11yProps(1)}>About Me</Button>
+            <Button {...a11yProps(1)}>About Me</Button>
           </Link>
           <Link to="/resume" {...a11yProps(2)}>
-            <Button color="inherit">Resume</Button>
+            <Button>Resume</Button>
           </Link>
-          <Link to="/projects" className="link" {...a11yProps(3)}>
-            <Button color="inherit">Projects</Button>
+          <Link to="/projects" {...a11yProps(3)}>
+            <Button>Projects</Button>
           </Link>
-          <Link to="/photos" className="link" {...a11yProps(4)}>
-            <Button color="inherit">Photos</Button>
+          <Link to="/photos" {...a11yProps(4)}>
+            <Button>Photos</Button>
           </Link>
-          <Link to="/contact" className="link" {...a11yProps(5)}>
-            <Button color="inherit">Contact</Button>
+          <Link to="/contact" {...a11yProps(5)}>
+            <Button>Contact</Button>
           </Link>
         </Toolbar>
         </Tabs>
