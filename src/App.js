@@ -8,7 +8,7 @@ import {Projects} from "./Components/Projects/Projects";
 import {GIFinder} from "./Components/Projects/GIFinder/GIFinder";
 import {Photos} from "./Components/Photos/Photos";
 import {Contact} from "./Components/Contact/Contact";
-import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
+import {HashRouter as Router, Route, Switch} from "react-router-dom";
 import {Home} from "./Components/Home/Home";
 import CssBaseline from '@material-ui/core/CssBaseline';
 import { MuiThemeProvider, createMuiTheme, responsiveFontSizes} from '@material-ui/core/styles'; // responseiveFontSizes needs testing
