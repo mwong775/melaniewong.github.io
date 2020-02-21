@@ -16,6 +16,9 @@ import { MuiThemeProvider, createMuiTheme, responsiveFontSizes} from '@material-
 let theme = createMuiTheme({
   palette: {
     type: "dark",
+    primary: {
+        main: "#dda0dd"
+    }
   },
 });
 theme = responsiveFontSizes(theme);
@@ -26,34 +29,32 @@ export class App extends React.Component {
         <Router basename={process ? process.env.PUBLIC_URL : ""}>
           <div>
            <MuiThemeProvider theme={theme}>
-              <CssBaseline />
-              <header>
-                 <Nav/>
-              </header>
-                <Particles params={particleOpt} className="particles"/>
-              <div className="block">
-                  <Switch>
-                    <Route path="/about" exact component={About} />
-                  </Switch>
-                  <Switch>
-                    <Route path="/resume" exact component={Resume} />
-                  </Switch>
-                  <Switch>
-                    <Route path="/projects" exact component={Projects} />
-                  </Switch>
-                  <Switch>
-                    <Route path="/gifinder" exact component={GIFinder} />
-                  </Switch>
-                  <Switch>
-                      <Route path="/photos" exact component={Photos} />
-                  </Switch>
-                  <Switch>
-                      <Route path="/contact" exact component={Contact} />
-                  </Switch>
-                  <Switch>
-                      <Route path="/" exact component={Home} />
-                  </Switch>
-              </div>
+            <CssBaseline />
+            <header>
+                <Nav/>
+            </header>
+            <Particles params={particleOpt} className="particles"/>
+                <Switch>
+                <Route path="/about" exact component={About} />
+                </Switch>
+                <Switch>
+                <Route path="/resume" exact component={Resume} />
+                </Switch>
+                <Switch>
+                <Route path="/projects" exact component={Projects} />
+                </Switch>
+                <Switch>
+                <Route path="/gifinder" exact component={GIFinder} />
+                </Switch>
+                <Switch>
+                    <Route path="/photos" exact component={Photos} />
+                </Switch>
+                <Switch>
+                    <Route path="/contact" exact component={Contact} />
+                </Switch>
+                <Switch>
+                    <Route path="/" exact component={Home} />
+                </Switch>
               <footer className="mb-5"/>
               </MuiThemeProvider>
           </div>

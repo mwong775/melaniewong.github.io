@@ -95,8 +95,8 @@ const useStyles = makeStyles(theme => ({
 export const Projects = () => {
   const classes = useStyles();
 		return(
-				<>
-			<h2>Projects</h2>
+				<div className="content-wrapper">
+			<h2 className="gradient-font">Projects</h2>
 		 <div className={classes.root}>
       {images.map(image => (
         <ButtonBase
@@ -140,6 +140,6 @@ export const Projects = () => {
 	      alt="LLNL Poster"
 	    />
 	</div>
-	</>
+	</div>
 );
 }

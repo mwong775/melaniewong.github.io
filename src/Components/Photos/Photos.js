@@ -40,8 +40,8 @@ const useStyles = makeStyles(theme => ({
 export const Photos = () => {
     const classes = useStyles();
 		return(
-			<>
-			<h2>Photos</h2>
+			<div className="content-wrapper">
+			<h2 className="gradient-font">Photos</h2>
       <div className={classes.root}>
       <GridList cellHeight={180} className={classes.gridList} cols={3}>
         <GridListTile key="Subheader" cols={3} style={{ height: 'auto' }}>
@@ -64,6 +64,6 @@ export const Photos = () => {
         ))}
       </GridList>
     </div>
-    </>
+    </div>
 			);
 	}

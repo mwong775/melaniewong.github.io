@@ -91,14 +91,14 @@ export const VerticalLinearStepper = () => {
 export class About extends React.Component {
 	render() {
 		return(
-			<>
-				<h2>About Me</h2>
+			<div className="content-wrapper">
+				<h2 className="gradient-font">About Me</h2>
 				<VerticalLinearStepper/>
 				<br/>
 				<p>More information on the Tech4Good Lab can be found <a href="https://tech4good.soe.ucsc.edu/#/" target="_blank" rel="noopener noreferrer">here</a>.</p>
 				<p>The Glass Room website can be found <a href="https://theglassroom.org" target="_blank" rel="noopener noreferrer">here</a>.</p>
 				<p>The Glass Room SF offers Data Detox Kits, which are also available online <a href="https://datadetoxkit.org/en/home" target="_blank" rel="noopener noreferrer">here</a>.</p>
-			</>
+			</div>
 			);
 	}
 }
