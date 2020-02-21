@@ -26,7 +26,7 @@ export class GIFinder extends React.Component {
 
     getTrending() {
         // Make a request for a user with a given ID
-        const url = BASE_URL + 'trending?' + 'api_key=' + PUBLIC_KEY + '&limit=' + LIMIT + '&rating=' + RATING;
+        const url = BASE_URL + 'trending?api_key=' + PUBLIC_KEY + '&limit=' + LIMIT + '&rating=' + RATING;
         axios.get(url)
           .then(response => {
             // handle success
@@ -46,7 +46,7 @@ export class GIFinder extends React.Component {
 
     handleInputChange = (term) => {
     // console.log("in App", term);
-    const url = BASE_URL + 'search?' + 'api_key=' + PUBLIC_KEY + '&q=' + term  + '&limit=' + LIMIT   + '&offset=' + OFFSET + '&rating=' + RATING + '&lang=' + LANG;
+    const url = BASE_URL + 'search?api_key=' + PUBLIC_KEY + '&q=' + term  + '&limit=' + LIMIT   + '&offset=' + OFFSET + '&rating=' + RATING + '&lang=' + LANG;
     // console.log('url for GET: ', url);
     axios.get(url)
           .then(response => {
