@@ -64,15 +64,14 @@ const useStyles = makeStyles(theme => ({
   root: {
     display: 'flex',
     position: 'fixed',
-    bottom: theme.spacing(2),
-    right: theme.spacing(2),
-
-    flexGrow: 1,
+    // bottom: theme.spacing(2),
+    // right: theme.spacing(2),
+    // flexGrow: 1,
   },
   appBar: {
     transition: theme.transitions.create(['margin', 'width'], {
-      easing: theme.transitions.easing.sharp,
-      duration: theme.transitions.duration.leavingScreen,
+    easing: theme.transitions.easing.sharp,
+    duration: theme.transitions.duration.leavingScreen,
     }),
   },
   appBarShift: {
@@ -164,10 +163,11 @@ ScrollTop.propTypes = {
 
 export const Nav = () => {
    const classes = useStyles();
-   const [value, setValue] = React.useState(0);
-   const handleChange = (event, newValue) => {
-    setValue(newValue);
-  };
+  //  const [value, setValue] = React.useState(0);
+  //  const [setValue] = React.useState(0); 
+  //  const handleChange = (event, newValue) => {
+  //   setValue(newValue);
+  // };
 
 // drawer stuff below
    const [open, setOpen] = React.useState(false);
@@ -188,7 +188,7 @@ export const Nav = () => {
           scrollButtons="off"
           aria-label="scrollable prevent tabs example">
         <Toolbar class>
-            <IconButton edge="start" color="inherit" aria-label="open drawer" style={{marginLeft: "1%"}} onClick={handleDrawerOpen} className={clsx(classes.menuButton, open && classes.hide)}>
+            <IconButton edge="start" aria-label="open drawer" style={{marginLeft: "1%"}} onClick={handleDrawerOpen} className={clsx(classes.menuButton, open && classes.hide)}>
             <MenuIcon />
           </IconButton>
           <Link to="/">
@@ -238,7 +238,7 @@ export const Nav = () => {
       <Toolbar id="back-to-top-anchor" />
       <ScrollTop className="back-to-top">
         <Fab  size="small" aria-label="scroll back to top">
-          <KeyboardArrowUpIcon />
+          <KeyboardArrowUpIcon/>
         </Fab>
       </ScrollTop>
     </React.Fragment>
