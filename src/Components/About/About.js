@@ -9,17 +9,17 @@ import Typography from '@material-ui/core/Typography';
 import './About.css';
 
 function getSteps() {
-  return ['Introduction', 'This past Summer...', 'During Fall 2019...', 'Now for 2020...'];
+  return ['Introduction', 'This past Summer...', 'During Fall 2019...', 'For 2020...'];
 }
 
 function getStepContent(step) {
   switch (step) {
     case 0:
       return `I am a student pursuing a B.S. in Computer Science at UC Santa Cruz. Some of my interests include 
-            computer and network security, software engineering, and using technology for social good.
+            computer and network security, software engineering, and developing technology for social good.
             I'm also a former Division III student-athlete in track & field, specializing in sprints and hurdles.`;
     case 1:
-      return 'I was a Compututation Intern at the National Ignition Facility, a division of Lawrence Livermore National Laboratory. My project involved migrating the technology stack of an in-house web-based application from Apache Struts to React and RESTful services. This involved creating a brand new front-end using React.js, implementing web services in Java, and deploying the new application using Atlassian Bamboo.';
+      return 'I was a Computation Intern at the National Ignition Facility, a division of Lawrence Livermore National Laboratory. My project involved migrating the technology stack of an in-house web-based application from Apache Struts to React and RESTful services. This involved creating a brand new front-end using React.js, implementing web services in Java, and deploying the new application using Atlassian Bamboo.';
    
     case 2:
       return `This past quarter I was on the UX team in the Tech4Good Lab at UCSC, focusing on improving usability and experience on one of our learning platforms. I also worked part time this Fall as a Mozilla Ingenious for the Glass Room, a pop-up exhibition in downtown San Francisco sponsored by Tactical Tech and Mozilla Firefox. In the Glass Room, we faciliate workshops and activities addressing today's issues regarding data privacy and digital security.`;
