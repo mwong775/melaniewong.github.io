@@ -2,20 +2,22 @@ import * as React from "react";
 import './Home.css';
 import {Link} from 'react-router-dom'; 
 import Button from '@material-ui/core/Button';
+import mashimaro from '../Photos/images/mashimaro.png';
 
 export class Home extends React.Component {
 	render() {
 		return (
 			<div className="home">
         <div className="intro">
-          <h2>Melanie Wong</h2>
+          <h2 className="name">Melanie Wong</h2>
+          <img className="mashimaro" src={mashimaro} alt="mashimaro"/>
         </div>   
         <div className="about content-wrapper">
           <div className="about-wrapper">
             <h4 className="gradient-font">About Me</h4>
             <p>Hi there! I'm Melanie, and I'm an undergraduate student studying Computer Science at the University of California in Santa Cruz.</p>
             <Link to="/about">
-              <Button style={{color: 'plum'}}>Learn More</Button>
+              <Button style={{color: '#5f60b3'}}>Learn More</Button>
             </Link>
           </div>
           <div className="about-wrapper">
