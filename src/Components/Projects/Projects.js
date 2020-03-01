@@ -21,9 +21,8 @@ const useStyles = makeStyles(theme => ({
   root: {
     display: 'flex',
     flexDirection: 'row',
-    // flexWrap: 'wrap',
     minWidth: 300,
-    width: '80%',
+    width: '100%',
     marginTop: 30
   },
   image: {
@@ -130,11 +129,11 @@ export const Projects = () => {
         </Link>
         </ButtonBase>
       ))}
-    <h5 style={{paddingLeft: '20%', margin: 'auto'}}>A simple search to discover awesome GIFs, powered by the Giphy API</h5>
+    <h4 className="project-summary" style={{marginLeft: '20%'}}>A simple search to discover awesome GIFs, powered by the Giphy API</h4>
     </div>
     <br/>
-	<h6>Project poster from my 2019 summer internship at LLNL</h6>
 	<div className="poster">
+    <h4 className="project-summary">Project poster from my 2019 summer internship at LLNL</h4>
 		 <img
 	      src={poster}
 	      alt="LLNL Poster"

@@ -16,7 +16,6 @@ export class GIFinder extends React.Component {
     state = {
         gifs: [],
         viewMode: 'Trending'
-        // gifData: {}
     }
     // this.handleInputChange = this.handleInputChange.bind(this);
 
