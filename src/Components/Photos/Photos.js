@@ -33,7 +33,7 @@ const useStyles = makeStyles(theme => ({
       'linear-gradient(to top, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.3) 70%, rgba(0,0,0,0) 100%)',
   },
   icon: {
-    color: 'rgba(255, 255, 255, 0.54)',
+    color: 'rgba(255, 255, 255, 0.4)',
   },
 }));
 
@@ -42,11 +42,9 @@ export const Photos = () => {
 		return(
 			<div className="content-wrapper">
 			<h2 className="gradient-font">Photos</h2>
+      <div style={{marginBottom: '5%'}}>Surprisingly decent photos taken with an iPhone</div>
       <div className={classes.root}>
-      <GridList cellHeight={180} className={classes.gridList} cols={3}>
-        <GridListTile key="Subheader" cols={3} style={{ height: 'auto' }}>
-          <ListSubheader component="div">Surprisingly decent photos taken with an iPhone</ListSubheader>
-        </GridListTile>
+      <GridList className={classes.gridList} cols={3}>
         {tileData.map(tile => (
           <GridListTile key={tile.img}>
             <img src={tile.img} alt={tile.title} />
