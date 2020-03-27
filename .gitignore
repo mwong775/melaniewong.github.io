@@ -12,3 +12,8 @@
 # IntelliJ stuff
 /.idea
 mwong775.github.io.iml
+
+# Elastic Beanstalk Files
+.elasticbeanstalk/*
+!.elasticbeanstalk/*.cfg.yml
+!.elasticbeanstalk/*.global.yml
