@@ -7,10 +7,7 @@ import Toolbar from '@material-ui/core/Toolbar';
 import { makeStyles } from '@material-ui/core/styles';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import useScrollTrigger from '@material-ui/core/useScrollTrigger';
-// import AccountCircle from '@material-ui/icons/AccountCircle';
 import Button from '@material-ui/core/Button';
-// import Box from '@material-ui/core/Box';
-// import Container from '@material-ui/core/Container';
 import Drawer from '@material-ui/core/Drawer';
 import Divider from '@material-ui/core/Divider';
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
@@ -28,7 +25,7 @@ import Zoom from '@material-ui/core/Zoom';
 import {Link} from 'react-router-dom'; 
 import './Nav.css';
 
-const drawerWidth = 240;
+const drawerWidth = 320;
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -64,9 +61,10 @@ const useStyles = makeStyles(theme => ({
   root: {
     display: 'flex',
     position: 'fixed',
-    // bottom: theme.spacing(2),
-    // right: theme.spacing(2),
-    // flexGrow: 1,
+    bottom: theme.spacing(2),
+    right: theme.spacing(2),
+    flexGrow: 1,
+    zIndex: 1
   },
   appBar: {
     transition: theme.transitions.create(['margin', 'width'], {
@@ -124,13 +122,9 @@ const useStyles = makeStyles(theme => ({
 }));
 
 function ScrollTop(props) {
-  const { children, window } = props;
+  const { children } = props;
   const classes = useStyles();
-  // Note that you normally won't need to set the window ref as useScrollTrigger
-  // will default to window.
-  // This is only being set here because the demo is in an iframe.
   const trigger = useScrollTrigger({
-    target: window ? window() : undefined,
     disableHysteresis: true,
     threshold: 100,
   });
@@ -152,25 +146,11 @@ function ScrollTop(props) {
   );
 }
 
-ScrollTop.propTypes = {
-  children: PropTypes.element.isRequired,
-  /**
-   * Injected by the documentation to work in an iframe.
-   * You won't need it on your project.
-   */
-  window: PropTypes.func,
-};
-
 export const Nav = () => {
    const classes = useStyles();
-  //  const [value, setValue] = React.useState(0);
-  //  const [setValue] = React.useState(0); 
-  //  const handleChange = (event, newValue) => {
-  //   setValue(newValue);
-  // };
 
-// drawer stuff below
-   const [open, setOpen] = React.useState(false);
+  // drawer stuff below
+  const [open, setOpen] = React.useState(false);
 
   const handleDrawerOpen = () => {
     setOpen(true);
@@ -182,9 +162,12 @@ export const Nav = () => {
   return (
     <React.Fragment>
       <CssBaseline />
-      <AppBar className="appbar">
+      <AppBar position="fixed"
+        className={clsx(classes.appBar, {
+          [classes.appBarShift]: open,
+        }, "appbar")}>
       <Tabs
-       variant="scrollable"
+          variant="scrollable"
           scrollButtons="off"
           aria-label="scrollable prevent tabs example">
         <Toolbar class>
@@ -225,37 +208,20 @@ export const Nav = () => {
             <ChevronLeftIcon />
           </IconButton>
         </div>
-        <List>
-        </List>
-        <Divider />
+        <Divider/>
         <List>
         <ListItem button>
         </ListItem>
           <ListItemIcon></ListItemIcon>
-          <ListItemText>test</ListItemText>
+          <ListItemText primary="text"></ListItemText>
         </List>
       </Drawer>
       <Toolbar id="back-to-top-anchor" />
       <ScrollTop className="back-to-top">
-        <Fab  size="small" aria-label="scroll back to top">
+        <Fab size="small" aria-label="scroll back to top">
           <KeyboardArrowUpIcon/>
         </Fab>
       </ScrollTop>
     </React.Fragment>
   );
 }
-
- /*} <Typography variant="h6">
-            not News
-          </Typography> */
-
-          /* <IconButton
-                className="accountCircle"
-                aria-label="account of current user"
-                aria-controls="menu-appbar"
-                aria-haspopup="true"
-                color="inherit"
-              >
-                <AccountCircle />
-              </IconButton> */
-
