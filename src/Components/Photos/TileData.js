@@ -12,8 +12,6 @@ const tileData = [
     img: rocks,
     title: 'Rocks, rocks, and sand',
     location: '花蓮 - 台灣 Taiwan',
-    cols: 5,
-    featured: true,
   },
   {
     img: goldBuilding,
@@ -29,7 +27,6 @@ const tileData = [
     img: NY,
     title: 'NY Skyline',
     location: 'Manhattan, NY',
-    featured: true,
   },
   {
     img: pubu,

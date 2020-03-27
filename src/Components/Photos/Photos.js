@@ -6,13 +6,14 @@ import GridListTileBar from '@material-ui/core/GridListTileBar';
 import IconButton from '@material-ui/core/IconButton';
 import InfoIcon from '@material-ui/icons/Info';
 import tileData from './TileData';
-// import rocks from './images/rocks.jpg';
-// import goldBuilding from './images/old_gold_building.jpg';
-// import sheep from './images/sheeep.jpg';
-// import jamesLeitch from './images/James_Leitch_12-13-18.jpg';
-// import NY from './images/NY_5-15-19_2.jpg';
-// import pubu from './images/pubu.jpg';
-// import tahoe from './images/Tahoe.jpg';
+import Dialog from '@material-ui/core/Dialog';
+import DialogActions from '@material-ui/core/DialogActions';
+import DialogContent from '@material-ui/core/DialogContent';
+import DialogContentText from '@material-ui/core/DialogContentText';
+import DialogTitle from '@material-ui/core/DialogTitle';
+import SvgIcon from '@material-ui/core/SvgIcon';
+import useMediaQuery from '@material-ui/core/useMediaQuery';
+import { useTheme } from '@material-ui/core/styles';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -38,29 +39,69 @@ const useStyles = makeStyles(theme => ({
 
 export const Photos = () => {
     const classes = useStyles();
+    const [open, setOpen] = React.useState(false);
+    const [pic, setPic] = React.useState({});
+    const theme = useTheme();
+    const fullScreen = useMediaQuery(theme.breakpoints.down('sm'));
+    const handleClickOpen = (pic) => {
+      setPic(pic);
+      setOpen(true);
+    };
+  
+    const handleClose = () => {
+      setOpen(false);
+    };
+
 		return(
 			<div className="content-wrapper">
 			<h2 className="gradient-font">Photos</h2>
       <div style={{marginBottom: '5%'}}>Surprisingly decent photos taken with an iPhone</div>
       <div className={classes.root}>
-      <GridList className={classes.gridList} cols={3}>
-        {tileData.map(tile => (
-          <GridListTile key={tile.img}>
-            <img src={tile.img} alt={tile.title} />
-            <GridListTileBar
-              title={tile.title}
-              subtitle={<span>{tile.location}</span>}
-              classes={{root: classes.titleBar}}
-              actionIcon={
-                <IconButton aria-label={`info about ${tile.title}`} className={classes.icon}>
-                  <InfoIcon />
-                </IconButton>
-              }
-            />
-          </GridListTile>
-        ))}
-      </GridList>
+        <GridList className={classes.gridList} cellHeight={180}>
+          {tileData.map(tile => (
+            <GridListTile key={tile.img} >
+              <img src={tile.img} alt={tile.title} cols={2} style={{ height: 'auto' }}/>
+              <GridListTileBar
+                title={tile.title}
+                subtitle={<span>{tile.location}</span>}
+                classes={{root: classes.titleBar}}
+                actionIcon={
+                  <IconButton aria-label={`info about ${tile.title}`} className={classes.icon} onClick={() => handleClickOpen(tile)}>
+                    <InfoIcon/>
+                  </IconButton>
+                }/>
+                <Dialog
+                fullScreen={fullScreen}
+                open={open}
+                onClose={handleClose}
+                aria-labelledby="responsive-dialog-title"
+                >
+                <DialogTitle id="responsive-dialog-title">{tile.title}</DialogTitle>
+                <DialogContent>
+                  <DialogContentText>
+                    {pic.location}
+                  </DialogContentText>
+                  <img src={pic.img} alt={pic.title} />
+                </DialogContent>
+                <DialogActions>
+                  <IconButton onClick={handleClose}>
+                    <HomeIcon color="primary"/>
+                  </IconButton>
+                </DialogActions>
+              </Dialog>
+            </GridListTile>
+          ))}
+        </GridList>
+      </div>
     </div>
-    </div>
-			);
-	}
+    );
+  }
+
+  function HomeIcon(props) {
+    return (
+      <SvgIcon {...props}>
+        <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z" />
+      </SvgIcon>
+    );
+  }
+  
