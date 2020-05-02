@@ -5,23 +5,10 @@ import {faFacebook, faLinkedin, faGithub} from "@fortawesome/free-brands-svg-ico
 import EmailIcon from '@material-ui/icons/Email';
 import DirectionsRunIcon from '@material-ui/icons/DirectionsRun';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import cinnamoroll_stack from '../Photos/images/cinna_stack.gif';
+
 
 export class Contact extends React.Component {
-	constructor(props) {
-		super(props);
-		this.state = { apiResponse: ""};
-		}
-	
-	callAPI() {
-		fetch("http://localhost:9000/testAPI")
-			.then(res => res.text())
-			.then(res => this.setState({ apiResponse: res }));
-	}
-
-	componentWillMount() {
-		this.callAPI();
-	}
-	
 	render() {
 		return(
 			<div className="content-wrapper">
@@ -32,7 +19,8 @@ export class Contact extends React.Component {
 				<IconButton onClick={()=> window.open("https://www.linkedin.com/in/mwong775", "_blank")}><FontAwesomeIcon color='#199bfc' icon={faLinkedin}/></IconButton>
 				<IconButton onClick={()=> window.open("https://github.com/mwong775", "_blank")}><FontAwesomeIcon color='#199bfc' icon={faGithub}/></IconButton>
 				<IconButton onClick={()=> window.open("https://www.goslugs.com/sports/track/2018-19/bios/wong_melanie_0nqe?view=bio", "_blank")}><DirectionsRunIcon style={{color: '#199bfc'}}/></IconButton>
-				{/* <p className="App-intro">{this.state.apiResponse}</p> */}
+				<br/>
+				<img className="cinnamoroll" src={cinnamoroll_stack} alt="cinnamoroll"/>
 			</div>
 			);
 	}
