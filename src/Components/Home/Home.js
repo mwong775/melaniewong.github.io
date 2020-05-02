@@ -2,7 +2,8 @@ import * as React from "react";
 import './Home.css';
 import {Link} from 'react-router-dom'; 
 import Button from '@material-ui/core/Button';
-import mashimaro from '../Photos/images/mashimaro.png';
+import cinnamoroll_sup from '../Photos/images/cinna_sup.gif';
+
 
 export class Home extends React.Component {
 	render() {
@@ -10,7 +11,7 @@ export class Home extends React.Component {
 			<div className="home">
         <div className="intro">
           <h2 className="name">Melanie Wong</h2>
-          <img className="mashimaro" src={mashimaro} alt="mashimaro"/>
+          <img className="cinnamoroll" src={cinnamoroll_sup} alt="cinnamoroll"/>
         </div>   
         <div className="about content-wrapper">
           <div className="about-wrapper">
