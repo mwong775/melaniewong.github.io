@@ -1,4 +1,4 @@
-# mwong.github.io
+# melaniewong.github.io
 My personal website developed using ReactJS and hosted on GitHub Pages
 
 Deployment files exist on the `master` branch
