@@ -7,7 +7,7 @@ cache:
   - node_modules
 branches:
   only:
-  - master
+  - development
 notifications:
   email: true
 before_script:
