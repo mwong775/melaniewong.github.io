@@ -24,7 +24,7 @@ export class Home extends React.Component {
           <div className="about-wrapper">
             <h4 className="gradient-font">About This Site</h4>
             <p>Welcome to my website! Please feel free to read more <Link to="/about">about</Link> me, or you can check out my <Link to="/resume">resume</Link>, past <Link to="/projects">projects</Link>, collection of <Link to="/photos">photos</Link>, or <Link to="/contact">contact</Link> me.</p>
-            <p>Source available on GitHub <a href="https://github.com/mwong775/mwong775.github.io/tree/development" target="_blank" rel="noopener noreferrer">here</a>.</p>
+            <p>Source available on GitHub <a href="https://github.com/mwong775/melaniewong.github.io/tree/development" target="_blank" rel="noopener noreferrer">here</a>.</p>
           </div>
         </div>
       </div>
