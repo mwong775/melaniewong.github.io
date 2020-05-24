@@ -29,7 +29,7 @@
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
     "deploy": "gh-pages -b master -d build",
-    "dev-docker": "docker build -t melaniewong.github.io . && docker run -v ./:/website/ -p 3000:3000 --name website_instance melaniewong.github.io"
+    "dev-docker": "docker build -t mwong775.github.io . && docker run -v ./:/website/ -p 3000:3000 --name website_instance mwong775.github.io"
   },
   "eslintConfig": {
     "extends": "react-app"
