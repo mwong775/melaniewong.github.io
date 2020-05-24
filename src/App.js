@@ -9,8 +9,9 @@ import {GIFinder} from "./components/Projects/GIFinder/GIFinder";
 // import {Twitter} from "./components/Projects/Twitter/Twitter";
 import {Photos} from "./components/Photos/Photos";
 import {Contact} from "./components/Contact/Contact";
-import {BrowserRouter as Router, Redirect, Route, Switch} from 'react-router-dom';import {Home} from "./components/Home/Home";
-import {ScrollToTop} from "./components/ScrollToTop"
+import {BrowserRouter as Router, Redirect, Route, Switch} from 'react-router-dom';
+import {Home} from "./components/Home/Home";
+// import {ScrollToTop} from "./components/ScrollToTop"
 import CssBaseline from '@material-ui/core/CssBaseline';
 import { MuiThemeProvider, createMuiTheme, responsiveFontSizes} from '@material-ui/core/styles'; // responseiveFontSizes needs testing
 
@@ -37,19 +38,33 @@ export class App extends React.Component {
             <Particles params={particleOpt} className="particles"/>
                 <Switch>
                     <Route path="/" exact component={Home} />
+                </Switch>
+                <Switch>
                     <Route path="/about" exact component={About} />
+                </Switch>
+                <Switch>
                     <Route path="/resume" exact component={Resume} />
+                </Switch>
+                <Switch>
                     <Route path="/projects" exact component={Projects} />
+                </Switch>
+                <Switch>
                     <Route path="/gifinder" exact component={GIFinder} />
+                </Switch>
+                    <Switch>
                     <Route path="/photos" exact component={Photos} />
+                </Switch>
+                <Switch>
                     <Route path="/contact" exact component={Contact} />
+                </Switch>
+                <Switch>
                     <Redirect to='/'/>
                 </Switch>
               {/* </ScrollToTop> */}
               </MuiThemeProvider>
-      </Router>
-      );
-  }
+        </Router>
+        );
+    }
 }
 
 const particleOpt = {
