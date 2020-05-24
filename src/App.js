@@ -10,7 +10,7 @@ import {GIFinder} from "./components/Projects/GIFinder/GIFinder";
 import {Photos} from "./components/Photos/Photos";
 import {Contact} from "./components/Contact/Contact";
 import {BrowserRouter as Router, Redirect, Route, Switch} from 'react-router-dom';import {Home} from "./components/Home/Home";
-import {ScrollToTop} from "./components/ScrollToTop"
+// import {ScrollToTop} from "./components/ScrollToTop"
 import CssBaseline from '@material-ui/core/CssBaseline';
 import { MuiThemeProvider, createMuiTheme, responsiveFontSizes} from '@material-ui/core/styles'; // responseiveFontSizes needs testing
 
@@ -29,7 +29,7 @@ export class App extends React.Component {
       return (
         <Router basename={process ? process.env.PUBLIC_URL : ""}>
            <MuiThemeProvider theme={theme}>
-            <ScrollToTop>
+            {/* <ScrollToTop> */}
             <CssBaseline />
             <header>
                 <Nav/>
@@ -45,7 +45,7 @@ export class App extends React.Component {
                     <Route path="/contact" exact component={Contact} />
                     <Redirect to='/'/>
                 </Switch>
-              </ScrollToTop>
+              {/* </ScrollToTop> */}
               </MuiThemeProvider>
       </Router>
       );
