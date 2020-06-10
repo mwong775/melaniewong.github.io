@@ -12,7 +12,7 @@ export class Resume extends React.Component {
       <div className="content-wrapper">
         <h2 className="gradient-font">Resume</h2>
         <br/>
-        <Button href="https://github.com/mwong775/melaniewong.github.io/raw/development/Resume.pdf" download={'Melanie Wong Resume'}>Download</Button>
+        <Button href={CV} download={'Melanie Wong Resume'}>Download</Button>
         <div className="resume-container">
             <object className={styles.pdf} type="application/pdf" data={CVUrl}>
               <p>PDF cannot be displayed :(</p>
