@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 import Stepper from '@material-ui/core/Stepper';
 import Step from '@material-ui/core/Step';
 import StepLabel from '@material-ui/core/StepLabel';
@@ -12,7 +12,7 @@ function getSteps() {
   return ['Introduction', 'This past Summer...', 'During Fall 2019...', 'For 2020...'];
 }
 
-function getStepContent(step) {
+function getStepContent(step: Number) {
   switch (step) {
     case 0:
       return `I am a student pursuing a B.S. in Computer Science at UC Santa Cruz. Some of my interests include 
