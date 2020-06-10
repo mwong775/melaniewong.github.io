@@ -56,10 +56,9 @@ const useStyles = makeStyles((theme: Theme) => ({
 }));
 
 function ScrollTop(props: any) {
-  const { children, window } = props;
+  const { children } = props;
   const classes = useStyles();
   const trigger = useScrollTrigger({
-    target: window ? window() : undefined,
     disableHysteresis: true,
     threshold: 100,
   });
@@ -86,7 +85,7 @@ function ScrollTop(props: any) {
 export class Nav extends React.Component {
   render() {
     return (
-      <React.Fragment>
+      <div className="nav">
         <AppBar className="appbar">
         <Tabs
             variant="scrollable"
@@ -96,11 +95,11 @@ export class Nav extends React.Component {
               <IconButton edge="start" aria-label="open drawer" style={{marginLeft: "1%"}}>
               <MenuIcon />
             </IconButton>
-            <Link to="/">
-              <Button {...a11yProps(0)}>Home</Button>
+            <Link to="/" {...a11yProps(0)}>
+              <Button>Home</Button>
             </Link>
-            <Link to="/about">
-              <Button {...a11yProps(1)}>About Me</Button>
+            <Link to="/about" {...a11yProps(1)}>
+              <Button>About Me</Button>
             </Link>
             <Link to="/resume" {...a11yProps(2)}>
               <Button>Resume</Button>
@@ -123,7 +122,7 @@ export class Nav extends React.Component {
             <KeyboardArrowUpIcon/>
           </Fab>
         </ScrollTop>
-      </React.Fragment>
+      </div>
     );
   }
 }

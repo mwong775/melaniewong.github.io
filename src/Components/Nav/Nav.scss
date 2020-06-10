@@ -4,4 +4,11 @@
 	/* background: linear-gradient(-225deg, rgb(34,225,255) 0%, rgb(29,143,225) 48%, rgb(98,94,177, 0.1) 100%); */
 }
 
+.scrollicon {
+	display: flex;
+    position: fixed;
+    flex-grow: 1;
+    z-index: 1;
+}
+
 

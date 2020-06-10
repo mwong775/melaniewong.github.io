@@ -21,7 +21,6 @@ body {
     display:inline-block;
 }
 
-
 canvas { /* puts particles overlapping */
 	position: absolute;
 	right: 0;
@@ -30,13 +29,6 @@ canvas { /* puts particles overlapping */
 	height: 100%;
 	width: 100%;
 	z-index: -1;
-}
-
-div.block {
-	/* position: relative; */
-	/* margin-bottom: 2%; */
-	/* width: 95%; */
-	color: #ffffff; /* SETS MAIN FONT COLOR*/
 }
 
 a {
