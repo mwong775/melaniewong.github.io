@@ -37,19 +37,26 @@ const useStyles = makeStyles((theme: Theme) => ({
   },
 }));
 
+export interface IPic {
+  location: string;
+  img: string;
+  title: string;
+}
+
 
 export const Photos = () => {
   const classes = useStyles();
   const [open, setOpen] = React.useState(false);
-  const [pic, setPic] = React.useState({
-    'location': '',
+  const [pic, setPic] = React.useState<IPic>({
+    'location': '', 
     'img': '',
     'title': ''
   });
   const theme = useTheme();
   const fullScreen = useMediaQuery(theme.breakpoints.down('sm'));
 
-  const handleClickOpen = (pic: object) => {
+  const handleClickOpen = (pic: IPic) => {
+    setPic(pic);
     setOpen(true);
   };
     
