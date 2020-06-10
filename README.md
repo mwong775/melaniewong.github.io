@@ -1,8 +1,12 @@
 # mwong775.github.io
-My personal website developed using ReactJS and hosted on GitHub Pages
+My personal website developed using React and Typescript, hosted on GitHub Pages
+
+Source code available on the `development` branch (this one)
 
 Deployment files exist on the `master` branch
 
-Source code available on the `development` branch
-
-Design + Development in progress :D
+Recent updates:
+* Set up continuous integration with CircleCI
+* Set up ESLint and testing with Jest and Enzyme
+* Converteded all Javascript code to Typescript
+* Added SASS/SCSS
