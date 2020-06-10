@@ -1,13 +1,15 @@
 import * as React from 'react';
 
-class SearchBar extends React.Component {
-    constructor() {
-        super();
-        this.state = { input: '' }
-    }
+type InputState = {
+    input: string
+}
 
-    onInputChange(input) {
-        // console.log(input);
+type InputProps = {
+    onInputChange: (e: any) => void;
+} 
+
+class SearchBar extends React.Component<InputProps, InputState> {
+    onInputChange = (input: string) => {
         this.setState({input});
         this.props.onInputChange(input);
     }

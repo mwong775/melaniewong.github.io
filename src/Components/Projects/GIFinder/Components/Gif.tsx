@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Gif = (image) => {
+const Gif = (image: any) => {
   return (
     <div className="gif-item">
       <img src={image.gif.images.downsized.url} onClick={()=> window.open(image.gif.images.downsized.url, "_blank")} alt="GIF"/>

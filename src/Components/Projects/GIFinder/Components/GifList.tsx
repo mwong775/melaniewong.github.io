@@ -2,8 +2,8 @@ import React from 'react';
 import Gif from './Gif';
 
 // stateless functional component
-const GifList = (props) => {
-  const gifItems = props.gifs.map((image) => {
+const GifList = (props: any) => {
+  const gifItems = props.gifs.map((image: any) => {
     return <Gif key={image.id} gif={image} />
   });
 
