@@ -37,9 +37,9 @@
     "extends": "react-app"
   },
   "jest": {
-    "moduleNameMapper": {
-      "^components(.*)$": "<rootDir>/src/Components$1"
-    }
+    "modulePaths": [
+      "<rootDir>/components/"
+    ]
   },
   "browserslist": {
     "production": [
