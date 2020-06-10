@@ -13,9 +13,9 @@ import DialogContentText from '@material-ui/core/DialogContentText';
 import DialogTitle from '@material-ui/core/DialogTitle';
 import SvgIcon from '@material-ui/core/SvgIcon';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
-import { useTheme } from '@material-ui/core/styles';
+import { Theme, useTheme } from '@material-ui/core/styles';
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((theme: Theme) => ({
   root: {
     display: 'flex',
     flexWrap: 'wrap',
@@ -37,30 +37,35 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-export const Photos = () => {
-    const classes = useStyles();
-    const [open, setOpen] = React.useState(false);
-    const [pic, setPic] = React.useState({});
-    const theme = useTheme();
-    const fullScreen = useMediaQuery(theme.breakpoints.down('sm'));
-    const handleClickOpen = (pic) => {
-      setPic(pic);
-      setOpen(true);
-    };
-  
-    const handleClose = () => {
-      setOpen(false);
-    };
 
-		return(
-			<div className="content-wrapper">
-			<h2 className="gradient-font">Photos</h2>
+export const Photos = () => {
+  const classes = useStyles();
+  const [open, setOpen] = React.useState(false);
+  const [pic, setPic] = React.useState({
+    'location': '',
+    'img': '',
+    'title': ''
+  });
+  const theme = useTheme();
+  const fullScreen = useMediaQuery(theme.breakpoints.down('sm'));
+
+  const handleClickOpen = (pic: object) => {
+    setOpen(true);
+  };
+    
+  const handleClose = () => {
+    setOpen(false);
+  };
+    
+    return(
+      <div className="content-wrapper">
+      <h2 className="gradient-font">Photos</h2>
       <div style={{marginBottom: '5%'}}>Surprisingly decent photos taken with an iPhone</div>
       <div className={classes.root}>
-        <GridList className={classes.gridList} cellHeight={180}>
+        <GridList className={classes.gridList} cellHeight={180} cols={2}>
           {tileData.map(tile => (
             <GridListTile key={tile.img} >
-              <img src={tile.img} alt={tile.title} cols={2} style={{ height: 'auto' }}/>
+              <img src={tile.img} alt={tile.title} style={{ height: 'auto' }}/>
               <GridListTileBar
                 title={tile.title}
                 subtitle={<span>{tile.location}</span>}
@@ -97,7 +102,7 @@ export const Photos = () => {
     );
   }
 
-  function HomeIcon(props) {
+  function HomeIcon(props: any) {
     return (
       <SvgIcon {...props}>
         <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z" />

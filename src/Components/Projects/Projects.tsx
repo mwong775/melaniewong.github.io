@@ -7,7 +7,7 @@ import poster from '../Photos/images/Poster.jpg';
 import giphy from '../Photos/images/giphy.jpg';
 // import Button from '@material-ui/core/Button';
 import {Link} from 'react-router-dom'; 
-import './Projects.css';
+import './Projects.scss';
 
 const images = [
   {

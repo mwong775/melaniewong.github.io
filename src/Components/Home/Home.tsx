@@ -1,5 +1,5 @@
 import * as React from "react";
-import './Home.css';
+import './Home.scss';
 import {Link} from 'react-router-dom'; 
 import Button from '@material-ui/core/Button';
 import cinnamoroll_sup from '../Photos/images/cinna_sup.gif';

@@ -1,5 +1,5 @@
 import * as React from "react";
-import './GIFinder.css';
+import './GIFinder.scss';
 import axios from 'axios';
 // import logo from './giphy-logo.svg';
 import SearchBar from './Components/SearchBar';
@@ -43,7 +43,7 @@ export class GIFinder extends React.Component {
           });
     }
 
-    handleInputChange = (term) => {
+    handleInputChange = (term: string) => {
     // console.log("in App", term);
     const url = BASE_URL + 'search?api_key=' + PUBLIC_KEY + '&q=' + term  + '&limit=' + LIMIT   + '&offset=' + OFFSET + '&rating=' + RATING + '&lang=' + LANG;
     // console.log('url for GET: ', url);
