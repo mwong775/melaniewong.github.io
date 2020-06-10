@@ -6,7 +6,7 @@ Source code available on the `development` branch (this one)
 Deployment files exist on the `master` branch
 
 Recent updates:
-* Set up continuous integration with CirclCI
+* Set up continuous integration with CircleCI
 * Set up ESLint and testing with Jest and Enzyme
 * Converteded all Javascript code to Typescript
 * Added SASS/SCSS
