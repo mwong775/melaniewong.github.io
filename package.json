@@ -41,11 +41,6 @@
   "eslintConfig": {
     "extends": "react-app"
   },
-  "jest": {
-    "modulePaths": [
-      "<rootDir>/components/"
-    ]
-  },
   "browserslist": {
     "production": [
       ">0.2%",

@@ -1,6 +1,6 @@
 import * as React from "react";
 import './App.scss';
-import {Bubbles} from "./Bubbles"
+import {Bubbles} from "./Components/Utils/Bubbles"
 import {Nav} from "./Components/Nav/Nav";
 import {About} from "./Components/About/About";
 import {Resume} from "./Components/Resume/Resume";
