@@ -1,26 +1,19 @@
-version: 2.1
+version: 2
 jobs:
   build:
     docker:
-      - image: circleci/node:12.9.1-browsers
-  
-    working_directory: ~/repo
+      - image: circleci/node:8
     steps:
       - checkout
-      
-      - restore_cache:
-        keys:
-          - v1-dependencies-{{ checksum "package.json" }}
-          - v1-dependencies-
-      
-      - run: npm install
-   
-      - save_cache:
-        paths:
-          - node_modules
-          - ~/.npm 
-          - ~/.cache        
-          
-      - key: v1-dependencies-{{ checksum "package.json" }}
-    
-      - run: npm run test
+      - restore_cache: # special step to restore the dependency cache
+          key: dependency-cache-{{ checksum "package.json" }}-{{ checksum "package-lock.json" }}
+      - run:
+          name: Setup Dependencies
+          command: npm install
+      - save_cache: # special step to save the dependency cache
+          key: dependency-cache-{{ checksum "package.json" }}-{{ checksum "package-lock.json" }}
+          paths:
+            - ./node_modules
+      - run: # run tests
+          name: Run Test
+          command: npm test
