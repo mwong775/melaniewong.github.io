@@ -38,7 +38,7 @@
   },
   "jest": {
     "moduleNameMapper": {
-      "^components(.*)$": "<rootDir>/src/js/components$1"
+      "^components(.*)$": "<rootDir>/src/Components$1"
     }
   },
   "browserslist": {
