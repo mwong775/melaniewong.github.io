@@ -8,5 +8,5 @@ Deployment files exist on the `master` branch
 Recent updates:
 * Set up continuous integration with CirclCI
 * Set up ESLint and testing with Jest and Enzyme
-* Convert all Javascript to Typescript
+* Converteded all Javascript code to Typescript
 * Added SASS/SCSS
