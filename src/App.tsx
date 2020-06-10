@@ -1,5 +1,5 @@
 import * as React from "react";
-import './App.css';
+import './App.scss';
 import {Bubbles} from "./Bubbles"
 import {Nav} from "./Components/Nav/Nav";
 import {About} from "./Components/About/About";
@@ -10,7 +10,7 @@ import {Photos} from "./Components/Photos/Photos";
 import {Contact} from "./Components/Contact/Contact";
 import {HashRouter as Router, Redirect, Route, Switch} from 'react-router-dom';
 import {Home} from "./Components/Home/Home";
-// import {ScrollToTop} from "./Components/ScrollToTop"
+// import {ScrollToTop} from "./Components/Utils/ScrollToTop"
 import CssBaseline from '@material-ui/core/CssBaseline';
 import { MuiThemeProvider, createMuiTheme, responsiveFontSizes} from '@material-ui/core/styles'; // responseiveFontSizes needs testing
 
