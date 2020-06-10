@@ -4,7 +4,6 @@ import AppBar from '@material-ui/core/AppBar';
 import Tabs from '@material-ui/core/Tabs';
 import Toolbar from '@material-ui/core/Toolbar';
 import { Theme, makeStyles } from '@material-ui/core/styles';
-import CssBaseline from '@material-ui/core/CssBaseline';
 import useScrollTrigger from '@material-ui/core/useScrollTrigger';
 import Button from '@material-ui/core/Button';
 import IconButton from '@material-ui/core/IconButton';
@@ -18,7 +17,6 @@ import { Link } from 'react-router-dom';
 import './Nav.scss';
 function TabPanel(props: any) {
   const { children, value, index, ...other } = props;
-
   return (
     <Typography
       component="div"
@@ -89,7 +87,6 @@ export class Nav extends React.Component {
   render() {
     return (
       <React.Fragment>
-        <CssBaseline />
         <AppBar className="appbar">
         <Tabs
             variant="scrollable"
