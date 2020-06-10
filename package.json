@@ -23,7 +23,7 @@
     "react-scripts": "^3.4.1"
   },
   "scripts": {
-    "lint": "eslint **/*.{js,jsx,json} --ignore-pattern build/",
+    "lint": "eslint src/**/*.{js,jsx,json} --ignore-pattern build/",
     "fix": "npm run lint --fix",
     "start": "react-scripts start",
     "build": "react-scripts build",
