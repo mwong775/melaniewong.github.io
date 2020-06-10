@@ -1,0 +1,30 @@
+.content-wrapper {    
+    .description {
+        font-size: 1em;
+        margin-bottom: 3%;
+    }
+    
+    .grid {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 100%;
+
+        .tile {
+            margin: 1px;
+            max-width: 400px;
+
+            img {
+                margin: 0;
+            }
+
+            .title-bar {
+                background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.3) 70%, rgba(0,0,0,0) 100%);
+                
+                .icon {
+                    color: rgba(255, 255, 255, 0.6);
+                }
+            }
+        }
+    }
+}
