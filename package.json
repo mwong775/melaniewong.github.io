@@ -23,6 +23,8 @@
     "react-scripts": "^3.4.1"
   },
   "scripts": {
+    "lint": "./node_modules/.bin/eslint **/*.{js,jsx,json}",
+    "fix": "npm run lint --fix",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -46,5 +48,8 @@
       "last 1 safari version"
     ]
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "eslint": "^6.6.0",
+    "eslint-plugin-react": "^7.20.0"
+  }
 }
