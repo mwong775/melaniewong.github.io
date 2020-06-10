@@ -1,5 +1,5 @@
 # mwong775.github.io
-My personal website developed using ReactJS and hosted on GitHub Pages
+My personal website developed using React and Typescript, hosted on GitHub Pages
 
 Deployment files exist on the `master` branch
 
