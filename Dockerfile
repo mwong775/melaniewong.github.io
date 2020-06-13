@@ -1,13 +1,17 @@
+# Docker image which is used as a foundation to create
+# a custom Docker Image with this Dockerfile
 # Use a lighter version of Node as a parent image
-FROM mhart/alpine-node:8.11.4
-# Set the working directory to /melaniewong.github.io
-WORKDIR /melaniewong.github.io
-# copy package.json into the container at /melaniewong.github.io
-COPY package*.json /melaniewong.github.io/
-# install dependencies
+FROM node:13.12.0-alpine
+# Set the working directory within the
+# virtualized Docker environment
+WORKDIR /usr/src/app
+# Copies package.json and package-lock.json
+# into the container
+COPY package*.json ./
+# Installs dependencies
 RUN npm install
-# Copy the current directory contents into the container at /melaniewong.github.io
-COPY . /melaniewong.github.io/
+# Copies the current directory contents into Docker environment
+COPY . .
 # Make port 3000 available to the world outside this container
 EXPOSE 3000
 # Run the app when the container launches
