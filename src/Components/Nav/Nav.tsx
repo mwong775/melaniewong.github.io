@@ -13,7 +13,7 @@ import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
 import KeyboardArrowUpIcon from '@material-ui/icons/KeyboardArrowUp';
 import Zoom from '@material-ui/core/Zoom';
-import { Link } from 'react-router-dom'; 
+import { Link } from 'react-router-dom';
 import './Nav.scss';
 function TabPanel(props: any) {
   const { children, value, index, ...other } = props;
@@ -87,39 +87,39 @@ export class Nav extends React.Component {
     return (
       <div className="nav">
         <AppBar className="appbar">
-        <Tabs
+          <Tabs
             variant="scrollable"
             scrollButtons="off"
             value="">
-          <Toolbar>
-              <IconButton edge="start" aria-label="open drawer" style={{marginLeft: "1%"}}>
-              <MenuIcon />
-            </IconButton>
-            <Link to="/" {...a11yProps(0)}>
-              <Button>Home</Button>
-            </Link>
-            <Link to="/about" {...a11yProps(1)}>
-              <Button>About Me</Button>
-            </Link>
-            <Link to="/resume" {...a11yProps(2)}>
-              <Button>Resume</Button>
-            </Link>
-            <Link to="/projects" {...a11yProps(3)}>
-              <Button>Projects</Button>
-            </Link>
-            <Link to="/photos" {...a11yProps(4)}>
-              <Button>Photos</Button>
-            </Link>
-            <Link to="/contact" {...a11yProps(5)}>
-              <Button>Contact</Button>
-            </Link>
-          </Toolbar>
+            <Toolbar>
+              <IconButton edge="start" aria-label="open drawer" style={{ marginLeft: "1%" }}>
+                <MenuIcon />
+              </IconButton>
+              <Link to="/" {...a11yProps(0)}>
+                <Button>Home</Button>
+              </Link>
+              <Link to="/about" {...a11yProps(1)}>
+                <Button>About Me</Button>
+              </Link>
+              <Link to="/resume" {...a11yProps(2)}>
+                <Button>Resume</Button>
+              </Link>
+              <Link to="/projects" {...a11yProps(3)}>
+                <Button>Projects</Button>
+              </Link>
+              <Link to="/photos" {...a11yProps(4)}>
+                <Button>Photos</Button>
+              </Link>
+              <Link to="/contact" {...a11yProps(5)}>
+                <Button>Contact</Button>
+              </Link>
+            </Toolbar>
           </Tabs>
         </AppBar>
         <Toolbar id="back-to-top-anchor" />
         <ScrollTop {...this.props}>
           <Fab size="small" aria-label="scroll back to top">
-            <KeyboardArrowUpIcon/>
+            <KeyboardArrowUpIcon />
           </Fab>
         </ScrollTop>
       </div>

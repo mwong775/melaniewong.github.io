@@ -6,7 +6,7 @@ import poster from '../Photos/images/Poster.jpg';
 // import iws from '../Photos/images/IWS.jpg'; // final webpage design...
 import giphy from '../Photos/images/giphy.jpg';
 // import Button from '@material-ui/core/Button';
-import {Link} from 'react-router-dom'; 
+import { Link } from 'react-router-dom';
 import './Projects.scss';
 
 const images = [
@@ -93,52 +93,52 @@ const useStyles = makeStyles(theme => ({
 
 export const Projects = () => {
   const classes = useStyles();
-		return(
-				<div className="content-wrapper">
-			<h2 className="gradient-font">Projects</h2>
-		 <div className={classes.root}>
-      {images.map(image => (
-        <ButtonBase
-          focusRipple
-          key={image.title}
-          className={classes.image}
-          focusVisibleClassName={classes.focusVisible}
-          style={{
-            width: image.width,
-          }}
-        >
-		<Link to="/gifinder">
-          <span
-            className={classes.imageSrc}
+  return (
+    <div className="content-wrapper">
+      <h2 className="gradient-font">Projects</h2>
+      <div className={classes.root}>
+        {images.map(image => (
+          <ButtonBase
+            focusRipple
+            key={image.title}
+            className={classes.image}
+            focusVisibleClassName={classes.focusVisible}
             style={{
-              backgroundImage: `url(${image.url})`,
+              width: image.width,
             }}
-          />
-          <span className={classes.imageBackdrop} />
-          <span className={classes.imageButton}>
-            <Typography
-              component="span"
-              variant="subtitle1"
-              color="inherit"
-              className={classes.imageTitle}
-            >
-              {image.title}
-              <span className={classes.imageMarked} />
-            </Typography>
-          </span>
-        </Link>
-        </ButtonBase>
-      ))}
-    <h4 className="project-summary" style={{marginLeft: '20%'}}>A simple search to discover awesome GIFs, powered by the Giphy API</h4>
+          >
+            <Link to="/gifinder">
+              <span
+                className={classes.imageSrc}
+                style={{
+                  backgroundImage: `url(${image.url})`,
+                }}
+              />
+              <span className={classes.imageBackdrop} />
+              <span className={classes.imageButton}>
+                <Typography
+                  component="span"
+                  variant="subtitle1"
+                  color="inherit"
+                  className={classes.imageTitle}
+                >
+                  {image.title}
+                  <span className={classes.imageMarked} />
+                </Typography>
+              </span>
+            </Link>
+          </ButtonBase>
+        ))}
+        <h4 className="project-summary" style={{ marginLeft: '20%' }}>A simple search to discover awesome GIFs, powered by the Giphy API</h4>
+      </div>
+      <br />
+      <div className="poster">
+        <h4 className="project-summary">Project poster from my 2019 summer internship at LLNL</h4>
+        <img
+          src={poster}
+          alt="LLNL Poster"
+        />
+      </div>
     </div>
-    <br/>
-	<div className="poster">
-    <h4 className="project-summary">Project poster from my 2019 summer internship at LLNL</h4>
-		 <img
-	      src={poster}
-	      alt="LLNL Poster"
-	    />
-	</div>
-	</div>
-);
+  );
 }

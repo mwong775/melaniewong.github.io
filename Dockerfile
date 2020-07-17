@@ -4,6 +4,7 @@
 FROM node:13.12.0-alpine
 # Set the working directory within the
 # virtualized Docker environment
+# all command statements after apply in here
 WORKDIR /usr/src/app
 # Copies package.json and package-lock.json
 # into the container

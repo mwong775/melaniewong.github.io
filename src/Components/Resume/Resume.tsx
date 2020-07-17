@@ -11,12 +11,12 @@ export class Resume extends React.Component {
     return (
       <div className="content-wrapper">
         <h2 className="gradient-font">Resume</h2>
-        <br/>
+        <br />
         <Button href={CV} download={'Melanie Wong Resume'}>Download</Button>
         <div className="resume-container">
-            <object className="pdf" type="application/pdf" data={CVUrl}>
-              <p>PDF cannot be displayed :(</p>
-            </object>
+          <object className="pdf" type="application/pdf" data={CVUrl}>
+            <p>PDF cannot be displayed :(</p>
+          </object>
         </div>
       </div>
     );
