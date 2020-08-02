@@ -3,14 +3,14 @@ import { RouteComponentProps } from 'react-router';
 import { withRouter } from 'react-router-dom';
 
 class ScrollToTop extends React.Component<RouteComponentProps> {
-    public componentDidUpdate(prevProps: any) {
+    componentDidUpdate(prevProps: any) {
         if (this.props.location !== prevProps.location) {
             window.scrollTo(0, 0);
         }
     }
 
-    public render() {
-        return this.props.children;
+    render() {
+        return <React.Fragment />
     }
 }
 

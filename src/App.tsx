@@ -10,7 +10,7 @@ import { Photos } from "./Components/Photos/Photos";
 import { Contact } from "./Components/Contact/Contact";
 import { HashRouter as Router, Redirect, Route, Switch } from 'react-router-dom';
 import { Home } from "./Components/Home/Home";
-// import {ScrollToTop} from "./Components/Utils/ScrollToTop"
+import ScrollToTop from "./Components/Utils/ScrollToTop"
 import CssBaseline from '@material-ui/core/CssBaseline';
 import { MuiThemeProvider, createMuiTheme, responsiveFontSizes } from '@material-ui/core/styles'; // responseiveFontSizes needs testing
 
@@ -29,7 +29,7 @@ export class App extends React.Component {
     return (
       <Router basename={process ? process.env.PUBLIC_URL : ""}>
         <MuiThemeProvider theme={theme}>
-          {/* <ScrollToTop> */}
+          <ScrollToTop/>
           <CssBaseline />
           <header>
             <Nav />
@@ -45,7 +45,6 @@ export class App extends React.Component {
             <Route path="/contact" exact component={Contact} />
             <Redirect to='/' />
           </Switch>
-          {/* </ScrollToTop> */}
         </MuiThemeProvider>
       </Router>
     );

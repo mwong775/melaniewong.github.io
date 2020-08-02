@@ -10,7 +10,6 @@ export class Resume extends React.Component {
   render() {
     return (
       <div className="content-wrapper">
-        <h2 className="gradient-font">Resume</h2>
         <br />
         <Button href={CV} download={'Melanie Wong Resume'}>Download</Button>
         <div className="resume-container">
