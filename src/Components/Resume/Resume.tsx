@@ -2,9 +2,6 @@ import React from 'react';
 import CV from '../../assets/cv/Melanie_Wong_Resume.pdf';
 import Button from '@material-ui/core/Button';
 import './Resume.scss';
-
-const CVUrl = `${CV}?#zoom=FitH&scrollbar=0&toolbar=0&navpanes=0`;
-
 export class Resume extends React.Component {
 
   render() {
@@ -13,7 +10,6 @@ export class Resume extends React.Component {
         <br />
         <Button href={CV} download={'Melanie Wong Resume'}>Download</Button>
         <div className="resume-container">
-          {/* <iframe className="pdf" src={CV}></iframe> */}
           <object className="pdf" type="application/pdf" data={CV}>
             <p>PDF cannot be displayed :(</p>
           </object>
