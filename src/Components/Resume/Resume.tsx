@@ -13,7 +13,8 @@ export class Resume extends React.Component {
         <br />
         <Button href={CV} download={'Melanie Wong Resume'}>Download</Button>
         <div className="resume-container">
-          <object className="pdf" type="application/pdf" data={CVUrl}>
+          {/* <iframe className="pdf" src={CV}></iframe> */}
+          <object className="pdf" type="application/pdf" data={CV}>
             <p>PDF cannot be displayed :(</p>
           </object>
         </div>
