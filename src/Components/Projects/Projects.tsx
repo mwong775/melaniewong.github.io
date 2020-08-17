@@ -5,7 +5,7 @@ import Typography from '@material-ui/core/Typography';
 import poster from '../Photos/images/Poster.jpg';
 // import iws from '../Photos/images/IWS.jpg'; // final webpage design...
 import giphy from '../Photos/images/giphy.jpg';
-// import Button from '@material-ui/core/Button';
+import cinnaboba from '../Photos/images/cinna_boba.gif';
 import { Link } from 'react-router-dom';
 import './Projects.scss';
 
@@ -13,20 +13,30 @@ const images = [
   {
     url: giphy,
     title: 'GIFinder',
+    link: './gifinder',
+    description: 'A simple search to discover awesome GIFs, powered by the Giphy API',
     width: '40%',
   },
+  {
+    url: cinnaboba,
+    title: 'Bobamap',
+    link: './bobamap',
+    description: 'A map of (most) boba places around the SF Bay Area',
+    width: '40%',
+  }
+
 ];
 
 const useStyles = makeStyles(theme => ({
   root: {
     display: 'flex',
-    flexDirection: 'row',
     minWidth: 300,
-    width: '100%',
-    marginTop: 30
+    width: '80%',
+    margin: 'auto',
   },
   image: {
     position: 'relative',
+    margin: 'auto',
     height: 200,
     [theme.breakpoints.down('xs')]: {
       width: '100% !important', // Overrides inline-style
@@ -107,7 +117,7 @@ export const Projects = () => {
               width: image.width,
             }}
           >
-            <Link to="/gifinder">
+            <Link to={image.link}>
               <span
                 className={classes.imageSrc}
                 style={{
@@ -120,8 +130,7 @@ export const Projects = () => {
                   component="span"
                   variant="subtitle1"
                   color="inherit"
-                  className={classes.imageTitle}
-                >
+                  className={classes.imageTitle}>
                   {image.title}
                   <span className={classes.imageMarked} />
                 </Typography>
@@ -129,7 +138,6 @@ export const Projects = () => {
             </Link>
           </ButtonBase>
         ))}
-        <h4 className="project-summary" style={{ marginLeft: '20%' }}>A simple search to discover awesome GIFs, powered by the Giphy API</h4>
       </div>
       <br />
       <div className="poster">

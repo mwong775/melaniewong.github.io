@@ -1,9 +1,10 @@
 import * as React from "react";
 import './GIFinder.scss';
 import axios from 'axios';
-// import logo from './giphy-logo.svg';
 import SearchBar from './Components/SearchBar';
 import GifList from './Components/GifList';
+import Button from '@material-ui/core/Button';
+import { Link } from 'react-router-dom';
 
 const PUBLIC_KEY = 'wy1tKswrmePmcwQI2hV3RBd336yfjvkS';
 const BASE_URL = 'https://api.giphy.com/v1/gifs/';
@@ -66,6 +67,7 @@ export class GIFinder extends React.Component {
   render() {
     return (
       <div className="App">
+        <Link to="/projects"><Button className="back">Back</Button></Link>
         <h1>GIFinder</h1>
         <h5>A simple search to discover awesome GIFs, powered by the Giphy API</h5>
         <SearchBar onInputChange={this.handleInputChange} />

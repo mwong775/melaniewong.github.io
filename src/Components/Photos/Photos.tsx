@@ -23,9 +23,9 @@ export interface IPic {
 export const Photos = () => {
   const [open, setOpen] = React.useState<boolean>(false);
   const [pic, setPic] = React.useState<IPic>({
-    'location': '',
-    'img': '',
-    'title': ''
+    location: '',
+    img: '',
+    title: ''
   });
   const theme = useTheme();
   const fullScreen = useMediaQuery(theme.breakpoints.down('sm'));
