@@ -15,7 +15,7 @@ export interface marker {
     city: string;
 }
 
-export class BobaMap extends React.Component<{}, {geoLocation: LatLngTuple, geoError: any, markers: marker[]}> {
+export class BobaMap extends React.Component<{}, { geoLocation: LatLngTuple, geoError: any, markers: marker[] }> {
     constructor(props: any) {
         super(props);
         this.state = {
@@ -30,7 +30,7 @@ export class BobaMap extends React.Component<{}, {geoLocation: LatLngTuple, geoE
                 console.log('Results: ', results, results.data.length);
                 let name = 2, address = 4, city = 5, lat = 6, long = 7;
                 let places: marker[] = [];
-                for(let i = 1; i < results.data.length; i++) {
+                for (let i = 1; i < results.data.length; i++) {
                     let place = results.data[i];
                     if (place[name] === undefined)
                         continue;
@@ -63,7 +63,7 @@ export class BobaMap extends React.Component<{}, {geoLocation: LatLngTuple, geoE
             <div className="App">
                 <Link to="/projects"><Button className="back">Back</Button></Link>
                 <div className="map-header">
-                    <h2>Boba Map!</h2>
+                    <h2 className="gradient-font">Boba Map!</h2>
                     <h4>Dataset from <a href="https://www.kaggle.com/vnxiclaire/bobabayarea" target="_blank" rel="noopener noreferrer">Kaggle</a></h4>
                 </div>
                 <Map id="mapId" center={this.state.geoLocation} zoom={zoom}>

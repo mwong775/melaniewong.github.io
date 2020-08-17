@@ -16,7 +16,7 @@ export class Home extends React.Component {
         <div className="about content-wrapper">
           <div className="about-wrapper">
             <h4 className="gradient-font">About Me</h4>
-            <p>Hi there! I'm Melanie, and I'm an undergraduate student studying Computer Science at the University of California in Santa Cruz.</p>
+            <p>Hi there! I'm Melanie, and I'm studying Computer Science at the University of California in Santa Cruz.</p>
             <Link to="/about">
               <Button style={{ color: '#199bfc' }}>Learn More</Button>
             </Link>
