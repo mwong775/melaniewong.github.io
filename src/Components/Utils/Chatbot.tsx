@@ -87,7 +87,7 @@ function Chatbot(props: any) {
         },
         {
             id: "Done",
-            message: "Alrighty then. Have a great day!",
+            message: "Cool. Have a great day!",
             end: true
         }
     ];
