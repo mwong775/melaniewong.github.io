@@ -10,7 +10,7 @@ import { GIFinder } from "./Components/Projects/GIFinder/GIFinder";
 import { BobaMap } from "./Components/Projects/BobaMap/BobaMap";
 import { Photos } from "./Components/Photos/Photos";
 import { Contact } from "./Components/Contact/Contact";
-import { BrowserRouter as Router, Redirect, Route, Switch } from 'react-router-dom';
+import { HashRouter as Router, Redirect, Route, Switch } from 'react-router-dom';
 import { Home } from "./Components/Home/Home";
 import ScrollToTop from "./Components/Utils/ScrollToTop"
 import CssBaseline from '@material-ui/core/CssBaseline';
