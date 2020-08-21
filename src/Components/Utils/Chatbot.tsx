@@ -70,7 +70,7 @@ function Chatbot(props: any) {
         {
             id: "Link to Boba Map",
             component: (
-                <div>YOu can check out my new boba map over <Link to="/bobamap">here</Link>!</div>
+                <div>You can check out my new boba map over <Link to="/bobamap">here</Link>!</div>
             ),
             asMessage: true,
             trigger: "Ask How to Help Again"
