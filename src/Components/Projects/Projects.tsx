@@ -30,13 +30,14 @@ const images = [
 const useStyles = makeStyles(theme => ({
   root: {
     display: 'flex',
+    flexDirection: 'column',
     minWidth: 300,
     width: '80%',
     margin: 'auto',
   },
   image: {
     position: 'relative',
-    margin: 'auto',
+    margin: '20px',
     height: 200,
     [theme.breakpoints.down('xs')]: {
       width: '100% !important', // Overrides inline-style
@@ -108,6 +109,7 @@ export const Projects = () => {
       <h2 className="gradient-font">Projects</h2>
       <div className={classes.root}>
         {images.map(image => (
+          <div className="projects">
           <ButtonBase
             focusRipple
             key={image.title}
@@ -137,10 +139,12 @@ export const Projects = () => {
               </span>
             </Link>
           </ButtonBase>
+          <Typography><h4 className="project-summary">{image.description}</h4></Typography>
+          </div>
         ))}
       </div>
       <br />
-      <div className="poster">
+      <div className="poster projects">
         <h4 className="project-summary">Project poster from my 2019 summer internship at LLNL</h4>
         <img
           src={poster}

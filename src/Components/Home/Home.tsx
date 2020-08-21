@@ -1,16 +1,21 @@
 import * as React from "react";
 import './Home.scss';
 import { Link } from 'react-router-dom';
+import { init } from 'ityped';
 import Button from '@material-ui/core/Button';
 import cinnamoroll_sup from '../Photos/images/cinna_sup.gif';
 
 
 export class Home extends React.Component {
+  componentDidMount() {
+    const name = document.querySelector('#nameId');
+    init(name, { showCursor: false, strings: ['Hi there!', 'Melanie Wong'] })
+  }
   render() {
     return (
       <div className="home">
         <div className="intro">
-          <h2 className="name">Melanie Wong</h2>
+          <h2 className="name"><div id="nameId"></div></h2>
           <img className="cinnamoroll" src={cinnamoroll_sup} alt="cinnamoroll" />
         </div>
         <div className="about content-wrapper">
