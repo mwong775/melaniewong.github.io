@@ -143,7 +143,7 @@ export const Projects = () => {
           </div>
         ))}
       </div>
-      <br />
+      <Link to="/markdownpreviewer"><h3 style={{textAlign: 'center'}}>Markdown Previewer</h3></Link>
       <div className="poster projects">
         <h4 className="project-summary">Project poster from my 2019 summer internship at LLNL</h4>
         <img

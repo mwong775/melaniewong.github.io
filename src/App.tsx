@@ -8,6 +8,7 @@ import { Resume } from "./Components/Resume/Resume";
 import { Projects } from "./Components/Projects/Projects";
 import { GIFinder } from "./Components/Projects/GIFinder/GIFinder";
 import { BobaMap } from "./Components/Projects/BobaMap/BobaMap";
+import { MarkdownPreviewer } from "./Components/Projects/MarkdownPreviewer/MarkdownPreviewer";
 import { Photos } from "./Components/Photos/Photos";
 import { Contact } from "./Components/Contact/Contact";
 import { HashRouter as Router, Redirect, Route, Switch } from 'react-router-dom';
@@ -44,6 +45,7 @@ export class App extends React.Component {
             <Route path="/projects" exact component={Projects} />
             <Route path="/gifinder" exact component={GIFinder} />
             <Route path="/bobamap" exact component={BobaMap} />
+            <Route path="/markdownpreviewer" exact component={MarkdownPreviewer} />
             <Route path="/photos" exact component={Photos} />
             <Route path="/contact" exact component={Contact} />
             <Redirect to='/' />

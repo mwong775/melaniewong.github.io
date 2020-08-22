@@ -1,0 +1,22 @@
+h2 {
+    margin: auto;
+}
+
+.boxes {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    padding: 10px 25vw;
+
+    .preview {
+        background-color: lightgrey;
+        min-width: 50%;
+        border-radius: 3% 3%;
+        padding: 10px;
+    }
+
+    .box {
+        margin-top: 10px;
+    }
+}
