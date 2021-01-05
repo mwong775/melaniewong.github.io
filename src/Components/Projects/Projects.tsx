@@ -145,7 +145,7 @@ export const Projects = () => {
               </span>
             </Link>
           </ButtonBase>
-          <Typography><h4 className="project-summary">{image.description}</h4></Typography>
+          <div className="project-summary">{image.description}</div>
           </div>
         ))}
       </div>

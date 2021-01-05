@@ -34,17 +34,31 @@
       display: flex;
       flex-direction: row;
 
+      .about-wrapper {
+        padding: 2%;
+        width: 50%;
+      }  
     }
 
-    .about-wrapper {
-      padding: 2%;
+
+    .timeline {
+      padding: 5% 25% 2% 25%;
     }
 
-    @media screen and (max-width: 420px) {
+    @media screen and (max-width: 420px) {      
       .intro {
         padding: 30% 12%;
       }
       .about {
         flex-direction: column;
+
+        .about-wrapper {
+          width: 100%;
+        }  
+  
+      }
+
+      .timeline {
+        padding: 2% 0 2% 0;
       }
     }

@@ -5,7 +5,6 @@ import { init } from 'ityped';
 import Button from '@material-ui/core/Button';
 import cinnamoroll_sup from '../Photos/images/cinna_sup.gif';
 
-
 export class Home extends React.Component {
   componentDidMount() {
     const name = document.querySelector('#nameId');
@@ -20,14 +19,15 @@ export class Home extends React.Component {
         </div>
         <div className="about content-wrapper">
           <div className="about-wrapper">
-            <h4 className="gradient-font">About Me</h4>
-            <p>Hi there! I'm Melanie, and I'm studying Computer Science at the University of California in Santa Cruz.</p>
+            <h2 className="gradient-font">About Me</h2>
+            <p>Hi! I'm Melanie, and I'm studying Computer Science at the University of California in Santa Cruz.</p>
+            <br/>
             <Link to="/about">
-              <Button style={{ color: '#199bfc' }}>Learn More</Button>
+              <Button variant="outlined" size="large">Learn More</Button>
             </Link>
           </div>
           <div className="about-wrapper">
-            <h4 className="gradient-font">About This Site</h4>
+            <h2 className="gradient-font">About This Site</h2>
             <p>Welcome to my website! Please feel free to read more <Link to="/about">about</Link> me, or you can check out my <Link to="/resume">resume</Link>, past <Link to="/projects">projects</Link>, collection of <Link to="/photos">photos</Link>, or <Link to="/contact">contact</Link> me.</p>
             <p>Source available on GitHub <a href="https://github.com/mwong775/melaniewong.github.io/tree/development" target="_blank" rel="noopener noreferrer">here</a>.</p>
           </div>

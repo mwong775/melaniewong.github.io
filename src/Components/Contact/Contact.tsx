@@ -6,7 +6,7 @@ import EmailIcon from '@material-ui/icons/Email';
 import DirectionsRunIcon from '@material-ui/icons/DirectionsRun';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import cinnamoroll_stack from '../Photos/images/cinna_stack.gif';
-
+import './Contact.scss';
 
 export class Contact extends React.Component {
 	render() {

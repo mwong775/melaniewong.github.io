@@ -2,6 +2,7 @@ import * as React from "react";
 import './App.scss';
 import { Bubbles } from "./Components/Utils/Bubbles";
 import Chatbot from "./Components/Utils/Chatbot";
+import Copyright from "./Components/Utils/Copyright";
 import { Nav } from "./Components/Nav/Nav";
 import { About } from "./Components/About/About";
 import { Resume } from "./Components/Resume/Resume";
@@ -18,25 +19,65 @@ import ScrollToTop from "./Components/Utils/ScrollToTop"
 import CssBaseline from '@material-ui/core/CssBaseline';
 import { MuiThemeProvider, createMuiTheme, responsiveFontSizes } from '@material-ui/core/styles'; // responseiveFontSizes needs testing
 
-let theme = createMuiTheme({
-  palette: {
-    type: "dark",
-    primary: {
-      main: "#199bfc"
+export class App extends React.Component<{}, { theme: any, themeLabel: string }> {
+  constructor(props: any) {
+    super(props);
+    this.state = {
+      theme: createMuiTheme({
+        palette: {
+          type: 'dark',
+          primary: {
+            main: "#199bfc"
+          }
+        },
+      }),
+      themeLabel: 'Dark',
     }
-  },
-});
-theme = responsiveFontSizes(theme);
+  }
 
-export class App extends React.Component {
+  componentDidMount() {
+    this.setState(prevState => ({
+      theme: responsiveFontSizes(prevState.theme)
+    }))
+  }
+
+  switchMode = (event) => {
+    // handled thru hardcoding - type error if string variable (can be undefined)
+    if (event) {
+      this.setState({
+        theme: createMuiTheme({
+          palette: {
+            type: 'dark',
+            primary: {
+              main: "#199bfc"
+            }
+          },
+        }),
+        themeLabel: "Dark"
+      });
+    } else {
+      this.setState({
+        theme: createMuiTheme({
+          palette: {
+            type: 'light',
+            primary: {
+              main: "#199bfc"
+            }
+          },
+        }),
+        themeLabel: "Light"
+      });
+    }
+  }
+
   render() {
     return (
       <Router basename={process ? process.env.PUBLIC_URL : ""}>
-        <MuiThemeProvider theme={theme}>
-          <ScrollToTop/>
+        <MuiThemeProvider theme={this.state.theme}>
+          <ScrollToTop />
           <CssBaseline />
           <header>
-            <Nav />
+            <Nav lightTheme={this.switchMode} themeLabel={this.state.themeLabel}/>
           </header>
           <Bubbles />
           <Switch>
@@ -52,6 +93,7 @@ export class App extends React.Component {
             <Route path="/contact" exact component={Contact} />
             <Redirect to='/' />
           </Switch>
+          <Copyright />
           <Chatbot />
         </MuiThemeProvider>
       </Router>

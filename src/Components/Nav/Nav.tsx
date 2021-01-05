@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import AppBar from '@material-ui/core/AppBar';
 import Tabs from '@material-ui/core/Tabs';
 import Toolbar from '@material-ui/core/Toolbar';
@@ -9,40 +8,13 @@ import Button from '@material-ui/core/Button';
 import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
 import Fab from '@material-ui/core/Fab';
-import Typography from '@material-ui/core/Typography';
-import Box from '@material-ui/core/Box';
 import KeyboardArrowUpIcon from '@material-ui/icons/KeyboardArrowUp';
 import Zoom from '@material-ui/core/Zoom';
+import Brightness3Icon from "@material-ui/icons/Brightness3";
+import Brightness7Icon from "@material-ui/icons/Brightness7";
 import { Link } from 'react-router-dom';
+import Tooltip from '@material-ui/core/Tooltip';
 import './Nav.scss';
-function TabPanel(props: any) {
-  const { children, value, index, ...other } = props;
-  return (
-    <Typography
-      component="div"
-      role="tabpanel"
-      hidden={value !== index}
-      id={`scrollable-prevent-tabpanel-${index}`}
-      aria-labelledby={`scrollable-prevent-tab-${index}`}
-      {...other}
-    >
-      {value === index && <Box p={3}>{children}</Box>}
-    </Typography>
-  );
-}
-
-TabPanel.propTypes = {
-  children: PropTypes.node,
-  index: PropTypes.any.isRequired,
-  value: PropTypes.any.isRequired,
-};
-
-function a11yProps(index: number) {
-  return {
-    id: `scrollable-prevent-tab-${index}`,
-    'aria-controls': `scrollable-prevent-tabpanel-${index}`,
-  };
-}
 
 const useStyles = makeStyles((theme: Theme) => ({
   root: {
@@ -82,7 +54,25 @@ function ScrollTop(props: any) {
   );
 }
 
-export class Nav extends React.Component {
+type SwitchProps = {
+  lightTheme: (e: any) => void;
+  themeLabel: string;
+}
+export class Nav extends React.Component<SwitchProps, { lightTheme: boolean }> {
+  constructor(props: any) {
+    super(props);
+    this.state = {
+      lightTheme: true,
+    };
+  }
+
+  switch = () => {
+    this.setState({
+      lightTheme: !this.state.lightTheme,
+    });
+    this.props.lightTheme(!this.state.lightTheme);
+  }
+
   render() {
     return (
       <div className="nav">
@@ -95,32 +85,42 @@ export class Nav extends React.Component {
               <IconButton edge="start" aria-label="open drawer" style={{ marginLeft: "1%" }}>
                 <MenuIcon />
               </IconButton>
-              <Link to="/" {...a11yProps(0)}>
+              <Link to="/">
                 <Button>Home</Button>
               </Link>
-              <Link to="/about" {...a11yProps(1)}>
-                <Button>About Me</Button>
+              <Link to="/about">
+                <Button>About</Button>
               </Link>
-              <Link to="/resume" {...a11yProps(2)}>
+              <Link to="/resume">
                 <Button>Resume</Button>
               </Link>
-              <Link to="/projects" {...a11yProps(3)}>
+              <Link to="/projects">
                 <Button>Projects</Button>
               </Link>
-              <Link to="/photos" {...a11yProps(4)}>
+              <Link to="/photos">
                 <Button>Photos</Button>
               </Link>
-              <Link to="/contact" {...a11yProps(5)}>
+              <Link to="/contact">
                 <Button>Contact</Button>
               </Link>
+              <IconButton
+                edge="end"
+                aria-label="mode"
+                onClick={() => this.switch()}
+              >
+                {this.state.lightTheme ? <Brightness7Icon /> : <Brightness3Icon />}
+              </IconButton>
+              {/* <p>{this.props.themeLabel} Theme</p> */}
             </Toolbar>
           </Tabs>
         </AppBar>
         <Toolbar id="back-to-top-anchor" />
         <ScrollTop {...this.props}>
-          <Fab size="small" aria-label="scroll back to top">
-            <KeyboardArrowUpIcon />
-          </Fab>
+          <Tooltip title="Back to Top" aria-label="Back to Top">
+            <Fab size="small" aria-label="scroll back to top">
+              <KeyboardArrowUpIcon />
+            </Fab>
+          </Tooltip>
         </ScrollTop>
       </div>
     );

@@ -12,7 +12,10 @@
 	margin: auto 5%;
 }
 
-h4.project-summary {
+.project-summary {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
 	margin: 5%;
 }
 

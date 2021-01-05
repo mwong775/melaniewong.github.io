@@ -6,36 +6,43 @@ import StepContent from '@material-ui/core/StepContent';
 import Button from '@material-ui/core/Button';
 import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
+import Timelines from '../About/Timelines/Timelines';
 import './About.scss';
 
 function getSteps() {
-  return ['Introduction', 'During 2019...', 'Earlier in 2020...', 'This Summer (so far)...'];
+  return ['Introduction', 'During my undergraduate studies...', 'In 2020...', 'Nowadays...'];
 }
 
 function getStepContent(step: Number) {
   switch (step) {
     case 0:
-      return `I am an incoming Master's student pursuing a 4-year B.S./M.S. in Computer Science at UC Santa Cruz. 
-      Interests primarily include topics in computer & network security, distributed systems, web development, 
-      cloud-based platforms, and many other domains within the field of software engineering. I'm eager to work with diverse
-      technologies to expand my expertise.`;
+      return `I am currently a Master's student pursuing a 4-year B.S./M.S. in Computer Science at UC Santa Cruz. 
+      My interests primarily include topics in computer & network security, distributed systems, web development, 
+      cloud-based platforms, and many other domains within the field of software engineering. I'm always eager to work with diverse
+      technologies to learn and expand my expertise.`;
     case 1:
-      return `I was a Computation Intern at the National Ignition Facility, a division of Lawrence Livermore National Laboratory. 
-      In the quarter of Fall 2019,  I began a research project focused on web and network security for everyday online users.
-      I also worked part time this Fall as a Mozilla Ingenious for the Glass Room, a pop-up exhibition in downtown San Francisco 
-      sponsored by Tactical Tech and Mozilla Firefox to address modern issues surrounding data privacy and digital security.`;
+      return `I started at UCSC as an NCAA student-athlete in track & field, competing in sprints and hurdles for 2 years.
+      My first internship role was a Computation Intern at the National Ignition Facility, a division of Lawrence Livermore National Laboratory. 
+      In the quarter of Fall 2019,  I began a research project focused on web and network security for everyday online users.`;
     case 2:
-      return `I recently graduated with my Bachelor's in June, and will spend my fourth year at UCSC pursuing a Master's
-      to finish by Spring 2021 as part of the new B.S./M.S. pathways program. I was also selected for the Building Belonging Fellowship award,
-      an opportunity to build software for conducting research in an experimental economics lab at UCSC over this summer.`;
+      return `I recently graduated with my Bachelor's in June, and spending my fourth year at UCSC pursuing a Master's
+      to finish by Spring 2021 as part of the new B.S./M.S. pathways program. I also completed an internship at Bank of America as a Global Technology Summer Analyst.`;
     case 3:
-      return `I just finished my internship at Bank of America as a Global Technology Summer Analyst. My team and I scraped over
-      30+ financial and regulatory documents to build an NLP language model using Python. We also created a document search engine with
-      similarity scoring and keyword highlighting using frequency and deep learning models.`;
+      return `I'm just trying my best to manage graduate coursework, working as a graduate teaching assistant, and some part-time coding for economics experiments - all while catching up on sleep :)`;
     default:
       return 'Unknown step';
   }
 }
+
+/**
+ *  My team and I scraped over
+      30+ financial and regulatory documents to build an NLP language model using Python. We also created a document search engine with
+      similarity scoring and keyword highlighting using frequency and deep learning models.
+ * 
+ * I also worked part time this Fall as a Mozilla Ingenious for the Glass Room, a pop-up exhibition in downtown San Francisco 
+      sponsored by Tactical Tech and Mozilla Firefox to address modern issues surrounding data privacy and digital security.
+ * 
+ */
 
 export const VerticalLinearStepper = () => {
   const [activeStep, setActiveStep] = React.useState(0);
@@ -102,6 +109,9 @@ export class About extends React.Component {
 				<h2 className="gradient-font">About Me</h2>
 				<VerticalLinearStepper/>
 				<br/>
+        <div className="timeline">
+          <Timelines/>
+        </div>
         <p>Other interests: playing piano, hiking, rock climbing, collecting plushies, playing Animal Crossing~</p>
 				<p>More information on the Tech4Good Lab can be found <a href="https://tech4good.soe.ucsc.edu/#/" target="_blank" rel="noopener noreferrer">here</a>.</p>
 				<p>The Glass Room website can be found <a href="https://theglassroom.org" target="_blank" rel="noopener noreferrer">here</a>.</p>
