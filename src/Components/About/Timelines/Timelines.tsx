@@ -9,10 +9,9 @@ import Box from '@material-ui/core/Box';
 import HtTimeline from './HtTimeline';
 import ExpTimeline from './ExpTimeline';
 import EvtTimeline from './EvtTimeline';
-import ExploreIcon from '@material-ui/icons/Explore';
+import AmpStoriesIcon from '@material-ui/icons/AmpStories';
 import WorkIcon from '@material-ui/icons/Work';
-import SchoolIcon from '@material-ui/icons/School';
-
+import EventIcon from '@material-ui/icons/Event';
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
 
@@ -73,10 +72,9 @@ export default function ScrollableTabsButtonForce() {
           aria-label="scrollable force tabs example"
           centered
         >
-          <Tab label="Highlights" icon={<ExploreIcon />} {...a11yProps(0)} />
+          <Tab label="Highlights" icon={<AmpStoriesIcon />} {...a11yProps(0)} />
           <Tab label="Experience" icon={<WorkIcon />} {...a11yProps(1)} />
-          {/* <Tab label="Education" icon={<SchoolIcon />} {...a11yProps(2)} /> */}
-          <Tab label="Events/Awards" icon={<SchoolIcon />} {...a11yProps(2)} />
+          <Tab label="Events/Awards" icon={<EventIcon />} {...a11yProps(2)} />
         </Tabs>
       </AppBar>
       <TabPanel value={value} index={0}>
