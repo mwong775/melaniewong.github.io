@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/static/css/main.b4c77d0b.chunk.css",
-    "main.js": "/static/js/main.06d5a73d.chunk.js",
-    "main.js.map": "/static/js/main.06d5a73d.chunk.js.map",
+    "main.js": "/static/js/main.327fbb43.chunk.js",
+    "main.js.map": "/static/js/main.327fbb43.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.e327d292.js",
     "runtime-main.js.map": "/static/js/runtime-main.e327d292.js.map",
-    "static/js/2.9b306fc2.chunk.js": "/static/js/2.9b306fc2.chunk.js",
-    "static/js/2.9b306fc2.chunk.js.map": "/static/js/2.9b306fc2.chunk.js.map",
+    "static/js/2.6d654245.chunk.js": "/static/js/2.6d654245.chunk.js",
+    "static/js/2.6d654245.chunk.js.map": "/static/js/2.6d654245.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.67f0caeb1b321ff86b3b9389d40757bf.js": "/precache-manifest.67f0caeb1b321ff86b3b9389d40757bf.js",
+    "precache-manifest.45430e24168ad7a41b949061a5752046.js": "/precache-manifest.45430e24168ad7a41b949061a5752046.js",
     "service-worker.js": "/service-worker.js",
     "static/css/main.b4c77d0b.chunk.css.map": "/static/css/main.b4c77d0b.chunk.css.map",
-    "static/js/2.9b306fc2.chunk.js.LICENSE.txt": "/static/js/2.9b306fc2.chunk.js.LICENSE.txt",
+    "static/js/2.6d654245.chunk.js.LICENSE.txt": "/static/js/2.6d654245.chunk.js.LICENSE.txt",
     "static/media/Melanie_Wong_Resume.pdf": "/static/media/Melanie_Wong_Resume.200562fe.pdf",
     "static/media/NY_5-15-19_2.jpg": "/static/media/NY_5-15-19_2.9e13cc4e.jpg",
     "static/media/Poster.jpg": "/static/media/Poster.7f31df48.jpg",
@@ -20,6 +20,7 @@
     "static/media/cinna_stack.gif": "/static/media/cinna_stack.8dfb69c7.gif",
     "static/media/cinna_sup.gif": "/static/media/cinna_sup.66e3768b.gif",
     "static/media/giphy.jpg": "/static/media/giphy.c8adcecb.jpg",
+    "static/media/livecolor_logo.png": "/static/media/livecolor_logo.5cd20cca.png",
     "static/media/old_gold_building.jpg": "/static/media/old_gold_building.bc5a4e7d.jpg",
     "static/media/pubu.jpg": "/static/media/pubu.72709814.jpg",
     "static/media/rocks.jpg": "/static/media/rocks.f752cff2.jpg",
@@ -27,8 +28,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.e327d292.js",
-    "static/js/2.9b306fc2.chunk.js",
+    "static/js/2.6d654245.chunk.js",
     "static/css/main.b4c77d0b.chunk.css",
-    "static/js/main.06d5a73d.chunk.js"
+    "static/js/main.327fbb43.chunk.js"
   ]
 }
