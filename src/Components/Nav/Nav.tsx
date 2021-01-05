@@ -103,13 +103,15 @@ export class Nav extends React.Component<SwitchProps, { lightTheme: boolean }> {
               <Link to="/contact">
                 <Button>Contact</Button>
               </Link>
-              <IconButton
-                edge="end"
-                aria-label="mode"
-                onClick={() => this.switch()}
-              >
-                {this.state.lightTheme ? <Brightness7Icon /> : <Brightness3Icon />}
-              </IconButton>
+              <Tooltip title="WARNING: sketchy light theme - toggle at own risk D:" aria-label="warning">
+                <IconButton
+                  edge="end"
+                  aria-label="mode"
+                  onClick={() => this.switch()}
+                >
+                  {this.state.lightTheme ? <Brightness7Icon /> : <Brightness3Icon />}
+                </IconButton>
+              </Tooltip>
               {/* <p>{this.props.themeLabel} Theme</p> */}
             </Toolbar>
           </Tabs>

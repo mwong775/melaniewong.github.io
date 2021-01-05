@@ -3,6 +3,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import ButtonBase from '@material-ui/core/ButtonBase';
 import Typography from '@material-ui/core/Typography';
 import poster from '../Photos/images/Poster.jpg';
+import livecolor from '../../assets/livecolor_logo.png';
 // import iws from '../Photos/images/IWS.jpg'; // final webpage design...
 import giphy from '../Photos/images/giphy.jpg';
 import cinnaboba from '../Photos/images/cinna_boba.gif';
@@ -15,7 +16,7 @@ const images = [
     title: 'GIFinder',
     link: './gifinder',
     description: 'A simple search to discover awesome GIFs, powered by the Giphy API',
-    width: '40%',
+    width: '30%',
   },
   {
     url: cinnaboba,
@@ -30,6 +31,13 @@ const images = [
     link: './llnlposter',
     description: 'Project poster from my 2019 summer internship at LLNL',
     width: '40%',
+  },
+  {
+    url: livecolor,
+    title: 'LiveColor',
+    link: 'https://team-harmony-dev.github.io/LiveColor_Website/',
+    description: 'Android application for color-picking (link currently unprovided)',
+    width: '30%',
   },
 ];
 
