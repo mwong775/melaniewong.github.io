@@ -1,13 +1,30 @@
 
+.row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding-top: 2%;
+}
+
 .map-header {
     text-align: left;
-    margin-left: 5%;  
-    padding-top: 2%; 
+    margin: 4%
 }
 
 #mapId {
     // height and width must be set in order to see the map
     height: 80vh;
-    width: 90vw;
+    width: 60vw;
     margin: auto;
 }
+
+@media screen and (max-width: 420px) {      
+      .row {
+        flex-direction: column;
+      }
+
+      #mapId {
+          margin: 0;
+          width: 100%;
+      }
+  }

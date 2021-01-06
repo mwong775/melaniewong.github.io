@@ -3,6 +3,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 import poster from '../Photos/images/Poster.jpg';
 import livecolor from '../../assets/livecolor_logo.png';
+import bettertogether from '../../assets/better_together.png';
 // import iws from '../Photos/images/IWS.jpg'; // final webpage design...
 import giphy from '../Photos/images/giphy.jpg';
 import cinnaboba from '../Photos/images/cinna_boba.gif';
@@ -32,8 +33,15 @@ const images = [
     link: './bobamap',
     external: '',
     repo: '',
-    description: 'A map of (most) boba places around the SF Bay Area',
-    width: '40%',
+    description: 'A map of (most) boba places around the San Francisco Bay Area',
+  },
+  {
+    url: bettertogether,
+    title: 'Better Together',
+    link: '',
+    external: '',
+    repo: 'https://github.com/mwong775/codehouse-team-four',
+    description: 'To enable communities to come closer and help each other secure livelihood through the pandemic and beyond. Winning Project at VMware CodeHouse 2020',
   },
   {
     url: poster,
@@ -50,7 +58,7 @@ const images = [
     link: '',
     external: 'https://team-harmony-dev.github.io/LiveColor_Website/', 
     repo: 'https://github.com/TheBrows/LiveColor',
-    description: 'Android application for color-picking (link currently unprovided)',
+    description: 'Android application for color-picking',
     width: '30%',
   },
 ];

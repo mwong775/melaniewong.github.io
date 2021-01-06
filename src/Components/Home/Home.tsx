@@ -12,7 +12,6 @@ import leeps from '../../assets/leeps_logo.png';
 import t4g from '../../assets/tech4good.png';
 import llnl from '../../assets/llnl.jpg';
 
-
 export class Home extends React.Component {
 
   componentDidMount() {

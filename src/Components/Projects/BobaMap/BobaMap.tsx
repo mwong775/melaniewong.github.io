@@ -60,12 +60,16 @@ export class BobaMap extends React.Component<{}, { geoLocation: LatLngTuple, geo
 
     render() {
         return (
-            <div className="App">
-                <Link to="/projects"><Button className="back">Back</Button></Link>
-                <div className="map-header">
-                    <h2 className="gradient-font">Boba Map!</h2>
-                    <h4>Dataset from <a href="https://www.kaggle.com/vnxiclaire/bobabayarea" target="_blank" rel="noopener noreferrer">Kaggle</a></h4>
+            <div className="App row">
+                    <Link to="/projects"><Button className="back">Back</Button></Link>
+                <div>
+                    <div className="map-header">
+                        <h2 className="gradient-font">Boba Map!</h2>
+                        <h4>Dataset from <a href="https://www.kaggle.com/vnxiclaire/bobabayarea" target="_blank" rel="noopener noreferrer">Kaggle</a></h4>
+                    </div>
                 </div>
+                <div>
+
                 <Map id="mapId" center={this.state.geoLocation} zoom={zoom}>
                     <TileLayer
                         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
@@ -87,6 +91,7 @@ export class BobaMap extends React.Component<{}, { geoLocation: LatLngTuple, geo
                         )
                     })}
                 </Map>
+                </div>
             </div>
         );
     }
