@@ -1,10 +1,12 @@
 import * as React from "react";
 import Particles from 'react-particles-js';
+import './Bubbles.scss';
 
 export class Bubbles extends React.Component {
     render() {
         return (
             <Particles
+                // height={(window.outerHeight).toString()}
                 params={{
                     "particles": {
                         "number": {

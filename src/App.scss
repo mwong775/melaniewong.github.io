@@ -21,16 +21,6 @@ body {
 	margin: 3% 0;
 }
 
-canvas { /* puts particles overlapping */
-	position: absolute;
-	right: 0;
-	bottom: 0;
-	left: 0;
-	height: 100%;
-	width: 100%;
-	z-index: -1;
-}
-
 a {
 	color: #199bfc !important;
 	text-decoration: none;

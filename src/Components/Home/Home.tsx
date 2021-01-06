@@ -4,6 +4,14 @@ import { Link } from 'react-router-dom';
 import { init } from 'ityped';
 import Button from '@material-ui/core/Button';
 import cinnamoroll_sup from '../Photos/images/cinna_sup.gif';
+import FeaturedCard from './FeaturedCard/FeaturedCard';
+import Grid from '@material-ui/core/Grid';
+import Container from '@material-ui/core/Container';
+import bofa from '../../assets/bofa.jpg';
+import leeps from '../../assets/leeps_logo.png';
+import t4g from '../../assets/tech4good.png';
+import llnl from '../../assets/llnl.jpg';
+
 
 export class Home extends React.Component {
 
@@ -13,9 +21,48 @@ export class Home extends React.Component {
   }
 
   render() {
-    const skills = ["Python", "JavaScript", "C++", "TypeScript", "Angular", "React", "Docker", "Polymer.js", "Java", "HTML", "CSS", "Kubernetes", "Wireshark", "Android", "Node.js"];
+    const skills = ["Python", "JavaScript", "C++", "TypeScript", "Angular", "React", "Docker", "Polymer.js", "Flask", "Java", "HTML", "CSS", "Kubernetes", "Wireshark", "Android", "Node.js"];
     const grad = ["Graduate Teaching Assistant (CSE150/L - Fall 2020, CSE30 - Winter 2021)", "Coursework: Artificial Intelligence, Sensor Networks and Internet of Things"];
     const undergrad = ["Graduated with Highest Honors, Cum Laude", "NCAA Track & Field Student-Athlete (2 years)", "Coursework: Algorithms & Data Structures, Distributed Systems, Computer & Network Security, Machine Learning, Coding for Social Good"];
+
+    const featuredCards = [
+      {
+        title: 'Bank of America',
+        date: 'June - August 2020',
+        description: 'Global Technology Summer Analyst',
+        link: '',
+        tags: ['Python', 'JupyterLab', 'HTML'],
+        image: bofa,
+        imageText: 'Image Text',
+      },
+      {
+        title: 'LEEPS Lab - UCSC Economics Department',
+        date: 'June - September 2019',
+        description: 'Lead Programmer',
+        link: 'https://leeps.ucsc.edu/',
+        tags: ['oTree', 'Polymer.js', 'Python'],
+        image: leeps,
+        imageText: 'Image Text',
+      },
+      {
+        title: 'UCSC Tech4Good Lab',
+        date: 'March 2019 - Present',
+        description: 'Research Assistant - Web Development',
+        link: 'https://tech4good.soe.ucsc.edu/',
+        tags: ['Angular', 'TypeScript', 'Firebase'],
+        image: t4g,
+        imageText: 'Image Text',
+      },
+      {
+        title: 'Lawrence Livermore National Laboratory',
+        date: 'June - September 2019',
+        description: 'Computation Intern',
+        link: 'https://www.llnl.gov/',
+        tags: ['Java', 'React', 'TypeScript'],
+        image: llnl,
+        imageText: 'Image Text',
+      },
+    ];
 
     return (
       <div className="home">
@@ -24,7 +71,7 @@ export class Home extends React.Component {
           <img className="cinnamoroll" src={cinnamoroll_sup} alt="cinnamoroll" />
         </div>
         <div className=" content-wrapper">
-          <div className="about">
+          <div className="row">
             <div className="about-wrapper">
               <h2 className="gradient-font">About Me</h2>
               <p>Hi! I'm Melanie, and I'm studying Computer Science at the University of California in Santa Cruz.</p>
@@ -39,7 +86,16 @@ export class Home extends React.Component {
               <p>Source available on GitHub <a href="https://github.com/mwong775/melaniewong.github.io/tree/development" target="_blank" rel="noopener noreferrer">here</a>.</p>
             </div>
           </div>
-
+          <div style={{ textAlign: 'center' }}>
+            <h2 className="gradient-font">Experience</h2>
+          </div>
+          <Container maxWidth="lg">
+            <Grid container spacing={4}>
+              {featuredCards.map((content) => (
+                <FeaturedCard key={content.title} content={content} />
+              ))}
+            </Grid>
+          </Container>
           <div id="education">
             <h2 className="gradient-font">Education</h2>
             <div className="education-block">

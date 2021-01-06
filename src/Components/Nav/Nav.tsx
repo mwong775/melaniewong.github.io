@@ -1,6 +1,5 @@
 import React from 'react';
 import AppBar from '@material-ui/core/AppBar';
-import Tabs from '@material-ui/core/Tabs';
 import Toolbar from '@material-ui/core/Toolbar';
 import { Theme, makeStyles } from '@material-ui/core/styles';
 import useScrollTrigger from '@material-ui/core/useScrollTrigger';
@@ -78,11 +77,11 @@ export class Nav extends React.Component<SwitchProps, { lightTheme: boolean }> {
     return (
       <div className="nav">
         <AppBar className="appbar">
-          <Tabs
+          {/* <Tabs
             variant="scrollable"
             scrollButtons="off"
-            value=""
-          >
+            value="0"
+          > */}
             <Toolbar>
               <IconButton edge="start" aria-label="open drawer" style={{ marginLeft: "1%", color: color }}>
                 <MenuIcon />
@@ -117,7 +116,7 @@ export class Nav extends React.Component<SwitchProps, { lightTheme: boolean }> {
               </Tooltip>
               {/* <p>{this.props.themeLabel} Theme</p> */}
             </Toolbar>
-          </Tabs>
+          {/* </Tabs> */}
         </AppBar>
         <Toolbar id="back-to-top-anchor" />
         <ScrollTop {...this.props}>
