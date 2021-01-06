@@ -1,21 +1,22 @@
 {
   "files": {
-    "main.css": "/static/css/main.6dd204a0.chunk.css",
-    "main.js": "/static/js/main.f8dbf6d2.chunk.js",
-    "main.js.map": "/static/js/main.f8dbf6d2.chunk.js.map",
+    "main.css": "/static/css/main.0ee0a1a2.chunk.css",
+    "main.js": "/static/js/main.f17fc5c0.chunk.js",
+    "main.js.map": "/static/js/main.f17fc5c0.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.e327d292.js",
     "runtime-main.js.map": "/static/js/runtime-main.e327d292.js.map",
-    "static/js/2.5602b85f.chunk.js": "/static/js/2.5602b85f.chunk.js",
-    "static/js/2.5602b85f.chunk.js.map": "/static/js/2.5602b85f.chunk.js.map",
+    "static/js/2.efbd3c87.chunk.js": "/static/js/2.efbd3c87.chunk.js",
+    "static/js/2.efbd3c87.chunk.js.map": "/static/js/2.efbd3c87.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.afdbdd3b134ae623e6aee1ac8fb2e762.js": "/precache-manifest.afdbdd3b134ae623e6aee1ac8fb2e762.js",
+    "precache-manifest.f1ba9c35ebc23b49b84bd78206d965f8.js": "/precache-manifest.f1ba9c35ebc23b49b84bd78206d965f8.js",
     "service-worker.js": "/service-worker.js",
-    "static/css/main.6dd204a0.chunk.css.map": "/static/css/main.6dd204a0.chunk.css.map",
-    "static/js/2.5602b85f.chunk.js.LICENSE.txt": "/static/js/2.5602b85f.chunk.js.LICENSE.txt",
+    "static/css/main.0ee0a1a2.chunk.css.map": "/static/css/main.0ee0a1a2.chunk.css.map",
+    "static/js/2.efbd3c87.chunk.js.LICENSE.txt": "/static/js/2.efbd3c87.chunk.js.LICENSE.txt",
     "static/media/Melanie_Wong_Resume.pdf": "/static/media/Melanie_Wong_Resume.200562fe.pdf",
     "static/media/NY_5-15-19_2.jpg": "/static/media/NY_5-15-19_2.9e13cc4e.jpg",
     "static/media/Poster.jpg": "/static/media/Poster.7f31df48.jpg",
     "static/media/Tahoe.jpg": "/static/media/Tahoe.1d076758.jpg",
+    "static/media/better_together.png": "/static/media/better_together.df30e76f.png",
     "static/media/bofa.jpg": "/static/media/bofa.f54f397f.jpg",
     "static/media/cinna_boba.gif": "/static/media/cinna_boba.43c3e9fa.gif",
     "static/media/cinna_stack.gif": "/static/media/cinna_stack.8dfb69c7.gif",
@@ -32,8 +33,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.e327d292.js",
-    "static/js/2.5602b85f.chunk.js",
-    "static/css/main.6dd204a0.chunk.css",
-    "static/js/main.f8dbf6d2.chunk.js"
+    "static/js/2.efbd3c87.chunk.js",
+    "static/css/main.0ee0a1a2.chunk.css",
+    "static/js/main.f17fc5c0.chunk.js"
   ]
 }
