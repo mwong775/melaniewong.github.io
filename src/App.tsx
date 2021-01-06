@@ -18,7 +18,10 @@ import { Home } from "./Components/Home/Home";
 import ScrollToTop from "./Components/Utils/ScrollToTop"
 import CssBaseline from '@material-ui/core/CssBaseline';
 import { MuiThemeProvider, createMuiTheme, responsiveFontSizes } from '@material-ui/core/styles'; // responseiveFontSizes needs testing
-
+import IconButton from '@material-ui/core/IconButton';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import EmailIcon from '@material-ui/icons/Email';
+import { faFacebook, faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons";
 export class App extends React.Component<{}, { theme: any, themeLabel: string }> {
   constructor(props: any) {
     super(props);
@@ -77,7 +80,7 @@ export class App extends React.Component<{}, { theme: any, themeLabel: string }>
           <ScrollToTop />
           <CssBaseline />
           <header>
-            <Nav lightTheme={this.switchMode} themeLabel={this.state.themeLabel}/>
+            <Nav lightTheme={this.switchMode} themeLabel={this.state.themeLabel} />
           </header>
           <Bubbles />
           <Switch>
@@ -93,7 +96,13 @@ export class App extends React.Component<{}, { theme: any, themeLabel: string }>
             <Route path="/contact" exact component={Contact} />
             <Redirect to='/' />
           </Switch>
-          <Copyright />
+          <footer style={{ padding: '2%'}}>
+            <Copyright />
+            <IconButton href="mailto:mwong775@gmail.com"><EmailIcon style={{ color: "#ffffff" }}/></IconButton>
+            <IconButton onClick={() => window.open("https://www.facebook.com/mwong775", "_blank")}><FontAwesomeIcon icon={faFacebook} /></IconButton>
+            <IconButton onClick={() => window.open("https://www.linkedin.com/in/mwong775", "_blank")}><FontAwesomeIcon icon={faLinkedin} /></IconButton>
+            <IconButton onClick={() => window.open("https://github.com/mwong775", "_blank")}><FontAwesomeIcon icon={faGithub} /></IconButton>
+          </footer>
           <Chatbot />
         </MuiThemeProvider>
       </Router>

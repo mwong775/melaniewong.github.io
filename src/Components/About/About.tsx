@@ -68,7 +68,7 @@ export const VerticalLinearStepper = () => {
             <StepLabel>{label}</StepLabel>
             <StepContent>
               <Typography>{getStepContent(index)}</Typography>
-              <br/>
+              <br />
               <div>
                 <div>
                   <Button
@@ -92,8 +92,8 @@ export const VerticalLinearStepper = () => {
       </Stepper>
       {activeStep === steps.length && (
         <Paper square elevation={0}>
-          <Typography style={{padding: "1%"}}>Introduction completed - scroll down for more info!</Typography>
-          <Button variant="contained" color="primary" onClick={handleReset} style={{margin: "1%"}}>
+          <Typography style={{ padding: "1%" }}>Introduction completed - scroll down for more info!</Typography>
+          <Button variant="contained" color="primary" onClick={handleReset} style={{ margin: "1%" }}>
             Reset
           </Button>
         </Paper>
@@ -103,20 +103,20 @@ export const VerticalLinearStepper = () => {
 }
 
 export class About extends React.Component {
-	render() {
-		return(
-			<div className="content-wrapper">
-				<h2 className="gradient-font">About Me</h2>
-				<VerticalLinearStepper/>
-				<br/>
+  render() {
+    return (
+      <div className="content-wrapper">
+        <h2 className="gradient-font">About Me</h2>
+        <VerticalLinearStepper />
+        <br />
         <div className="timeline">
-          <Timelines/>
+          <Timelines />
         </div>
         <p>Other interests: playing piano, hiking, rock climbing, collecting plushies, playing Animal Crossing~</p>
-				<p>More information on the Tech4Good Lab can be found <a href="https://tech4good.soe.ucsc.edu/#/" target="_blank" rel="noopener noreferrer">here</a>.</p>
-				<p>The Glass Room website can be found <a href="https://theglassroom.org" target="_blank" rel="noopener noreferrer">here</a>.</p>
-				<p>The Glass Room offers Data Detox Kits, which are available online <a href="https://datadetoxkit.org/en/home" target="_blank" rel="noopener noreferrer">here</a>.</p>
-			</div>
-			);
-	}
+        <p>More information on the Tech4Good Lab can be found <a href="https://tech4good.soe.ucsc.edu/#/" target="_blank" rel="noopener noreferrer">here</a>.</p>
+        <p>The Glass Room website can be found <a href="https://theglassroom.org" target="_blank" rel="noopener noreferrer">here</a>.</p>
+        <p>The Glass Room offers Data Detox Kits, which are available online <a href="https://datadetoxkit.org/en/home" target="_blank" rel="noopener noreferrer">here</a>.</p>
+      </div>
+    );
+  }
 }

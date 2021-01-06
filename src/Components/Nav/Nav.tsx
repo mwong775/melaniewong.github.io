@@ -74,40 +74,43 @@ export class Nav extends React.Component<SwitchProps, { lightTheme: boolean }> {
   }
 
   render() {
+    const color = "#ffffff";
     return (
       <div className="nav">
         <AppBar className="appbar">
           <Tabs
             variant="scrollable"
             scrollButtons="off"
-            value="">
+            value=""
+          >
             <Toolbar>
-              <IconButton edge="start" aria-label="open drawer" style={{ marginLeft: "1%" }}>
+              <IconButton edge="start" aria-label="open drawer" style={{ marginLeft: "1%", color: color }}>
                 <MenuIcon />
               </IconButton>
               <Link to="/">
-                <Button>Home</Button>
+                <Button style={{ color: color }}>Home</Button>
               </Link>
               <Link to="/about">
-                <Button>About</Button>
+                <Button style={{ color: color }}>About</Button>
               </Link>
               <Link to="/resume">
-                <Button>Resume</Button>
+                <Button style={{ color: color }}>Resume</Button>
               </Link>
               <Link to="/projects">
-                <Button>Projects</Button>
+                <Button style={{ color: color }}>Projects</Button>
               </Link>
               <Link to="/photos">
-                <Button>Photos</Button>
+                <Button style={{ color: color }}>Photos</Button>
               </Link>
               <Link to="/contact">
-                <Button>Contact</Button>
+                <Button style={{ color: color }}>Contact</Button>
               </Link>
               <Tooltip title="WARNING: sketchy light theme - toggle at own risk D:" aria-label="warning">
                 <IconButton
                   edge="end"
                   aria-label="mode"
                   onClick={() => this.switch()}
+                  style={{ color: color }}
                 >
                   {this.state.lightTheme ? <Brightness7Icon /> : <Brightness3Icon />}
                 </IconButton>
