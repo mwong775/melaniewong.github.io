@@ -28,79 +28,14 @@ export default function HtTimeline() {
 
         <TimelineItem>
           <TimelineOppositeContent>
-            <Typography color="textSecondary">September 2017</Typography>
+            <Typography color="textSecondary">September 2020 - Present</Typography>
           </TimelineOppositeContent>
           <TimelineSeparator>
-            <TimelineDot />
+            <TimelineDot color="primary"/>
             <TimelineConnector />
           </TimelineSeparator>
           <TimelineContent>
-            <Typography>Pursuing B.S. Computer Science at University of California, Santa Cruz</Typography>
-          </TimelineContent>
-        </TimelineItem>
-
-        <TimelineItem>
-          <TimelineOppositeContent>
-            <Typography color="textSecondary">March 2019</Typography>
-          </TimelineOppositeContent>
-          <TimelineSeparator>
-            <TimelineDot color="primary" />
-            <TimelineConnector />
-          </TimelineSeparator>
-          <TimelineContent>
-            <Typography>Undergraduate Research Assistant at Tech4Good Lab, UCSC</Typography>
-          </TimelineContent>
-        </TimelineItem>
-
-        <TimelineItem>
-          <TimelineOppositeContent>
-            <Typography color="textSecondary">June - September 2019</Typography>
-          </TimelineOppositeContent>
-          <TimelineSeparator>
-            <TimelineDot color="secondary" />
-            <TimelineConnector />
-          </TimelineSeparator>
-          <TimelineContent>
-            <Typography>Computation Intern at Lawrence Livermore National Laboratory</Typography>
-          </TimelineContent>
-        </TimelineItem>
-
-        <TimelineItem>
-          <TimelineOppositeContent>
-            <Typography color="textSecondary">September 2019</Typography>
-          </TimelineOppositeContent>
-          <TimelineSeparator>
-            <TimelineDot color="primary" />
-            <TimelineConnector />
-          </TimelineSeparator>
-          <TimelineContent>
-            <Typography>Undergraduate Researcher at Baskin School of Engineering, UCSC</Typography>
-          </TimelineContent>
-        </TimelineItem>
-
-        <TimelineItem>
-          <TimelineOppositeContent>
-            <Typography color="textSecondary">May 2020 - Present</Typography>
-          </TimelineOppositeContent>
-          <TimelineSeparator>
-            <TimelineDot color="primary" />
-            <TimelineConnector />
-          </TimelineSeparator>
-          <TimelineContent>
-            <Typography>Lead Programmer for RI Project at LEEPS Lab, UCSC Economics Department</Typography>
-          </TimelineContent>
-        </TimelineItem>
-
-        <TimelineItem>
-          <TimelineOppositeContent>
-            <Typography color="textSecondary">June 2020</Typography>
-          </TimelineOppositeContent>
-          <TimelineSeparator>
-            <TimelineDot />
-            <TimelineConnector />
-          </TimelineSeparator>
-          <TimelineContent>
-            <Typography>Graduated B.S. in Computer Science with Highest Honors, Cum Laude at UCSC</Typography>
+            <Typography>Graduate Teaching Assistant, pursuing M.S. Computer Science at UC Santa Cruz</Typography>
           </TimelineContent>
         </TimelineItem>
 
@@ -119,14 +54,79 @@ export default function HtTimeline() {
 
         <TimelineItem>
           <TimelineOppositeContent>
-            <Typography color="textSecondary">September 2020 - Present</Typography>
+            <Typography color="textSecondary">June 2020</Typography>
           </TimelineOppositeContent>
           <TimelineSeparator>
-            <TimelineDot color="primary"/>
+            <TimelineDot />
             <TimelineConnector />
           </TimelineSeparator>
           <TimelineContent>
-            <Typography>Graduate Teaching Assistant, pursuing M.S. Computer Science at UC Santa Cruz</Typography>
+            <Typography>Graduated B.S. in Computer Science with Highest Honors, Cum Laude at UCSC</Typography>
+          </TimelineContent>
+        </TimelineItem>
+
+        <TimelineItem>
+          <TimelineOppositeContent>
+            <Typography color="textSecondary">May 2020 - January 2021</Typography>
+          </TimelineOppositeContent>
+          <TimelineSeparator>
+            <TimelineDot color="primary" />
+            <TimelineConnector />
+          </TimelineSeparator>
+          <TimelineContent>
+            <Typography>Lead Programmer for RI Project at LEEPS Lab, UCSC Economics Department</Typography>
+          </TimelineContent>
+        </TimelineItem>
+        
+        <TimelineItem>
+          <TimelineOppositeContent>
+            <Typography color="textSecondary">September 2019</Typography>
+          </TimelineOppositeContent>
+          <TimelineSeparator>
+            <TimelineDot color="primary" />
+            <TimelineConnector />
+          </TimelineSeparator>
+          <TimelineContent>
+            <Typography>Undergraduate Researcher at Baskin School of Engineering, UCSC</Typography>
+          </TimelineContent>
+        </TimelineItem>
+        
+        <TimelineItem>
+          <TimelineOppositeContent>
+            <Typography color="textSecondary">June - September 2019</Typography>
+          </TimelineOppositeContent>
+          <TimelineSeparator>
+            <TimelineDot color="secondary" />
+            <TimelineConnector />
+          </TimelineSeparator>
+          <TimelineContent>
+            <Typography>Computation Intern at Lawrence Livermore National Laboratory</Typography>
+          </TimelineContent>
+        </TimelineItem>
+
+        <TimelineItem>
+          <TimelineOppositeContent>
+            <Typography color="textSecondary">March 2019</Typography>
+          </TimelineOppositeContent>
+          <TimelineSeparator>
+            <TimelineDot color="primary" />
+            <TimelineConnector />
+          </TimelineSeparator>
+          <TimelineContent>
+            <Typography>Undergraduate Research Assistant at Tech4Good Lab, UCSC</Typography>
+          </TimelineContent>
+        </TimelineItem>
+
+        <TimelineItem>
+          <TimelineOppositeContent>
+            <Typography color="textSecondary">September 2017</Typography>
+          </TimelineOppositeContent>
+          <TimelineSeparator>
+            <TimelineDot />
+            <TimelineConnector />
+          </TimelineSeparator>
+          <TimelineContent>
+            <Typography>Pursuing B.S. Computer Science at University of California, Santa Cruz</Typography>
           </TimelineContent>
         </TimelineItem>
 

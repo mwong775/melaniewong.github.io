@@ -13,55 +13,30 @@ export default function EvtTimeline() {
     <React.Fragment>
       <Timeline align="alternate">
 
-      <TimelineItem>
-          <TimelineOppositeContent>
-            <Typography color="textSecondary">September 2017</Typography>
-          </TimelineOppositeContent>
-          <TimelineSeparator>
-            <TimelineDot />
-            <TimelineConnector />
-          </TimelineSeparator>
-          <TimelineContent>
-            <Typography>UCSC Scholar's Program</Typography>
-          </TimelineContent>
-        </TimelineItem>
-
         <TimelineItem>
           <TimelineOppositeContent>
-            <Typography color="textSecondary">October 2018</Typography>
-          </TimelineOppositeContent>
-          <TimelineSeparator>
-            <TimelineDot color="secondary"/>
-            <TimelineConnector />
-          </TimelineSeparator>
-          <TimelineContent>
-            <Typography>2nd Place - Code for Good | JPMorgan Chase & Co.</Typography>
-          </TimelineContent>
-        </TimelineItem>
-
-        <TimelineItem>
-          <TimelineOppositeContent>
-            <Typography color="textSecondary">May 2019</Typography>
+            <Typography color="textSecondary">September 2020</Typography>
           </TimelineOppositeContent>
           <TimelineSeparator>
             <TimelineDot color="primary" />
             <TimelineConnector />
           </TimelineSeparator>
           <TimelineContent>
-            <Typography>Goldman Sachs Engineering Essentials</Typography>
+            <Typography>Guest Speaker - VMware's Tech for Good Talks</Typography>
+            <Typography>Regents Fellowship - UCSC Division of Graduate Studies</Typography>
           </TimelineContent>
         </TimelineItem>
-
+        
         <TimelineItem>
           <TimelineOppositeContent>
-            <Typography color="textSecondary">June 2019</Typography>
+            <Typography color="textSecondary">August 2020</Typography>
           </TimelineOppositeContent>
           <TimelineSeparator>
-            <TimelineDot/>
+            <TimelineDot color="secondary" />
             <TimelineConnector />
           </TimelineSeparator>
           <TimelineContent>
-            <Typography>Rewriting the Code Fellow</Typography>
+            <Typography>Winner & Team MVP - VMware CodeHouse</Typography>
           </TimelineContent>
         </TimelineItem>
 
@@ -80,31 +55,56 @@ export default function EvtTimeline() {
 
         <TimelineItem>
           <TimelineOppositeContent>
-            <Typography color="textSecondary">August 2020</Typography>
+            <Typography color="textSecondary">June 2019</Typography>
           </TimelineOppositeContent>
           <TimelineSeparator>
-            <TimelineDot color="secondary" />
+            <TimelineDot/>
             <TimelineConnector />
           </TimelineSeparator>
           <TimelineContent>
-            <Typography>Winner & Team MVP - VMware CodeHouse</Typography>
+            <Typography>Rewriting the Code Fellow</Typography>
           </TimelineContent>
         </TimelineItem>
 
         <TimelineItem>
           <TimelineOppositeContent>
-            <Typography color="textSecondary">September 2020</Typography>
+            <Typography color="textSecondary">May 2019</Typography>
           </TimelineOppositeContent>
           <TimelineSeparator>
             <TimelineDot color="primary" />
             <TimelineConnector />
           </TimelineSeparator>
           <TimelineContent>
-            <Typography>Guest Speaker - VMware's Tech for Good Talks</Typography>
-            <Typography>Regents Fellowship - UCSC Division of Graduate Studies</Typography>
-
+            <Typography>Goldman Sachs Engineering Essentials</Typography>
           </TimelineContent>
         </TimelineItem>
+
+        <TimelineItem>
+          <TimelineOppositeContent>
+            <Typography color="textSecondary">October 2018</Typography>
+          </TimelineOppositeContent>
+          <TimelineSeparator>
+            <TimelineDot color="secondary"/>
+            <TimelineConnector />
+          </TimelineSeparator>
+          <TimelineContent>
+            <Typography>2nd Place - Code for Good | JPMorgan Chase & Co.</Typography>
+          </TimelineContent>
+        </TimelineItem>
+
+        <TimelineItem>
+            <TimelineOppositeContent>
+              <Typography color="textSecondary">September 2017</Typography>
+            </TimelineOppositeContent>
+            <TimelineSeparator>
+              <TimelineDot />
+              <TimelineConnector />
+            </TimelineSeparator>
+            <TimelineContent>
+              <Typography>UCSC Scholar's Program</Typography>
+            </TimelineContent>
+        </TimelineItem>
+
       </Timeline>
     </React.Fragment>
   );

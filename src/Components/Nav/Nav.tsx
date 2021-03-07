@@ -78,7 +78,7 @@ export class Nav extends React.Component<SwitchProps, { lightTheme: boolean; val
     const color = "#ffffff";
     return (
       <div className="nav">
-        <AppBar className="appbar">
+        <AppBar className={this.state.lightTheme ? 'appbar-light' : 'appbar-dark'}>
           <Tabs
             variant="scrollable"
             scrollButtons="off"

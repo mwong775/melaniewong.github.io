@@ -28,66 +28,40 @@ export default function ExpTimeline() {
 
         <TimelineItem>
           <TimelineOppositeContent>
-            <Typography color="textSecondary">March 2019</Typography>
+            <Typography color="textSecondary">September 2021</Typography>
           </TimelineOppositeContent>
           <TimelineSeparator>
-            <TimelineDot color="primary" />
+            <TimelineDot />
             <TimelineConnector />
           </TimelineSeparator>
           <TimelineContent>
-            <Typography>Undergraduate Research Assistant at Tech4Good Lab, UCSC</Typography>
+            <Typography>Incoming Software Engineer at ???</Typography>
           </TimelineContent>
         </TimelineItem>
 
         <TimelineItem>
           <TimelineOppositeContent>
-            <Typography color="textSecondary">June - September 2019</Typography>
+            <Typography color="textSecondary">June 2021</Typography>
           </TimelineOppositeContent>
           <TimelineSeparator>
             <TimelineDot color="secondary" />
             <TimelineConnector />
           </TimelineSeparator>
           <TimelineContent>
-            <Typography>Computation Intern at Lawrence Livermore National Laboratory</Typography>
+            <Typography>Incoming Software Development Engineer Intern at ???</Typography>
           </TimelineContent>
         </TimelineItem>
 
         <TimelineItem>
           <TimelineOppositeContent>
-            <Typography color="textSecondary">September 2019</Typography>
+            <Typography color="textSecondary">September 2020 - Present</Typography>
           </TimelineOppositeContent>
           <TimelineSeparator>
             <TimelineDot color="primary" />
             <TimelineConnector />
           </TimelineSeparator>
           <TimelineContent>
-            <Typography>Undergraduate Researcher at Baskin School of Engineering, UCSC</Typography>
-          </TimelineContent>
-        </TimelineItem>
-
-        <TimelineItem>
-          <TimelineOppositeContent>
-            <Typography color="textSecondary">October 2019</Typography>
-          </TimelineOppositeContent>
-          <TimelineSeparator>
-            <TimelineDot color="primary" />
-            <TimelineConnector />
-          </TimelineSeparator>
-          <TimelineContent>
-            <Typography>Glass Room Ingenious at The Glass Room San Francisco</Typography>
-          </TimelineContent>
-        </TimelineItem>
-
-        <TimelineItem>
-          <TimelineOppositeContent>
-            <Typography color="textSecondary">May 2020 - Present</Typography>
-          </TimelineOppositeContent>
-          <TimelineSeparator>
-            <TimelineDot color="primary" />
-            <TimelineConnector />
-          </TimelineSeparator>
-          <TimelineContent>
-            <Typography>Lead Programmer for RI Project at LEEPS Lab, UCSC Economics Department</Typography>
+            <Typography>Graduate Teaching Assistant at UC Santa Cruz</Typography>
           </TimelineContent>
         </TimelineItem>
 
@@ -106,14 +80,66 @@ export default function ExpTimeline() {
 
         <TimelineItem>
           <TimelineOppositeContent>
-            <Typography color="textSecondary">September 2020 - Present</Typography>
+            <Typography color="textSecondary">May 2020 - January 2021</Typography>
           </TimelineOppositeContent>
           <TimelineSeparator>
             <TimelineDot color="primary" />
             <TimelineConnector />
           </TimelineSeparator>
           <TimelineContent>
-            <Typography>Graduate Teaching Assistant at UC Santa Cruz</Typography>
+            <Typography>Lead Programmer for RI Project at LEEPS Lab, UCSC Economics Department</Typography>
+          </TimelineContent>
+        </TimelineItem>
+
+        <TimelineItem>
+          <TimelineOppositeContent>
+            <Typography color="textSecondary">October 2019</Typography>
+          </TimelineOppositeContent>
+          <TimelineSeparator>
+            <TimelineDot color="primary" />
+            <TimelineConnector />
+          </TimelineSeparator>
+          <TimelineContent>
+            <Typography>Glass Room Ingenious at The Glass Room San Francisco</Typography>
+          </TimelineContent>
+        </TimelineItem>
+
+        <TimelineItem>
+          <TimelineOppositeContent>
+            <Typography color="textSecondary">September 2019</Typography>
+          </TimelineOppositeContent>
+          <TimelineSeparator>
+            <TimelineDot color="primary" />
+            <TimelineConnector />
+          </TimelineSeparator>
+          <TimelineContent>
+            <Typography>Undergraduate Researcher at Baskin School of Engineering, UCSC</Typography>
+          </TimelineContent>
+        </TimelineItem>
+
+        <TimelineItem>
+          <TimelineOppositeContent>
+            <Typography color="textSecondary">June - September 2019</Typography>
+          </TimelineOppositeContent>
+          <TimelineSeparator>
+            <TimelineDot color="secondary" />
+            <TimelineConnector />
+          </TimelineSeparator>
+          <TimelineContent>
+            <Typography>Computation Intern at Lawrence Livermore National Laboratory</Typography>
+          </TimelineContent>
+        </TimelineItem>
+
+        <TimelineItem>
+          <TimelineOppositeContent>
+            <Typography color="textSecondary">March 2019</Typography>
+          </TimelineOppositeContent>
+          <TimelineSeparator>
+            <TimelineDot color="primary" />
+            <TimelineConnector />
+          </TimelineSeparator>
+          <TimelineContent>
+            <Typography>Undergraduate Research Assistant at Tech4Good Lab, UCSC</Typography>
           </TimelineContent>
         </TimelineItem>
 

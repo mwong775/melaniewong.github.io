@@ -21,12 +21,12 @@ function getStepContent(step: Number) {
       cloud-based platforms, and many other domains within the field of software engineering. I'm always eager to work with diverse
       technologies to learn and expand my expertise.`;
     case 1:
-      return `I started at UCSC as an NCAA student-athlete in track & field, competing in sprints and hurdles for 2 years.
-      My first internship role was a Computation Intern at the National Ignition Facility, a division of Lawrence Livermore National Laboratory. 
-      In the quarter of Fall 2019,  I began a research project focused on web and network security for everyday online users.`;
+      return `I started at UC Santa Cruz as an NCAA student-athlete in track & field, competing in sprints and hurdles for 2 years.
+      I completed my first summer internship as a Computation Intern at Lawrence Livermore National Laboratory. 
+      In the quarter of Fall 2019, I began a research project focused on web and network security for everyday online users.`;
     case 2:
-      return `I recently graduated with my Bachelor's in June, and spending my fourth year at UCSC pursuing a Master's
-      to finish by Spring 2021 as part of the new B.S./M.S. pathways program. I also completed an internship at Bank of America as a Global Technology Summer Analyst.`;
+      return `I graduated with my Bachelor's in June 2020, and I'm currently spending my fourth year at UCSC pursuing a Master's
+      to finish by Spring 2021 as part of the new B.S./M.S. pathways program. I also most recent internship was with Bank of America as a Global Technology Summer Analyst.`;
     case 3:
       return `I'm just trying my best to manage graduate coursework, working as a graduate teaching assistant, and some part-time coding for economics experiments - all while catching up on sleep :)`;
     default:
@@ -112,7 +112,7 @@ export class About extends React.Component {
         <div className="timeline">
           <Timelines />
         </div>
-        <p>Other interests: playing piano, hiking, rock climbing, collecting plushies, playing Animal Crossing~</p>
+        <p>Other interests: hiking, rock climbing, playing piano, collecting plushies, playing Animal Crossing :P</p>
         <p>More information on the Tech4Good Lab can be found <a href="https://tech4good.soe.ucsc.edu/#/" target="_blank" rel="noopener noreferrer">here</a>.</p>
         <p>The Glass Room website can be found <a href="https://theglassroom.org" target="_blank" rel="noopener noreferrer">here</a>.</p>
         <p>The Glass Room offers Data Detox Kits, which are available online <a href="https://datadetoxkit.org/en/home" target="_blank" rel="noopener noreferrer">here</a>.</p>
