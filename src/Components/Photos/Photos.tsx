@@ -46,7 +46,7 @@ export const Photos = () => {
       <GridList className="grid">
         {tileData.map(tile => (
           <GridListTile key={tile.img} className="tile">
-            <img src={tile.img} alt={tile.title} />
+            <img src={'https://github-pages-pics.s3-us-west-1.amazonaws.com/' + tile.filename} alt={tile.title} />
             <GridListTileBar
               title={tile.title}
               subtitle={<span>{tile.location}</span>}
