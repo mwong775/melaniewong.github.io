@@ -12,7 +12,6 @@ import leeps from '../../assets/leeps_logo.png';
 import t4g from '../../assets/tech4good.png';
 import llnl from '../../assets/llnl.jpg';
 import Card from '@material-ui/core/Card';
-import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import Typography from '@material-ui/core/Typography';
 export class Home extends React.Component {
@@ -39,7 +38,7 @@ export class Home extends React.Component {
       },
       {
         title: 'LEEPS Lab - UCSC Economics Department',
-        date: 'June - September 2019',
+        date: 'May - January 2021',
         description: 'Lead Programmer',
         link: 'https://leeps.ucsc.edu/',
         tags: ['oTree', 'Polymer.js', 'Python'],
