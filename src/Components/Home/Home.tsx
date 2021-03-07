@@ -11,7 +11,10 @@ import bofa from '../../assets/bofa.jpg';
 import leeps from '../../assets/leeps_logo.png';
 import t4g from '../../assets/tech4good.png';
 import llnl from '../../assets/llnl.jpg';
-
+import Card from '@material-ui/core/Card';
+import CardActions from '@material-ui/core/CardActions';
+import CardContent from '@material-ui/core/CardContent';
+import Typography from '@material-ui/core/Typography';
 export class Home extends React.Component {
 
   componentDidMount() {
@@ -97,30 +100,44 @@ export class Home extends React.Component {
           </Container>
           <div id="education">
             <h2 className="gradient-font">Education</h2>
-            <div className="education-block">
-              <h3>University of California, Santa Cruz</h3>
-              <span className="education-date">Sep 2020 - Present</span>
-              <h4>M.S. Computer Science and Engineering</h4>
-              <ul>
-                {grad.map((point) => {
-                  return (
-                    <li>{point}</li>
-                  )
-                })}
-              </ul>
-            </div>
-            <div className="education-block">
-              <h3>University of California, Santa Cruz</h3>
-              <span className="education-date">Sep 2017 - June 2020</span>
-              <h4>B.S. Computer Science</h4>
-              <ul>
-                {undergrad.map((point) => {
-                  return (
-                    <li>{point}</li>
-                  )
-                })}
-              </ul>
-            </div>
+
+            <Card className="education-block">
+              <CardContent>
+                <Typography variant="h5" component="h3">
+                  University of California, Santa Cruz
+                </Typography>
+                <span className="education-date">Sep 2020 - Present</span>
+                <Typography component="h4">
+                  M.S. Computer Science and Engineering
+                </Typography>
+                <ul>
+                  {grad.map((point) => {
+                    return (
+                      <li>{point}</li>
+                    )
+                  })}
+                </ul>
+              </CardContent>
+            </Card>
+
+            <Card className="education-block">
+              <CardContent>
+                <Typography variant="h5" component="h3">
+                  University of California, Santa Cruz
+                </Typography>
+                <span className="education-date">Sep 2017 - June 2020</span>
+                <Typography component="h4">
+                B.S. Computer Science
+                </Typography>
+                <ul>
+                  {undergrad.map((point) => {
+                    return (
+                      <li>{point}</li>
+                    )
+                  })}
+                </ul>
+              </CardContent>
+            </Card>
           </div>
 
           <div id="skills">
@@ -133,8 +150,6 @@ export class Home extends React.Component {
               })}
             </ul>
           </div>
-
-
         </div>
       </div>
     );

@@ -118,7 +118,7 @@ export const Projects = () => {
                       {card.link.length > 0 &&
                         <Link to={card.link}>
                           <Button size="small" color="primary">
-                            View
+                            Demo
                         </Button>
                         </Link>
                       }
