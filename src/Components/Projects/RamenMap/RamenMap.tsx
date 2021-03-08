@@ -137,7 +137,11 @@ export class RamenMap extends React.Component<{}, { ramenCount: any, ramenList: 
                                                 <TableCell align="right"><Rating name="half-rating-read" defaultValue={2.5} value={parseInt(row[stars])} precision={0.25} readOnly /></TableCell>
                                             </TableRow>
                                         ))}
-
+                                        {this.state.emptyRows > 0 && (
+                                            <TableRow style={{ height: 53 * this.state.emptyRows }}>
+                                                <TableCell colSpan={6} />
+                                            </TableRow>
+                                        )}
                                     </TableBody>
                                     <TableFooter>
                                         <TableRow>
