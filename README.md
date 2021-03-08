@@ -6,6 +6,7 @@ Source code available on the `development` branch (this one)
 Deployment files exist on the `master` branch
 
 Recent updates:
+* Mini project: mapped instant ramen products by countries
 * Added Timelines under 'About' tab
 * Created aesthetic feature cards for 'Projects' and 'Experience'
 * Displaying images stored in AWS S3 rather than local
