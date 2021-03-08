@@ -16,16 +16,16 @@ import { useTheme } from '@material-ui/core/styles';
 import './Photos.scss';
 export interface IPic {
   location: string;
-  img: string;
   title: string;
+  filename: string;
 }
 
 export const Photos = () => {
   const [open, setOpen] = React.useState<boolean>(false);
   const [pic, setPic] = React.useState<IPic>({
     location: '',
-    img: '',
-    title: ''
+    title: '',
+    filename: '',
   });
   const theme = useTheme();
   const fullScreen = useMediaQuery(theme.breakpoints.down('sm'));
@@ -45,7 +45,7 @@ export const Photos = () => {
       <div className="description">Surprisingly decent photos taken with an iPhone</div>
       <GridList className="grid">
         {tileData.map(tile => (
-          <GridListTile key={tile.img} className="tile">
+          <GridListTile key={tile.filename} className="tile">
             <img src={'https://github-pages-pics.s3-us-west-1.amazonaws.com/' + tile.filename} alt={tile.title} />
             <GridListTileBar
               title={tile.title}
@@ -67,7 +67,7 @@ export const Photos = () => {
                 <DialogContentText>
                   {pic.location}
                 </DialogContentText>
-                <img src={pic.img} alt={pic.title} />
+                <img src={'https://github-pages-pics.s3-us-west-1.amazonaws.com/' + tile.filename} alt={pic.title} />
               </DialogContent>
               <DialogActions>
                 <IconButton onClick={handleClose}>

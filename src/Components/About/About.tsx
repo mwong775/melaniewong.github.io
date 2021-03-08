@@ -7,6 +7,15 @@ import Button from '@material-ui/core/Button';
 import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
 import Timelines from '../About/Timelines/Timelines';
+import Card from '@material-ui/core/Card';
+import CardActions from '@material-ui/core/CardActions';
+import CardContent from '@material-ui/core/CardContent';
+import CardMedia from '@material-ui/core/CardMedia';
+import Grid from '@material-ui/core/Grid';
+import Container from '@material-ui/core/Container';
+import tech4good from '../../assets/tech4good.png';
+import glass_room from '../../assets/glass_room.jpg';
+import data_detox_kit from '../../assets/data-detox-kits.jpg';
 import './About.scss';
 
 function getSteps() {
@@ -43,6 +52,27 @@ function getStepContent(step: Number) {
       sponsored by Tactical Tech and Mozilla Firefox to address modern issues surrounding data privacy and digital security.
  * 
  */
+
+const resources = [
+  {
+    name: 'Tech4Good',
+    description: 'More information about the Tech4Good Lab can be found',
+    link: 'https://tech4good.soe.ucsc.edu/#/',
+    pic: tech4good,
+  },
+  {
+    name: 'Glass Room',
+    description: "The Glass Room website can be found",
+    link: 'https://theglassroom.org',
+    pic: glass_room,
+  },
+  {
+    name: 'Data Detox Kit',
+    description: "The Glass Room offers Data Detox Kits, which are available online",
+    link: 'https://datadetoxkit.org/en/home',
+    pic: data_detox_kit,
+  }
+]
 
 export const VerticalLinearStepper = () => {
   const [activeStep, setActiveStep] = React.useState(0);
@@ -113,9 +143,30 @@ export class About extends React.Component {
           <Timelines />
         </div>
         <p>Other interests: hiking, rock climbing, playing piano, collecting plushies, playing Animal Crossing :P</p>
-        <p>More information on the Tech4Good Lab can be found <a href="https://tech4good.soe.ucsc.edu/#/" target="_blank" rel="noopener noreferrer">here</a>.</p>
-        <p>The Glass Room website can be found <a href="https://theglassroom.org" target="_blank" rel="noopener noreferrer">here</a>.</p>
-        <p>The Glass Room offers Data Detox Kits, which are available online <a href="https://datadetoxkit.org/en/home" target="_blank" rel="noopener noreferrer">here</a>.</p>
+        <Container maxWidth="md">
+          <Grid container spacing={4}>
+            {resources.map((card) => (
+              <Grid item key={card.name} xs={12} sm={6} md={6}>
+                <Card>
+                  <CardMedia
+                    style={{paddingTop: '56.25%', backgroundColor: '#ffffff'}}
+                    image={card.pic}
+                    title={card.name}
+                  />
+                  {/* <img className={classes.cardMedia} src={card.url} alt="pic" /> */}
+                  <CardContent>
+                    <Typography gutterBottom variant="h5" component="h2">
+                      {card.name}
+                    </Typography>
+                    <Typography>
+                      {card.description} <a href={card.link} target="_blank" rel="noopener noreferrer">here</a>.
+                    </Typography>
+                  </CardContent>
+                </Card>
+              </Grid>
+            ))}
+          </Grid>
+        </Container>
       </div>
     );
   }

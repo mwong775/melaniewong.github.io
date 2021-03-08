@@ -24,7 +24,7 @@ export class Home extends React.Component {
   render() {
     const skills = ["Python", "JavaScript", "C++", "TypeScript", "Angular", "React", "Docker", "Polymer.js", "Flask", "Java", "HTML", "CSS", "Kubernetes", "Wireshark", "Android", "Node.js"];
     const grad = ["Graduate Teaching Assistant (CSE150/L - Fall 2020, CSE30 - Winter 2021)", "Coursework: Artificial Intelligence, Sensor Networks and Internet of Things"];
-    const undergrad = ["Graduated with Highest Honors, Cum Laude", "NCAA Track & Field Student-Athlete (2 years)", "Coursework: Algorithms & Data Structures, Distributed Systems, Computer & Network Security, Machine Learning, Coding for Social Good"];
+    const undergrad = ["Graduated in 3 years with Highest Honors, Cum Laude", "NCAA Track & Field Student-Athlete (2 years)", "Coursework: Algorithms & Data Structures, Distributed Systems, Computer & Network Security, Machine Learning, Coding for Social Good"];
 
     const featuredCards = [
       {

@@ -14,7 +14,6 @@ import './BobaMap.scss';
 
 const zoom: number = 9;
 
-
 const customIcons = {
     1: {
       icon: <SentimentVeryDissatisfiedIcon />,
@@ -63,7 +62,7 @@ export class BobaMap extends React.Component<{}, { geoLocation: LatLngTuple, geo
     componentDidMount() {
         readRemoteFile('https://raw.githubusercontent.com/mwong775/mwong775.github.io/development/src/assets/bayarea_boba_spots.csv', {
             complete: (results: any) => {
-                console.log('Results: ', results, results.data.length);
+                // console.log('Results: ', results, results.data.length);
                 let name = 2, rating = 3, address = 4, city = 5, lat = 6, long = 7;
                 let places: marker[] = [];
                 for (let i = 1; i < results.data.length; i++) {
