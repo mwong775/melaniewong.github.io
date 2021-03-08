@@ -30,6 +30,7 @@
     "react": "^16.13.1",
     "react-bootstrap": "^1.0.1",
     "react-dom": "^16.13.1",
+    "react-jvectormap": "0.0.16",
     "react-leaflet": "^2.7.0",
     "react-papaparse": "^3.7.1",
     "react-particles-js": "^2.7.1",

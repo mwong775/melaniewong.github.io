@@ -80,7 +80,6 @@ export class BobaMap extends React.Component<{}, { geoLocation: LatLngTuple, geo
                 this.setState(prevState => ({
                     markers: [...prevState.markers, ...places]
                 }))
-
             }
         })
         navigator.geolocation.getCurrentPosition((e) => {
@@ -108,7 +107,6 @@ export class BobaMap extends React.Component<{}, { geoLocation: LatLngTuple, geo
                     </div>
                 </div>
                 <div>
-
                     <Map id="mapId" center={this.state.geoLocation} zoom={zoom}>
                         <TileLayer
                             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"

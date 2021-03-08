@@ -7,6 +7,7 @@ import bettertogether from '../../assets/better_together.png';
 // import iws from '../Photos/images/IWS.jpg'; // final webpage design...
 import giphy from '../Photos/images/giphy.jpg';
 import cinnaboba from '../Photos/images/cinna_boba.gif';
+import ramen from '../../assets/ramen.gif';
 import Button from '@material-ui/core/Button';
 import Card from '@material-ui/core/Card';
 import CardActions from '@material-ui/core/CardActions';
@@ -29,7 +30,7 @@ const images = [
   },
   {
     url: cinnaboba,
-    title: 'Bobamap',
+    title: 'Bay Area Boba Map',
     link: './bobamap',
     external: '',
     repo: '',
@@ -42,6 +43,15 @@ const images = [
     external: '',
     repo: 'https://github.com/mwong775/codehouse-team-four',
     description: 'To enable communities to come closer and help each other secure livelihood through the pandemic and beyond. Winning Project at VMware CodeHouse 2020',
+  },
+  {
+    url: ramen,
+    title: 'Instant Ramen World Map',
+    link: './ramenmap',
+    external: '',
+    repo: '',
+    description: 'A map of instant ramen products from various countries around the world',
+
   },
   {
     url: poster,
@@ -140,6 +150,7 @@ export const Projects = () => {
         </Container>
       </div>
       <Link to="/markdownpreviewer"><h3 style={{ textAlign: 'center' }}>Markdown Previewer</h3></Link>
+      <Link to="/ramenmap"><h3>ramen</h3></Link>
       <p>Links from VMware CodeHouse: <a href="https://www.instagram.com/p/CGQYebfguI9/?igshid=1pjkd1lk8p3g6&fbclid=IwAR1Gc0_AE6eivllwJAIeCXjSQsf7t7b3KiR_9m8G7WRcba7YKAhUh0XwlqY" target="_blank" rel="noopener noreferrer">instagram post</a> and <a href="https://blogs.vmware.com/careers/2020/10/vmware-codehouse-2020-the-virtual-experience.html" target="_blank" rel="noopener noreferrer">article</a>.</p>
     </div>
   );
