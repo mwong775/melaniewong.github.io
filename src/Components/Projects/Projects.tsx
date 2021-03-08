@@ -8,6 +8,7 @@ import bettertogether from '../../assets/better_together.png';
 import giphy from '../Photos/images/giphy.jpg';
 import cinnaboba from '../Photos/images/cinna_boba.gif';
 import ramen from '../../assets/ramen.gif';
+import pokedex from '../../assets/pokedex.gif';
 import Button from '@material-ui/core/Button';
 import Card from '@material-ui/core/Card';
 import CardActions from '@material-ui/core/CardActions';
@@ -51,7 +52,6 @@ const images = [
     external: '',
     repo: '',
     description: 'A map of instant ramen products from various countries around the world',
-
   },
   {
     url: poster,
@@ -60,7 +60,6 @@ const images = [
     external: '',
     repo: '',
     description: 'Project poster from my 2019 summer internship at Lawrence Livermore National Laboratory',
-    width: '40%',
   },
   {
     url: livecolor,
@@ -69,8 +68,15 @@ const images = [
     external: 'https://team-harmony-dev.github.io/LiveColor_Website/', 
     repo: 'https://github.com/TheBrows/LiveColor',
     description: 'Android application for color-picking',
-    width: '30%',
   },
+  {
+    url: pokedex,
+    title: 'Pokedex',
+    link: './pokedex',
+    external: '',
+    repo: '',
+    description: 'A simple pokedex',
+  }
 ];
 
 const useStyles = makeStyles(theme => ({
@@ -102,7 +108,7 @@ const useStyles = makeStyles(theme => ({
 export const Projects = () => {
   const classes = useStyles();
   return (
-    <div className="content-wrapper">
+    <div>
       <h2 className="gradient-font">Projects</h2>
       <div className={classes.root}>
         <Container className={classes.cardGrid} maxWidth="md">
@@ -115,7 +121,6 @@ export const Projects = () => {
                     image={card.url}
                     title="Image title"
                   />
-                  {/* <img className={classes.cardMedia} src={card.url} alt="pic" /> */}
                   <CardContent className={classes.cardContent}>
                     <Typography gutterBottom variant="h5" component="h2">
                       {card.title}
@@ -149,7 +154,7 @@ export const Projects = () => {
           </Grid>
         </Container>
       </div>
-      <Link to="/markdownpreviewer"><h3 style={{ textAlign: 'center' }}>Markdown Previewer</h3></Link>
+      {/* <Link to="/markdownpreviewer"><h3 style={{ textAlign: 'center' }}>Markdown Previewer</h3></Link> */}
       <p>Links from VMware CodeHouse: <a href="https://www.instagram.com/p/CGQYebfguI9/?igshid=1pjkd1lk8p3g6&fbclid=IwAR1Gc0_AE6eivllwJAIeCXjSQsf7t7b3KiR_9m8G7WRcba7YKAhUh0XwlqY" target="_blank" rel="noopener noreferrer">instagram post</a> and <a href="https://blogs.vmware.com/careers/2020/10/vmware-codehouse-2020-the-virtual-experience.html" target="_blank" rel="noopener noreferrer">article</a>.</p>
     </div>
   );

@@ -10,6 +10,7 @@ import { Projects } from "./Components/Projects/Projects";
 import { GIFinder } from "./Components/Projects/GIFinder/GIFinder";
 import { BobaMap } from "./Components/Projects/BobaMap/BobaMap";
 import { RamenMap } from "./Components/Projects/RamenMap/RamenMap";
+import { Pokedex } from "./Components/Projects/Pokedex/Pokedex";
 import { Poster } from "./Components/Projects/Poster/Poster";
 import { MarkdownPreviewer } from "./Components/Projects/MarkdownPreviewer/MarkdownPreviewer";
 import { Photos } from "./Components/Photos/Photos";
@@ -92,6 +93,7 @@ export class App extends React.Component<{}, { theme: any, themeLabel: string }>
             <Route path="/gifinder" exact component={GIFinder} />
             <Route path="/bobamap" exact component={BobaMap} />
             <Route path="/ramenmap" exact component={RamenMap} />
+            <Route path="/pokedex" exact component={Pokedex} />
             <Route path="/llnlposter" exact component={Poster} />
             <Route path="/markdownpreviewer" exact component={MarkdownPreviewer} />
             <Route path="/photos" exact component={Photos} />

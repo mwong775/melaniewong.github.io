@@ -1,0 +1,66 @@
+.poke {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+
+    .card {
+    width: 360px;
+    margin: 0 1% 2% 1%;
+    background: #444;
+    color: #e4c439;
+    padding: 1rem;
+    border-radius: 10px;
+    border-top: 0.5px solid #cebf7b;
+    border-bottom: 0.5px solid #cebf7b;
+    text-align: center;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transition: 0.2s ease-in-out all;
+
+    .card-id {
+        background: #cebf7b;
+        width: 3rem;
+        color: #333;
+        padding: 0.1rem;
+        font-weight: 700;
+        position: absolute;
+        border-radius: 0 0 10px 0;
+        top: 0;
+        left: 0;
+    }
+    .card-name {
+        text-transform: capitalize;
+        color: #fff;
+        // font-size: 2rem;
+        // font-weight: 700;
+    }
+    
+    .card-image {
+        width: 150px;
+        display: block;
+        margin: auto;
+    }
+    
+    .card-details {
+        font-size: 1.3rem;
+        color: #dbca80;
+    }
+    
+    }
+
+    .card:hover {
+    transform: scale(1.05);
+    }
+
+    .dummies {
+        width: 360px;
+        height: 0;
+        margin: 0 1% 2% 1%;
+    }
+
+}
+
+
