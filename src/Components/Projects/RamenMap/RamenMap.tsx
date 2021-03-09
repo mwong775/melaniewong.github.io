@@ -220,6 +220,8 @@ export class RamenMap extends React.Component<{}, { sum: number, ratingSums: any
                             <div style={{ display: 'flex', flexDirection: 'row' }}>
                                 <Button style={{ margin: '5px 2%' }} onClick={() => { this.setState({ mapType: 'world' }) }}>World</Button>
                                 <Button style={{ margin: '5px 2%' }} onClick={() => { this.setState({ mapType: 'asia' }) }}>Asia</Button>
+                                <Button style={{ margin: '5px 2%' }} onClick={() => { this.setState({ mapType: 'europe' }) }}>Europe</Button>
+
                             </div>
                             {this.state.mapType === 'world' &&
                                 <VectorMap
@@ -265,6 +267,47 @@ export class RamenMap extends React.Component<{}, { sum: number, ratingSums: any
                                 this.state.mapType === 'asia' &&
                                 <VectorMap
                                     map={"asia_mill"}
+                                    ref={"map"}
+                                    backgroundColor="transparent" //change it to ocean blue: #0077be, rgba(2, 123, 255, 0.4)
+                                    zoomOnScroll={false}
+                                    containerStyle={{
+                                        height: "85%"
+                                    }}
+                                    onRegionClick={this.handleMapClick} //gets the country code
+                                    containerClassName="map"
+                                    regionStyle={{
+                                        initial: {
+                                            fill: "#e4e4e4",
+                                            "fill-opacity": 0.9,
+                                            stroke: "none",
+                                            "stroke-width": 0,
+                                            "stroke-opacity": 0
+                                        },
+                                        hover: {
+                                            "fill-opacity": 0.8,
+                                            cursor: "pointer"
+                                        },
+                                        selected: {
+                                            fill: "#2938bc" //color for the clicked country
+                                        },
+                                        selectedHover: {}
+                                    }}
+                                    // regionsSelectable={true}
+                                    series={{
+                                        regions: [
+                                            {
+                                                values: this.state.ramenCount, //this is your data
+                                                scale: ["#e0ccff", "#5c00e6"], //your color game's here
+                                                normalizeFunction: "polynomial"
+                                            }
+                                        ]
+                                    }}
+                                />
+                            }
+                             {
+                                this.state.mapType === 'europe' &&
+                                <VectorMap
+                                    map={"europe_mill"}
                                     ref={"map"}
                                     backgroundColor="transparent" //change it to ocean blue: #0077be, rgba(2, 123, 255, 0.4)
                                     zoomOnScroll={false}
