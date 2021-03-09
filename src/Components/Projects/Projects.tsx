@@ -27,7 +27,6 @@ const images = [
     external: '',
     repo: '',
     description: 'A simple search to discover awesome GIFs, powered by the Giphy API',
-    width: '30%',
   },
   {
     url: cinnaboba,
@@ -108,7 +107,7 @@ const useStyles = makeStyles(theme => ({
 export const Projects = () => {
   const classes = useStyles();
   return (
-    <div>
+    <div className="content-wrapper">
       <h2 className="gradient-font">Projects</h2>
       <div className={classes.root}>
         <Container className={classes.cardGrid} maxWidth="md">

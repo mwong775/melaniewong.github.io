@@ -57,13 +57,15 @@ function ScrollTop(props: any) {
 type SwitchProps = {
   lightTheme: (e: any) => void;
   themeLabel: string;
+  // openDrawer: (e: any) => void;
 }
-export class Nav extends React.Component<SwitchProps, { lightTheme: boolean; value: string; }> {
+export class Nav extends React.Component<SwitchProps, { lightTheme: boolean; value: string; isDrawerOpen: boolean;}> {
   constructor(props: any) {
     super(props);
     this.state = {
       lightTheme: true,
       value: "",
+      isDrawerOpen: false,
     };
   }
 
@@ -74,18 +76,31 @@ export class Nav extends React.Component<SwitchProps, { lightTheme: boolean; val
     this.props.lightTheme(!this.state.lightTheme);
   }
 
+  // openDrawer = () => {
+  //   console.log('open drawer', this.state.isDrawerOpen);
+  //   this.setState({
+  //     isDrawerOpen: !this.state.isDrawerOpen
+  //   });
+  //   this.props.openDrawer(!this.state.isDrawerOpen);
+  // }
+
   render() {
     const color = "#ffffff";
     return (
       <div className="nav">
-        <AppBar className={this.state.lightTheme ? 'appbar-light' : 'appbar-dark'}>
+        <AppBar position="absolute" className={this.state.lightTheme ? 'appbar-light' : 'appbar-dark'}>
           <Tabs
             variant="scrollable"
             scrollButtons="off"
             value={this.state.value}
           >
             <Toolbar>
-              <IconButton edge="start" aria-label="open drawer" style={{ marginLeft: "1%", color: color }}>
+              <IconButton
+                edge="start"
+                aria-label="open drawer"
+                style={{ marginLeft: "1%", color: color }}
+                // onClick={() => this.openDrawer()}
+                >
                 <MenuIcon />
               </IconButton>
               <Link to="/">
