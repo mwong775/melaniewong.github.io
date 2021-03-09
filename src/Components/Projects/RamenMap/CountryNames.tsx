@@ -1,6 +1,6 @@
 const countryNames = {
     'US': 'USA',
-    'TW': 'aiwan',
+    'TW': 'Taiwan',
     'TH': 'Thailand',
     'VN': 'Vietnam',
     'KR': 'South Korea',
