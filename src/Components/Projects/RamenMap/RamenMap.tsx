@@ -17,9 +17,8 @@ import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
 import Rating from '@material-ui/lab/Rating';
 
-const brand = 1, variety = 2, style = 3, country = 4, stars = 5; //, top_ten = 6;
-
-export class RamenMap extends React.Component<{}, { ramenCount: any, ramenList: any, selected: any, page: number, rowsPerPage: number, emptyRows: number }> {
+const brand = 1, variety = 2, style = 3, country = 4, stars = 5, top_ten = 6;
+export class RamenMap extends React.Component<{}, { ramenCount: any, ramenList: any, selected: any, page: number, rowsPerPage: number, emptyRows: number, topTen: any[] }> {
     constructor(props: any) {
         super(props);
         this.state = {
@@ -28,7 +27,8 @@ export class RamenMap extends React.Component<{}, { ramenCount: any, ramenList: 
             selected: {},
             page: 0,
             rowsPerPage: 5,
-            emptyRows: 0
+            emptyRows: 0,
+            topTen: new Array<number>(3), // top 3, only 2016 (out of 2012 - 2016)
         }
     }
     componentDidMount() {
@@ -37,6 +37,7 @@ export class RamenMap extends React.Component<{}, { ramenCount: any, ramenList: 
                 // console.log('Results: ', results, results.data.length);
                 // console.log(getData());  //gets an array of all countries names & codes: [{code: "AU", name: "Australia"}, ...]
                 let ramenCount = {}, ramenList = {};
+                let topTenList: any = [];
                 for (let i = 1; i < results.data.length; i++) {
                     let ramen = results.data[i];
                     if (ramen[0] === undefined)
@@ -48,17 +49,27 @@ export class RamenMap extends React.Component<{}, { ramenCount: any, ramenList: 
                     }
                     ramenList[countryCode].push(ramen);
                     ramenCount[countryCode]++;
+
+                    const topTen = ramen[top_ten];
+                    if (topTen && parseInt(topTen) === 2013) {
+                        const rank = topTen[topTen.length - 1];
+                        // console.log(topTen, ramen[country], ramen[variety]);
+                        if (rank >= 1 && rank <= 3)
+                            topTenList[rank-1] = ramen[variety] + " - " + ramen[country];
+                    }
                 }
+                // console.log(topTenList);
                 this.setState({
                     ramenCount: ramenCount,
                     ramenList: ramenList,
+                    topTen: topTenList
                 });
             }
         })
     }
 
     handleMapClick = (e, countryCode) => {
-        // console.log(countryCode, countryNames[countryCode], this.state.mapData[countryCode]);
+        // console.log(e, countryCode, countryNames[countryCode], this.state.ramenList[countryCode]);
         if (countryNames[countryCode] === undefined) {
             this.setState({
                 selected: {
@@ -118,9 +129,9 @@ export class RamenMap extends React.Component<{}, { ramenCount: any, ramenList: 
                                     <TableHead>
                                         <TableRow hover>
                                             <TableCell>Brand</TableCell>
-                                            <TableCell align="right">Variety</TableCell>
-                                            <TableCell align="right">Style</TableCell>
-                                            <TableCell align="right">Rating (Stars)</TableCell>
+                                            <TableCell>Variety</TableCell>
+                                            <TableCell>Style</TableCell>
+                                            <TableCell>Rating (Stars)</TableCell>
                                         </TableRow>
                                     </TableHead>
                                     <TableBody>
@@ -132,9 +143,9 @@ export class RamenMap extends React.Component<{}, { ramenCount: any, ramenList: 
                                                 <TableCell component="th" scope="row">
                                                     {row[brand]}
                                                 </TableCell>
-                                                <TableCell align="right">{row[variety]}</TableCell>
-                                                <TableCell align="right">{row[style]}</TableCell>
-                                                <TableCell align="right"><Rating name="half-rating-read" defaultValue={2.5} value={parseInt(row[stars])} precision={0.25} readOnly /></TableCell>
+                                                <TableCell>{row[variety]}</TableCell>
+                                                <TableCell>{row[style]}</TableCell>
+                                                <TableCell><Rating name="half-rating-read" defaultValue={2.5} value={parseInt(row[stars])} precision={0.25} readOnly /></TableCell>
                                             </TableRow>
                                         ))}
                                         {this.state.emptyRows > 0 && (
