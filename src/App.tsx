@@ -32,10 +32,8 @@ import Divider from '@material-ui/core/Divider';
 import MenuIcon from '@material-ui/icons/Menu';
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import { makeStyles } from '@material-ui/core/styles';
-import useScrollTrigger from '@material-ui/core/useScrollTrigger';
 import Button from '@material-ui/core/Button';
 import Tabs from '@material-ui/core/Tabs';
-import Zoom from '@material-ui/core/Zoom';
 import Brightness3Icon from "@material-ui/icons/Brightness3";
 import Brightness7Icon from "@material-ui/icons/Brightness7";
 import { Link } from 'react-router-dom';
@@ -114,35 +112,8 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-function ScrollTop(props: any) {
-  const { children } = props;
-  const classes = useStyles();
-  const trigger = useScrollTrigger({
-    disableHysteresis: true,
-    threshold: 100,
-  });
-
-  const handleClick = (event: React.MouseEvent<HTMLDivElement>) => {
-    const anchor = ((event.target as HTMLDivElement).ownerDocument || document).querySelector(
-      '#back-to-top-anchor',
-    );
-
-    if (anchor) {
-      anchor.scrollIntoView({ behavior: 'smooth', block: 'center' });
-    }
-  };
-
-  return (
-    <Zoom in={trigger}>
-      <div onClick={handleClick} role="presentation" className={classes.root}>
-        {children}
-      </div>
-    </Zoom>
-  );
-}
-
 export const App = () => {
-  const [theme, setTheme] = React.useState(createMuiTheme({
+  let [theme, setTheme] = React.useState(createMuiTheme({
     palette: {
       type: 'dark',
       primary: {
@@ -150,7 +121,7 @@ export const App = () => {
       }
     },
   }));
-
+  theme = responsiveFontSizes(theme);
   const classes = useStyles();
   const [open, setOpen] = React.useState(false);
   const [themeLabel, setMode] = React.useState('Dark');
@@ -162,8 +133,17 @@ export const App = () => {
   };
 
   const switchMode = () => {
-    const newMode = themeLabel === 'Dark' ? 'Light' : 'Dark';
+    const newMode = themeLabel === 'Light' ? 'Dark' : 'Light';
     setMode(newMode);
+    const type = newMode === 'Light' ? 'light' : 'dark';
+    setTheme(createMuiTheme({
+      palette: {
+        type: type,
+        primary: {
+          main: PRIMARY_COLOR
+        }
+      },
+    }));
   };
 
   const color = "#ffffff";
@@ -179,7 +159,6 @@ export const App = () => {
             <Tabs
               variant="scrollable"
               scrollButtons="off"
-            // value={this.state.value}
             >
               <Toolbar>
                 <IconButton
@@ -222,14 +201,6 @@ export const App = () => {
               </Toolbar>
             </Tabs>
           </AppBar>
-          {/* <Toolbar id="back-to-top-anchor" /> */}
-          {/* <ScrollTop  >
-            <Tooltip title="Back to Top" aria-label="Back to Top">
-              <Fab size="small" aria-label="scroll back to top">
-                <KeyboardArrowUpIcon />
-              </Fab>
-            </Tooltip>
-          </ScrollTop> */}
           <Drawer
             className={classes.drawer}
             variant="persistent"

@@ -2,51 +2,40 @@ import React from 'react';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
 import { Link } from 'react-router-dom';
+import Accordion from '@material-ui/core/Accordion';
+import AccordionSummary from '@material-ui/core/AccordionSummary';
+import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 
 // Icons
 import ListItemIcon from '@material-ui/core/ListItemIcon';
-import DashboardIcon from '@material-ui/icons/Dashboard';
-import PeopleIcon from '@material-ui/icons/People';
-import EmojiPeopleIcon from '@material-ui/icons/EmojiPeople';
-import PostAddIcon from '@material-ui/icons/PostAdd';
+import HomeIcon from '@material-ui/icons/Home';
 import WorkIcon from '@material-ui/icons/Work';
-import MapIcon from '@material-ui/icons/Map';
-import ForumIcon from '@material-ui/icons/Forum';
-import Divider from '@material-ui/core/Divider';
-
-{/* <Route path="/" exact component={Home} />
-<Route path="/about" exact component={About} />
-<Route path="/resume" exact component={Resume} />
-<Route path="/projects" exact component={Projects} />
-<Route path="/gifinder" exact component={GIFinder} />
-<Route path="/bobamap" exact component={BobaMap} />
-<Route path="/ramenmap" exact component={RamenMap} />
-<Route path="/pokedex" exact component={Pokedex} />
-<Route path="/llnlposter" exact component={Poster} />
-<Route path="/markdownpreviewer" exact component={MarkdownPreviewer} />
-<Route path="/photos" exact component={Photos} />
-<Route path="/contact" exact component={Contact} />
-<Redirect to='/' /> */}
-
-const textColor = "#ffffff";
+import CodeIcon from '@material-ui/icons/Code';
+import ContactMailIcon from '@material-ui/icons/ContactMail';
+import AccountBoxIcon from '@material-ui/icons/AccountBox';
+import PhotoLibraryIcon from '@material-ui/icons/PhotoLibrary';
+import GifIcon from '@material-ui/icons/Gif';
+import EmojiFoodBeverageIcon from '@material-ui/icons/EmojiFoodBeverage';
+import FastfoodIcon from '@material-ui/icons/Fastfood';
+import MenuBookIcon from '@material-ui/icons/MenuBook';
 
 export const mainListItems = (
     <div>
         <Link to="/" style={{ textDecoration: 'none' }}>
             <ListItem button>
                 <ListItemIcon>
-                    <DashboardIcon />
+                    <HomeIcon />
                 </ListItemIcon>
-                <ListItemText primary="Home" style={{ color: textColor }} />
+                <ListItemText primary="Home" />
             </ListItem>
         </Link>
         <Link to="/about" style={{ textDecoration: 'none' }}>
             <ListItem button>
                 <ListItemIcon>
-                    <EmojiPeopleIcon />
+                    <AccountBoxIcon />
 
                 </ListItemIcon>
-                <ListItemText primary="About" style={{ color: textColor }} />
+                <ListItemText primary="About" />
             </ListItem>
         </Link>
         <Link to="/resume" style={{ textDecoration: 'none' }}>
@@ -54,32 +43,73 @@ export const mainListItems = (
                 <ListItemIcon>
                     <WorkIcon />
                 </ListItemIcon>
-                <ListItemText primary="Resume" style={{ color: textColor }} />
+                <ListItemText primary="Resume" />
             </ListItem>
         </Link>
         <Link to="/projects" style={{ textDecoration: 'none' }}>
-            <ListItem button>
-                <ListItemIcon>
-                    <PeopleIcon />
-                </ListItemIcon>
-                <ListItemText primary="Projects" style={{ color: textColor }} />
-            </ListItem>
+
+
+            <Accordion>
+                <AccordionSummary
+                    expandIcon={<ExpandMoreIcon />}
+                    aria-controls="panel1a-content"
+                    id="panel1a-header"
+                >
+                    <ListItemIcon>
+                        <CodeIcon />
+                    </ListItemIcon>
+                    <ListItemText primary="Projects" style={{ color: '#1b95f0' }} />
+
+                </AccordionSummary>
+                <Link to="/gifinder" style={{ textDecoration: 'none' }}>
+
+                    <ListItem button>
+                        <ListItemIcon>
+                            <GifIcon />
+                        </ListItemIcon>
+                        <ListItemText primary="GIFinder" />
+                    </ListItem>
+                </Link>
+                <Link to="/bobamap" style={{ textDecoration: 'none' }}>
+                    <ListItem button>
+                        <ListItemIcon>
+                            <EmojiFoodBeverageIcon />
+                        </ListItemIcon>
+                        <ListItemText primary="Boba Map" />
+                    </ListItem>
+                </Link>
+                <Link to="/ramenmap" style={{ textDecoration: 'none' }}>
+                    <ListItem button>
+                        <ListItemIcon>
+                            <FastfoodIcon />
+                        </ListItemIcon>
+                        <ListItemText primary="Ramen Map" />
+                    </ListItem>
+                </Link>
+                <Link to="/pokedex" style={{ textDecoration: 'none' }}>
+                    <ListItem button>
+                        <ListItemIcon>
+                            <MenuBookIcon />
+                        </ListItemIcon>
+                        <ListItemText primary="Pokedex" />
+                    </ListItem>
+                </Link>
+            </Accordion>
         </Link>
         <Link to="/photos" style={{ textDecoration: 'none' }}>
             <ListItem button>
                 <ListItemIcon>
-                    <MapIcon />
-
+                    <PhotoLibraryIcon />
                 </ListItemIcon>
-                <ListItemText primary="Photos" style={{ color: textColor }} />
+                <ListItemText primary="Photos" />
             </ListItem>
         </Link>
         <Link to="/contact" style={{ textDecoration: 'none' }}>
             <ListItem button>
                 <ListItemIcon>
-                    <PeopleIcon />
+                    <ContactMailIcon />
                 </ListItemIcon>
-                <ListItemText primary="Contact" style={{ color: textColor }} />
+                <ListItemText primary="Contact" />
             </ListItem>
         </Link>
     </div>
