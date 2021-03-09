@@ -18,7 +18,7 @@ import Paper from '@material-ui/core/Paper';
 import Rating from '@material-ui/lab/Rating';
 
 const brand = 1, variety = 2, style = 3, country = 4, stars = 5, top_ten = 6;
-export class RamenMap extends React.Component<{}, { ramenCount: any, ramenList: any, selected: any, page: number, rowsPerPage: number, emptyRows: number, topTen: any[] }> {
+export class RamenMap extends React.Component<{}, { ramenCount: any, ramenList: any, selected: any, page: number, rowsPerPage: number, emptyRows: number, mapType: string }> {
     constructor(props: any) {
         super(props);
         this.state = {
@@ -28,7 +28,8 @@ export class RamenMap extends React.Component<{}, { ramenCount: any, ramenList: 
             page: 0,
             rowsPerPage: 5,
             emptyRows: 0,
-            topTen: new Array<number>(3), // top 3, only 2016 (out of 2012 - 2016)
+            mapType: 'world'
+            // topTen: new Array<number>(3), // top 3, only 2016 (out of 2012 - 2016)
         }
     }
     componentDidMount() {
@@ -55,14 +56,14 @@ export class RamenMap extends React.Component<{}, { ramenCount: any, ramenList: 
                         const rank = topTen[topTen.length - 1];
                         // console.log(topTen, ramen[country], ramen[variety]);
                         if (rank >= 1 && rank <= 3)
-                            topTenList[rank-1] = ramen[variety] + " - " + ramen[country];
+                            topTenList[rank - 1] = ramen[variety] + " - " + ramen[country];
                     }
                 }
                 // console.log(topTenList);
                 this.setState({
                     ramenCount: ramenCount,
                     ramenList: ramenList,
-                    topTen: topTenList
+                    // topTen: topTenList
                 });
             }
         })
@@ -172,45 +173,95 @@ export class RamenMap extends React.Component<{}, { ramenCount: any, ramenList: 
                         }
                     </div>
                 </div>
-                <VectorMap
-                    map={"world_mill"}
-                    ref={"map"}
-                    backgroundColor="rgba(2, 123, 255, 0.4)" //change it to ocean blue: #0077be
-                    zoomOnScroll={false}
-                    containerStyle={{
-                        width: "85%",
-                        height: "600px"
-                    }}
-                    onRegionClick={this.handleMapClick} //gets the country code
-                    containerClassName="map"
-                    regionStyle={{
-                        initial: {
-                            fill: "#e4e4e4",
-                            "fill-opacity": 0.9,
-                            stroke: "none",
-                            "stroke-width": 0,
-                            "stroke-opacity": 0
-                        },
-                        hover: {
-                            "fill-opacity": 0.8,
-                            cursor: "pointer"
-                        },
-                        selected: {
-                            fill: "#2938bc" //color for the clicked country
-                        },
-                        selectedHover: {}
-                    }}
-                    // regionsSelectable={true}
-                    series={{
-                        regions: [
-                            {
-                                values: this.state.ramenCount, //this is your data
-                                scale: ["#e0ccff", "#5c00e6"], //your color game's here
-                                normalizeFunction: "polynomial"
-                            }
-                        ]
-                    }}
-                />
+                <div style={{ width: '80%', textAlign: 'center', display: 'flex', flexDirection: 'column'}}>
+                    <div style={{ display: 'flex', flexDirection: 'row'}}>
+                        <Button style={{ margin: '2%' }} onClick={() => { this.setState({ mapType: 'world' }) }}>World</Button>
+                        <Button style={{ margin: '2%' }} onClick={() => { this.setState({ mapType: 'asia' }) }}>Asia</Button>
+                    </div>
+                    {this.state.mapType === 'world' &&
+                        <VectorMap
+                            map={`${this.state.mapType}_mill`}
+                            ref={"map"}
+                            backgroundColor="rgba(2, 123, 255, 0.4)" //change it to ocean blue: #0077be
+                            zoomOnScroll={false}
+                            containerStyle={{
+                                width: "90%",
+                                height: "85%"
+                            }}
+                            onRegionClick={this.handleMapClick} //gets the country code
+                            containerClassName="map"
+                            regionStyle={{
+                                initial: {
+                                    fill: "#e4e4e4",
+                                    "fill-opacity": 0.9,
+                                    stroke: "none",
+                                    "stroke-width": 0,
+                                    "stroke-opacity": 0
+                                },
+                                hover: {
+                                    "fill-opacity": 0.8,
+                                    cursor: "pointer"
+                                },
+                                selected: {
+                                    fill: "#2938bc" //color for the clicked country
+                                },
+                                selectedHover: {}
+                            }}
+                            // regionsSelectable={true}
+                            series={{
+                                regions: [
+                                    {
+                                        values: this.state.ramenCount, //this is your data
+                                        scale: ["#e0ccff", "#5c00e6"], //your color game's here
+                                        normalizeFunction: "polynomial"
+                                    }
+                                ]
+                            }}
+                        />
+                    }
+                    {
+                        this.state.mapType === 'asia' &&
+                        <VectorMap
+                            map={"asia_mill"}
+                            ref={"map"}
+                            backgroundColor="rgba(2, 123, 255, 0.4)" //change it to ocean blue: #0077be
+                            zoomOnScroll={false}
+                            containerStyle={{
+                                width: "90%",
+                                height: "85%"
+                            }}
+                            onRegionClick={this.handleMapClick} //gets the country code
+                            containerClassName="map"
+                            regionStyle={{
+                                initial: {
+                                    fill: "#e4e4e4",
+                                    "fill-opacity": 0.9,
+                                    stroke: "none",
+                                    "stroke-width": 0,
+                                    "stroke-opacity": 0
+                                },
+                                hover: {
+                                    "fill-opacity": 0.8,
+                                    cursor: "pointer"
+                                },
+                                selected: {
+                                    fill: "#2938bc" //color for the clicked country
+                                },
+                                selectedHover: {}
+                            }}
+                            // regionsSelectable={true}
+                            series={{
+                                regions: [
+                                    {
+                                        values: this.state.ramenCount, //this is your data
+                                        scale: ["#e0ccff", "#5c00e6"], //your color game's here
+                                        normalizeFunction: "polynomial"
+                                    }
+                                ]
+                            }}
+                        />
+                    }
+                </div>
             </div>
         );
     }
