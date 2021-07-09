@@ -8,6 +8,7 @@ import bettertogether from '../../assets/better_together.png';
 import giphy from '../Photos/images/giphy.jpg';
 import cinnaboba from '../Photos/images/cinna_boba.gif';
 import ramen from '../../assets/ramen.gif';
+import yelp from '../../assets/yelp.png';
 import pokedex from '../../assets/pokedex.gif';
 import Button from '@material-ui/core/Button';
 import Card from '@material-ui/core/Card';
@@ -21,12 +22,20 @@ import './Projects.scss';
 
 const images = [
   {
-    url: giphy,
-    title: 'GIFinder',
-    link: './gifinder',
+    url: yelp,
+    title: 'Boba Review Analysis',
+    link: './bobareviews',
     external: '',
     repo: '',
-    description: 'A simple search to discover awesome GIFs, powered by the Giphy API',
+    description: 'A textual analysis on yelp reviews of boba places in the San Francisco Bay Area'
+  },
+  {
+    url: ramen,
+    title: 'Instant Ramen World Map',
+    link: './ramenmap',
+    external: '',
+    repo: '',
+    description: 'A map of instant ramen products from various countries around the world',
   },
   {
     url: cinnaboba,
@@ -45,20 +54,20 @@ const images = [
     description: 'To enable communities to come closer and help each other secure livelihood through the pandemic and beyond. Winning Project at VMware CodeHouse 2020',
   },
   {
-    url: ramen,
-    title: 'Instant Ramen World Map',
-    link: './ramenmap',
-    external: '',
-    repo: '',
-    description: 'A map of instant ramen products from various countries around the world',
-  },
-  {
     url: poster,
     title: 'LLNL Poster',
     link: './llnlposter',
     external: '',
     repo: '',
     description: 'Project poster from my 2019 summer internship at Lawrence Livermore National Laboratory',
+  },
+  {
+    url: giphy,
+    title: 'GIFinder',
+    link: './gifinder',
+    external: '',
+    repo: '',
+    description: 'A simple search to discover awesome GIFs, powered by the Giphy API',
   },
   {
     url: livecolor,
@@ -154,7 +163,6 @@ export const Projects = () => {
         </Container>
       </div>
       {/* <Link to="/markdownpreviewer"><h3 style={{ textAlign: 'center' }}>Markdown Previewer</h3></Link> */}
-      <p>Links from VMware CodeHouse: <a href="https://www.instagram.com/p/CGQYebfguI9/?igshid=1pjkd1lk8p3g6&fbclid=IwAR1Gc0_AE6eivllwJAIeCXjSQsf7t7b3KiR_9m8G7WRcba7YKAhUh0XwlqY" target="_blank" rel="noopener noreferrer">instagram post</a> and <a href="https://blogs.vmware.com/careers/2020/10/vmware-codehouse-2020-the-virtual-experience.html" target="_blank" rel="noopener noreferrer">article</a>.</p>
     </div>
   );
 }

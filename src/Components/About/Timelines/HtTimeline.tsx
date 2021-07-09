@@ -41,7 +41,7 @@ export default function HtTimeline() {
 
         <TimelineItem>
           <TimelineOppositeContent>
-            <Typography color="textSecondary">June 2020 - August 2020</Typography>
+            <Typography color="textSecondary">June - August 2020</Typography>
           </TimelineOppositeContent>
           <TimelineSeparator>
             <TimelineDot color="secondary" />
@@ -61,7 +61,7 @@ export default function HtTimeline() {
             <TimelineConnector />
           </TimelineSeparator>
           <TimelineContent>
-            <Typography>Graduated B.S. in Computer Science with Highest Honors, Cum Laude at UCSC</Typography>
+            <Typography>B.S. in Computer Science with Highest Honors, Cum Laude at UCSC</Typography>
           </TimelineContent>
         </TimelineItem>
 

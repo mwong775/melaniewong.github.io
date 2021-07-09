@@ -13,6 +13,7 @@ import CardMedia from '@material-ui/core/CardMedia';
 import Grid from '@material-ui/core/Grid';
 import Container from '@material-ui/core/Container';
 import tech4good from '../../assets/tech4good.png';
+import codehouse from '../../assets/codehouse.png';
 import glass_room from '../../assets/glass_room.jpg';
 import data_detox_kit from '../../assets/data-detox-kits.jpg';
 import './About.scss';
@@ -29,12 +30,12 @@ function getStepContent(step: Number) {
       cloud-based platforms, and many other domains within the field of software engineering. I'm always eager to work with diverse
       technologies to learn and expand my expertise.`;
     case 1:
-      return `I started at UC Santa Cruz as an NCAA student-athlete in track & field, competing in sprints and hurdles for 2 years.
+      return `I started at UC Santa Cruz as an NCAA student-athlete in track & field, competing in sprints and hurdles for my first 2 years.
       I completed my first summer internship as a Computation Intern at Lawrence Livermore National Laboratory. 
-      In the quarter of Fall 2019, I began a research project focused on web and network security for everyday online users.`;
+      In my third and final year of undergrad, I started a research project focused on web and network security for everyday online users.`;
     case 2:
       return `I graduated with my Bachelor's in June 2020, and I'm currently spending my fourth year at UCSC pursuing a Master's
-      to finish by Spring 2021 as part of the new B.S./M.S. pathways program. I also most recent internship was with Bank of America as a Global Technology Summer Analyst.`;
+      to finish by Spring 2021 as part of the new B.S./M.S. pathways program. My most recent internship was with Bank of America as a Global Technology Summer Analyst.`;
     case 3:
       return `I'm just trying my best to manage graduate coursework, working as a graduate teaching assistant, and some part-time coding for economics experiments - all while catching up on sleep :)`;
     default:
@@ -54,6 +55,13 @@ function getStepContent(step: Number) {
 
 const resources = [
   {
+    name: 'VMware CodeHouse',
+    description: "An article on the 2020 virtual VMware CodeHouse is available",
+    link: 'https://blogs.vmware.com/careers/2020/10/vmware-codehouse-2020-the-virtual-experience.html',
+    pic: codehouse,
+  },
+    // <p>Links from VMware CodeHouse: <a href="https://www.instagram.com/p/CGQYebfguI9/?igshid=1pjkd1lk8p3g6&fbclid=IwAR1Gc0_AE6eivllwJAIeCXjSQsf7t7b3KiR_9m8G7WRcba7YKAhUh0XwlqY" target="_blank" rel="noopener noreferrer">instagram post</a> and <a href="https://blogs.vmware.com/careers/2020/10/vmware-codehouse-2020-the-virtual-experience.html" target="_blank" rel="noopener noreferrer">article</a>.</p>
+  {
     name: 'Tech4Good',
     description: 'More information about the Tech4Good Lab can be found',
     link: 'https://tech4good.soe.ucsc.edu/#/',
@@ -61,7 +69,7 @@ const resources = [
   },
   {
     name: 'Glass Room',
-    description: "The Glass Room website can be found",
+    description: "More information on The Glass Room can be found on the website",
     link: 'https://theglassroom.org',
     pic: glass_room,
   },

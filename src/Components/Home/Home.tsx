@@ -23,7 +23,7 @@ export class Home extends React.Component {
 
   render() {
     const skills = ["Python", "JavaScript", "C++", "TypeScript", "Angular", "React", "Docker", "Polymer.js", "Flask", "Java", "HTML", "CSS", "Kubernetes", "Wireshark", "Android", "Node.js"];
-    const grad = ["Graduate Teaching Assistant (CSE150/L - Fall 2020, CSE30 - Winter 2021)", "Coursework: Artificial Intelligence, Sensor Networks and Internet of Things"];
+    const grad = ["Graduate Teaching Assistant (CSE150/L - Fall 2020, CSE30 - Winter 2021, CSE20 - Spring 2021)", "Coursework: Sensor Networks and Internet of Things, Cyber-Physical Systems Security, Artificial Intelligence"];
     const undergrad = ["Graduated in 3 years with Highest Honors, Cum Laude", "NCAA Track & Field Student-Athlete (2 years)", "Coursework: Algorithms & Data Structures, Distributed Systems, Computer & Network Security, Machine Learning, Coding for Social Good"];
 
     const featuredCards = [
@@ -83,7 +83,7 @@ export class Home extends React.Component {
             </div>
             <div className="about-wrapper">
               <h2 className="gradient-font">About This Site</h2>
-              <p>Welcome to my website! Please feel free to read more <Link to="/about">about</Link> me, or you can check out my <Link to="/resume">resume</Link>, past <Link to="/projects">projects</Link>, collection of <Link to="/photos">photos</Link>, or <Link to="/contact">contact</Link> me.</p>
+              <p>Welcome to my website! Please feel free to read more <Link to="/about">about</Link> me, or you can check out my <Link to="/resume">resume</Link>, peculiar <Link to="/projects">projects</Link>, collection of <Link to="/photos">photos</Link>, or <Link to="/contact">contact</Link> me.</p>
               <p>Source available on GitHub <a href="https://github.com/mwong775/melaniewong.github.io/tree/development" target="_blank" rel="noopener noreferrer">here</a>.</p>
             </div>
           </div>

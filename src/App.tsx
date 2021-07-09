@@ -9,6 +9,7 @@ import { Resume } from "./Components/Resume/Resume";
 import { Projects } from "./Components/Projects/Projects";
 import { GIFinder } from "./Components/Projects/GIFinder/GIFinder";
 import { BobaMap } from "./Components/Projects/BobaMap/BobaMap";
+import BobaReviews from "./Components/Projects/BobaReviews/BobaReviews";
 import { RamenMap } from "./Components/Projects/RamenMap/RamenMap";
 import { Pokedex } from "./Components/Projects/Pokedex/Pokedex";
 import { Poster } from "./Components/Projects/Poster/Poster";
@@ -233,6 +234,7 @@ export const App = () => {
               <Route path="/projects" exact component={Projects} />
               <Route path="/gifinder" exact component={GIFinder} />
               <Route path="/bobamap" exact component={BobaMap} />
+              <Route path="/bobareviews" exact component={BobaReviews} />
               <Route path="/ramenmap" exact component={RamenMap} />
               <Route path="/pokedex" exact component={Pokedex} />
               <Route path="/llnlposter" exact component={Poster} />
