@@ -102,9 +102,9 @@ export default function BobaReviews() {
         <div className="content-wrapper">
             <h2 className="gradient-font">Analysis of Boba Reviews</h2>
             <div style={{ paddingBottom: '3%', paddingLeft: '1%' }}>
-                <li>Randomly decided to analyze yelp reviews of most common Bay Area boba places back in September 2020 (before the pandemic)</li>
+                <li>Randomly decided to analyze yelp reviews of most common Bay Area boba places back in September 2020</li>
                 <li>Recently reran the scripts (after adding a couple more stopwords), now into the post-pandemic</li>
-                <li>Can observe if and how recent reviews differ before (left) and after (right) the pandemic</li>
+                <li>Can observe if and how recent reviews differ during (left) and after (right) the pandemic</li>
             </div>
             <div className={classes.root}>
                 <AppBar position="static" color="default">
@@ -134,40 +134,40 @@ export default function BobaReviews() {
                     <img src={boba_bigram_freq} alt="boba_bigram_freq" />
                 </TabPanel>
                 <TabPanel value={value} index={1}>
-                    <img src={boba_freq_boba_guys} alt="boba_freq_boba_guys" />
                     <img src={boba_freq_boba_guys_old} alt="boba_freq_boba_guys_old" />
-                    <img src={boba_bigram_freq_boba_guys} alt="boba_bigram_freq_boba_guys" />
+                    <img src={boba_freq_boba_guys} alt="boba_freq_boba_guys" />
                     <img src={boba_bigram_freq_boba_guys_old} alt="boba_bigram_freq_boba_guys_old" />
+                    <img src={boba_bigram_freq_boba_guys} alt="boba_bigram_freq_boba_guys" />
                 </TabPanel>
                 <TabPanel value={value} index={2}>
-                    <img src={boba_freq_gong_cha} alt="boba_freq_gong_cha" />
                     <img src={boba_freq_gong_cha_old} alt="boba_freq_gong_cha_old" />
-                    <img src={boba_bigram_freq_gong_cha} alt="boba_bigram_freq_gong_cha" />
+                    <img src={boba_freq_gong_cha} alt="boba_freq_gong_cha" />
                     <img src={boba_bigram_freq_gong_cha_old} alt="boba_bigram_freq_gong_cha_old" />
+                    <img src={boba_bigram_freq_gong_cha} alt="boba_bigram_freq_gong_cha" />
                 </TabPanel>
                 <TabPanel value={value} index={3}>
-                    <img src={boba_freq_happy_lemon} alt="boba_freq_happy_lemon" />
                     <img src={boba_freq_happy_lemon_old} alt="boba_freq_happy_lemon_old" />
-                    <img src={boba_bigram_freq_happy_lemon} alt="boba_bigram_freq_happy_lemon" />
+                    <img src={boba_freq_happy_lemon} alt="boba_freq_happy_lemon" />
                     <img src={boba_bigram_freq_happy_lemon_old} alt="boba_bigram_freq_happy_lemon_old" />
+                    <img src={boba_bigram_freq_happy_lemon} alt="boba_bigram_freq_happy_lemon" />
                 </TabPanel>
                 <TabPanel value={value} index={4}>
-                    <img src={boba_freq_itea} alt="boba_freq_itea" />
                     <img src={boba_freq_itea_old} alt="boba_freq_itea_old" />
-                    <img src={boba_bigram_freq_itea} alt="boba_bigram_freq_itea" />
+                    <img src={boba_freq_itea} alt="boba_freq_itea" />
                     <img src={boba_bigram_freq_itea_old} alt="boba_bigram_freq_itea_old" />
+                    <img src={boba_bigram_freq_itea} alt="boba_bigram_freq_itea" />
                 </TabPanel>
                 <TabPanel value={value} index={5}>
-                    <img src={boba_freq_sharetea} alt="boba_freq_sharetea" />
                     <img src={boba_freq_sharetea_old} alt="boba_freq_sharetea_old" />
-                    <img src={boba_bigram_freq_sharetea} alt="boba_bigram_freq_sharetea" />
+                    <img src={boba_freq_sharetea} alt="boba_freq_sharetea" />
                     <img src={boba_bigram_freq_sharetea_old} alt="boba_bigram_freq_sharetea_old" />
+                    <img src={boba_bigram_freq_sharetea} alt="boba_bigram_freq_sharetea" />
                 </TabPanel>
                 <TabPanel value={value} index={6}>
-                    <img src={boba_freq_t4} alt="boba_freq_t4" />
                     <img src={boba_freq_t4_old} alt="boba_freq_t4_old" />
-                    <img src={boba_bigram_freq_t4} alt="boba_bigram_freq_t4" />
+                    <img src={boba_freq_t4} alt="boba_freq_t4" />
                     <img src={boba_bigram_freq_t4_old} alt="boba_bigram_freq_t4_old" />
+                    <img src={boba_bigram_freq_t4} alt="boba_bigram_freq_t4" />
                 </TabPanel>
             </div>
         </div>
