@@ -42,7 +42,7 @@ export const Photos = () => {
   return (
     <div className="content-wrapper">
       <h2 className="gradient-font">Photos</h2>
-      <div className="description">Surprisingly decent photos taken with an iPhone</div>
+      <div className="description">Surprisingly decent photos taken with an iPhone 6s</div>
       <GridList className="grid">
         {tileData.map(tile => (
           <GridListTile key={tile.filename} className="tile">

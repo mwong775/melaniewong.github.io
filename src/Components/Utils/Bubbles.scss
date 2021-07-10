@@ -7,4 +7,10 @@ canvas { /* puts particles overlapping */
     height: 100%;
     flex: 1 1 auto;
     z-index: -1;
+    width: 100%;
+  height: 100%;
+  position: fixed;
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
 }

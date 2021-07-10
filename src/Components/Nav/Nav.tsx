@@ -76,14 +76,6 @@ export class Nav extends React.Component<SwitchProps, { lightTheme: boolean; val
     this.props.lightTheme(!this.state.lightTheme);
   }
 
-  // openDrawer = () => {
-  //   console.log('open drawer', this.state.isDrawerOpen);
-  //   this.setState({
-  //     isDrawerOpen: !this.state.isDrawerOpen
-  //   });
-  //   this.props.openDrawer(!this.state.isDrawerOpen);
-  // }
-
   render() {
     const color = "#ffffff";
     return (

@@ -14,6 +14,7 @@ import llnl from '../../assets/llnl.jpg';
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
 import Typography from '@material-ui/core/Typography';
+import Fab from '@material-ui/core/Fab';
 export class Home extends React.Component {
 
   componentDidMount() {
@@ -129,9 +130,9 @@ export class Home extends React.Component {
                 B.S. Computer Science
                 </Typography>
                 <ul>
-                  {undergrad.map((point) => {
+                  {undergrad.map((p) => {
                     return (
-                      <li>{point}</li>
+                      <li>{p}</li>
                     )
                   })}
                 </ul>
@@ -144,7 +145,7 @@ export class Home extends React.Component {
             <ul>
               {skills.map((skill) => {
                 return (
-                  <li style={{ color: "#ffffff" }}>{skill}</li>
+                  <Fab variant="extended" color="primary" style={{margin: '5px', color: 'white'}}>{skill}</Fab>
                 )
               })}
             </ul>

@@ -10,6 +10,7 @@ import { Projects } from "./Components/Projects/Projects";
 import { GIFinder } from "./Components/Projects/GIFinder/GIFinder";
 import { BobaMap } from "./Components/Projects/BobaMap/BobaMap";
 import BobaReviews from "./Components/Projects/BobaReviews/BobaReviews";
+import { AnimalCrossing } from "./Components/Projects/AnimalCrossing/AnimalCrossing";
 import { RamenMap } from "./Components/Projects/RamenMap/RamenMap";
 import { Pokedex } from "./Components/Projects/Pokedex/Pokedex";
 import { Poster } from "./Components/Projects/Poster/Poster";
@@ -34,7 +35,7 @@ import MenuIcon from '@material-ui/icons/Menu';
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import { makeStyles } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
-import Tabs from '@material-ui/core/Tabs';
+import Hidden from '@material-ui/core/Hidden';
 import Brightness3Icon from "@material-ui/icons/Brightness3";
 import Brightness7Icon from "@material-ui/icons/Brightness7";
 import { Link } from 'react-router-dom';
@@ -157,19 +158,16 @@ export const App = () => {
           <CssBaseline />
           <Bubbles />
           <AppBar position="fixed" className={`${themeLabel === 'Dark' ? 'appbar-light' : 'appbar-dark'} ${clsx(classes.appBar, open && classes.appBarShift)}`}>
-            <Tabs
-              variant="scrollable"
-              scrollButtons="off"
-            >
-              <Toolbar>
-                <IconButton
-                  edge="start"
-                  aria-label="open drawer"
-                  style={{ marginLeft: "1%", color: color }}
-                  onClick={handleDrawerOpen}
-                  className={clsx(classes.menuButton, open && classes.hide)}                >
-                  <MenuIcon />
-                </IconButton>
+            <Toolbar>
+              <IconButton
+                edge="start"
+                aria-label="open drawer"
+                style={{ marginLeft: "1%", color: color }}
+                onClick={handleDrawerOpen}
+                className={clsx(classes.menuButton, open && classes.hide)}                >
+                <MenuIcon />
+              </IconButton>
+              <Hidden only="xs">
                 <Link to="/">
                   <Button style={{ color: color }}>Home</Button>
                 </Link>
@@ -198,9 +196,9 @@ export const App = () => {
                     {themeLabel === 'Dark' ? <Brightness7Icon /> : <Brightness3Icon />}
                   </IconButton>
                 </Tooltip>
-                {/* <p>{this.props.themeLabel} Theme</p> */}
-              </Toolbar>
-            </Tabs>
+              </Hidden>
+              {/* <p>{this.props.themeLabel} Theme</p> */}
+            </Toolbar>
           </AppBar>
           <Drawer
             className={classes.drawer}
@@ -235,6 +233,7 @@ export const App = () => {
               <Route path="/gifinder" exact component={GIFinder} />
               <Route path="/bobamap" exact component={BobaMap} />
               <Route path="/bobareviews" exact component={BobaReviews} />
+              <Route path="/acnh" exact component={AnimalCrossing} />
               <Route path="/ramenmap" exact component={RamenMap} />
               <Route path="/pokedex" exact component={Pokedex} />
               <Route path="/llnlposter" exact component={Poster} />

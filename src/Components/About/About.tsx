@@ -16,13 +16,19 @@ import tech4good from '../../assets/tech4good.png';
 import codehouse from '../../assets/codehouse.png';
 import glass_room from '../../assets/glass_room.jpg';
 import data_detox_kit from '../../assets/data-detox-kits.jpg';
+import LibraryMusicTwoToneIcon from '@material-ui/icons/LibraryMusicTwoTone';
+import SportsEsportsTwoToneIcon from '@material-ui/icons/SportsEsportsTwoTone';
+import StraightenTwoToneIcon from '@material-ui/icons/StraightenTwoTone';
+import FastfoodIcon from '@material-ui/icons/Fastfood';
+import YouTubeIcon from '@material-ui/icons/YouTube';
+import MovieFilterTwoToneIcon from '@material-ui/icons/MovieFilterTwoTone';
 import './About.scss';
 
 function getSteps() {
   return ['Introduction', 'During my undergraduate studies...', 'In 2020...', 'Nowadays...'];
 }
 
-function getStepContent(step: Number) {
+function getStepContent(step: number) {
   switch (step) {
     case 0:
       return `I am currently a Master's student pursuing a 4-year B.S./M.S. in Computer Science at UC Santa Cruz. 
@@ -60,7 +66,7 @@ const resources = [
     link: 'https://blogs.vmware.com/careers/2020/10/vmware-codehouse-2020-the-virtual-experience.html',
     pic: codehouse,
   },
-    // <p>Links from VMware CodeHouse: <a href="https://www.instagram.com/p/CGQYebfguI9/?igshid=1pjkd1lk8p3g6&fbclid=IwAR1Gc0_AE6eivllwJAIeCXjSQsf7t7b3KiR_9m8G7WRcba7YKAhUh0XwlqY" target="_blank" rel="noopener noreferrer">instagram post</a> and <a href="https://blogs.vmware.com/careers/2020/10/vmware-codehouse-2020-the-virtual-experience.html" target="_blank" rel="noopener noreferrer">article</a>.</p>
+  // <p>Links from VMware CodeHouse: <a href="https://www.instagram.com/p/CGQYebfguI9/?igshid=1pjkd1lk8p3g6&fbclid=IwAR1Gc0_AE6eivllwJAIeCXjSQsf7t7b3KiR_9m8G7WRcba7YKAhUh0XwlqY" target="_blank" rel="noopener noreferrer">instagram post</a> and <a href="https://blogs.vmware.com/careers/2020/10/vmware-codehouse-2020-the-virtual-experience.html" target="_blank" rel="noopener noreferrer">article</a>.</p>
   {
     name: 'Tech4Good',
     description: 'More information about the Tech4Good Lab can be found',
@@ -149,14 +155,21 @@ export class About extends React.Component {
         <div className="timeline">
           <Timelines />
         </div>
-        <p>Other interests: hiking, rock climbing, playing piano, collecting plushies, playing Animal Crossing :P</p>
+        <h3 style={{ textAlign: 'center', paddingBottom: '10px'}}>Interests/Hobbies:
+        <LibraryMusicTwoToneIcon />
+        <SportsEsportsTwoToneIcon />
+        <StraightenTwoToneIcon />
+        <FastfoodIcon />
+        <YouTubeIcon />
+        <MovieFilterTwoToneIcon />
+        </h3>
         <Container maxWidth="md">
           <Grid container spacing={4}>
             {resources.map((card) => (
               <Grid item key={card.name} xs={12} sm={6} md={6}>
                 <Card>
                   <CardMedia
-                    style={{paddingTop: '56.25%', backgroundColor: '#ffffff'}}
+                    style={{ paddingTop: '56.25%', backgroundColor: '#ffffff' }}
                     image={card.pic}
                     title={card.name}
                   />
