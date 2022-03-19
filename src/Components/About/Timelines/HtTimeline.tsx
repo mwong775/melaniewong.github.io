@@ -26,16 +26,42 @@ export default function HtTimeline() {
 
       <Timeline align="alternate">
 
+      <TimelineItem>
+          <TimelineOppositeContent>
+            <Typography color="textSecondary">September 2021 - Present</Typography>
+          </TimelineOppositeContent>
+          <TimelineSeparator>
+            <TimelineDot />
+            <TimelineConnector />
+          </TimelineSeparator>
+          <TimelineContent>
+            <Typography>Software Engineer at Microsoft</Typography>
+          </TimelineContent>
+        </TimelineItem>
+
         <TimelineItem>
           <TimelineOppositeContent>
-            <Typography color="textSecondary">September 2020 - Present</Typography>
+            <Typography color="textSecondary">June - September 2021</Typography>
+          </TimelineOppositeContent>
+          <TimelineSeparator>
+            <TimelineDot color="secondary" />
+            <TimelineConnector />
+          </TimelineSeparator>
+          <TimelineContent>
+            <Typography>Software Development Engineer Intern at Amazon</Typography>
+          </TimelineContent>
+        </TimelineItem>
+
+        <TimelineItem>
+          <TimelineOppositeContent>
+            <Typography color="textSecondary">September 2020 - June 2021</Typography>
           </TimelineOppositeContent>
           <TimelineSeparator>
             <TimelineDot color="primary"/>
             <TimelineConnector />
           </TimelineSeparator>
           <TimelineContent>
-            <Typography>Graduate Teaching Assistant, pursuing M.S. Computer Science at UC Santa Cruz</Typography>
+            <Typography>Graduate Teaching Assistant, M.S. Computer Science at UC Santa Cruz</Typography>
           </TimelineContent>
         </TimelineItem>
 

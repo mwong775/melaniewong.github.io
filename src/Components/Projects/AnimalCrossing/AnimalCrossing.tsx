@@ -25,7 +25,7 @@ export class AnimalCrossing extends React.Component<{}, { fishies: IFish[] }> {
   }
 
   fetchFishData() {
-    const url = 'http://acnhapi.com/v1/fish';
+    const url = 'https://acnhapi.com/v1/fish';
     axios.get(url)
       .then(response => {
         const data = response.data;

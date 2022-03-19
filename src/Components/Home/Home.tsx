@@ -11,6 +11,8 @@ import bofa from '../../assets/bofa.jpg';
 import leeps from '../../assets/leeps_logo.png';
 import t4g from '../../assets/tech4good.png';
 import llnl from '../../assets/llnl.jpg';
+import amzn from '../../assets/amazon_logo.png';
+import ms from '../../assets/microsoft_logo.png';
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
 import Typography from '@material-ui/core/Typography';
@@ -23,11 +25,29 @@ export class Home extends React.Component {
   }
 
   render() {
-    const skills = ["Python", "JavaScript", "C++", "TypeScript", "Angular", "React", "Docker", "Polymer.js", "Flask", "Java", "HTML", "CSS", "Kubernetes", "Wireshark", "Android", "Node.js"];
+    const skills = ["Python", "JavaScript", "C++", "TypeScript", "Angular", "React", "Docker", "Polymer.js", "Flask", "Java", "HTML", "CSS", "Kubernetes", "Wireshark", "Android", "Node.js", "Swift"];
     const grad = ["Graduate Teaching Assistant (CSE150/L - Fall 2020, CSE30 - Winter 2021, CSE20 - Spring 2021)", "Coursework: Sensor Networks and Internet of Things, Cyber-Physical Systems Security, Artificial Intelligence"];
     const undergrad = ["Graduated in 3 years with Highest Honors, Cum Laude", "NCAA Track & Field Student-Athlete (2 years)", "Coursework: Algorithms & Data Structures, Distributed Systems, Computer & Network Security, Machine Learning, Coding for Social Good"];
 
     const featuredCards = [
+      {
+        title: 'Microsoft',
+        date: 'September 2021 - Present',
+        description: 'Software Engineer',
+        link: 'https://azure.microsoft.com/en-us/products/azure-stack/edge/#overview',
+        tags: [],
+        image: ms,
+        imageText: 'Microsoft',
+      },
+      {
+        title: 'Amazon',
+        date: 'June - August 2021',
+        description: 'Software Development Engineer Intern',
+        link: 'https://www.amazon.com/luna/',
+        tags: [],
+        image: amzn,
+        imageText: 'Amazon',
+      },
       {
         title: 'Bank of America',
         date: 'June - August 2020',
@@ -35,7 +55,7 @@ export class Home extends React.Component {
         link: '',
         tags: ['Python', 'JupyterLab', 'HTML'],
         image: bofa,
-        imageText: 'Image Text',
+        imageText: 'Bank of America',
       },
       {
         title: 'LEEPS Lab - UCSC Economics Department',
@@ -44,16 +64,16 @@ export class Home extends React.Component {
         link: 'https://leeps.ucsc.edu/',
         tags: ['oTree', 'Polymer.js', 'Python'],
         image: leeps,
-        imageText: 'Image Text',
+        imageText: 'LEEPS Lab',
       },
       {
         title: 'UCSC Tech4Good Lab',
-        date: 'March 2019 - Present',
+        date: 'March 2019 - June 2021',
         description: 'Research Assistant - Web Development',
         link: 'https://tech4good.soe.ucsc.edu/',
         tags: ['Angular', 'TypeScript', 'Firebase'],
         image: t4g,
-        imageText: 'Image Text',
+        imageText: 'Tech4Good',
       },
       {
         title: 'Lawrence Livermore National Laboratory',
@@ -62,7 +82,7 @@ export class Home extends React.Component {
         link: 'https://www.llnl.gov/',
         tags: ['Java', 'React', 'TypeScript'],
         image: llnl,
-        imageText: 'Image Text',
+        imageText: 'LLNL',
       },
     ];
 
@@ -76,7 +96,7 @@ export class Home extends React.Component {
           <div className="row">
             <div className="about-wrapper">
               <h2 className="gradient-font">About Me</h2>
-              <p>Hi! I'm Melanie, and I'm studying Computer Science at the University of California in Santa Cruz.</p>
+              <p>Hi! I'm Melanie, and I'm a Software Engineer at Microsoft.</p>
               <br />
               <Link to="/about">
                 <Button variant="outlined" size="large">Learn More</Button>
@@ -106,7 +126,7 @@ export class Home extends React.Component {
                 <Typography variant="h5" component="h3">
                   University of California, Santa Cruz
                 </Typography>
-                <span className="education-date">Sep 2020 - Present</span>
+                <span className="education-date">Sep 2020 - June 2021</span>
                 <Typography component="h4">
                   M.S. Computer Science and Engineering
                 </Typography>

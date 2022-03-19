@@ -25,25 +25,27 @@ import MovieFilterTwoToneIcon from '@material-ui/icons/MovieFilterTwoTone';
 import './About.scss';
 
 function getSteps() {
-  return ['Introduction', 'During my undergraduate studies...', 'In 2020...', 'Nowadays...'];
+  return ['Introduction', 'How College Began...', 'At UCSC...', 'Nowadays...'];
 }
 
 function getStepContent(step: number) {
   switch (step) {
     case 0:
-      return `I am currently a Master's student pursuing a 4-year B.S./M.S. in Computer Science at UC Santa Cruz. 
+      return `I am a recent graduate who completed a 4-year B.S./M.S. in Computer Science at UC Santa Cruz. 
       My interests primarily include topics in computer & network security, distributed systems, web development, 
       cloud-based platforms, and many other domains within the field of software engineering. I'm always eager to work with diverse
       technologies to learn and expand my expertise.`;
     case 1:
       return `I started at UC Santa Cruz as an NCAA student-athlete in track & field, competing in sprints and hurdles for my first 2 years.
-      I completed my first summer internship as a Computation Intern at Lawrence Livermore National Laboratory. 
-      In my third and final year of undergrad, I started a research project focused on web and network security for everyday online users.`;
+      Although I began my studies with zero CS knowledge or experience, I've worked my way to intern at Lawrence Livermore National Laboratory
+      as well as Bank of America during my summers. In my third and final year of undergrad, I started a research project focused on web and
+      network security for everyday online users.`;
     case 2:
-      return `I graduated with my Bachelor's in June 2020, and I'm currently spending my fourth year at UCSC pursuing a Master's
-      to finish by Spring 2021 as part of the new B.S./M.S. pathways program. My most recent internship was with Bank of America as a Global Technology Summer Analyst.`;
+      return `I graduated with my Bachelor's within three years, and spent my fourth year at UCSC completing a Master's
+      by Spring 2021 as part of the new B.S./M.S. pathways program. After that, I interned at Amazon over the summer before starting
+      full-time at Microsoft in Fall 2021.`;
     case 3:
-      return `I'm just trying my best to manage graduate coursework, working as a graduate teaching assistant, and some part-time coding for economics experiments - all while catching up on sleep :)`;
+      return `I've got more free time to go hiking, indoor climbing, dragonboating, play games, and catch up on lotsss of sleep :)`;
     default:
       return 'Unknown step';
   }

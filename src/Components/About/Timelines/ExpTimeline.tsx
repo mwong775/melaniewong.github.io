@@ -28,14 +28,14 @@ export default function ExpTimeline() {
 
         <TimelineItem>
           <TimelineOppositeContent>
-            <Typography color="textSecondary">September 2021</Typography>
+            <Typography color="textSecondary">September 2021 - Present</Typography>
           </TimelineOppositeContent>
           <TimelineSeparator>
             <TimelineDot />
             <TimelineConnector />
           </TimelineSeparator>
           <TimelineContent>
-            <Typography>Incoming Software Engineer at ???</Typography>
+            <Typography>Software Engineer at Microsoft</Typography>
           </TimelineContent>
         </TimelineItem>
 
@@ -48,13 +48,13 @@ export default function ExpTimeline() {
             <TimelineConnector />
           </TimelineSeparator>
           <TimelineContent>
-            <Typography>Software Development Engineer Intern at ???</Typography>
+            <Typography>Software Development Engineer Intern at Amazon</Typography>
           </TimelineContent>
         </TimelineItem>
 
         <TimelineItem>
           <TimelineOppositeContent>
-            <Typography color="textSecondary">September 2020 - Present</Typography>
+            <Typography color="textSecondary">September 2020 - June 2021</Typography>
           </TimelineOppositeContent>
           <TimelineSeparator>
             <TimelineDot color="primary" />
